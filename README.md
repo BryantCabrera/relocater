@@ -1,8 +1,9 @@
 ##	Github workflow
-1.	Link to repo: https://github.com/BryantCabrera/relocater
-2.	Clone this onto your computer (your local repo)
+1.	Link to repo: https://github.com/BryantCabrera/relocater.  
+2.	On your personal repo (NOT the General Assembly) enterprise, log in.  then click link above and fork the repo.  Make sure the repo is in your personal GitHub (go to your personal GitHub account and the project repo “relocater” should be there).  Then, from YOUR PERSONAL FORK, clone it to your local repo.
     1.	$git clone {without curly braces, put the clone link here}
-3.	In terminal, cd to the project repo $git checkout -b {without these curly braces, put your first name here in all lower case letters}
+    2.  $git remote add upstream https://github.com/BryantCabrera/relocater
+3.	In terminal, cd to the project repo, open it, and $git checkout -b {without these curly braces, put your first name here in all lower case letters}
     1.	EXAMPLE:  $git checkout -b bryant
     2.	**any other time you are changing back to your branch, you don’t need to type the “-b” part anymore
 4.	$npm install
@@ -21,9 +22,14 @@
 7.	When you are 100% sure your data is ready to be merged into the master copy, make sure you are on YOUR OWN BRANCH (lower left of VScode):
     1.	$git add -A
     2.	$git commit -m “Adds {put your name here}’s {2-3 word description of the feature/code you made}”
+    3.  $git push
     3.	$git push origin {branchname}
         1.	This passes up the whole branch
-8.	Merging
+8.  Make sure your local repo is always in sync.
+    1. make sure you don't have any pending commits, then
+    2.  $git checkout master
+    3. Bryant will let you know when to $git pull upstream master
+9.	Merging
     1.	On master GitHub link
         1.	Click green button called “compare & pull”
         2.	Create pull request
@@ -33,6 +39,9 @@
     2.	DO NOT hit “merge”, Bryant will be handling this.
 
 
+
+
+##React Documentation
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
