@@ -19,12 +19,13 @@
 6.	FOR REACT: you’re only concerned with the following folders:
     1.	src (where you will be making ALL components)
     2.	public
-7.	When you are 100% sure your data is ready to be merged into the master copy, make sure you are on YOUR OWN BRANCH (lower left of VScode):
+7.	When you are 100% sure your data is ready to be merged into the master copy, make sure you are on YOUR OWN BRANCH (lower left of VScode), call Bryant to let him know you're merging, then:
     1.	$git add -A
     2.	$git commit -m “Adds {put your name here}’s {2-3 word description of the feature/code you made}”
     3.  $git push
-    3.	$git push origin {branchname}
+    4.	$git push origin {branchname}
         1.	This passes up the whole branch
+    5.  on your PERSONAL GitHub repo, accept and merge the pull requests
 8.  Make sure your local repo is always in sync.
     1. make sure you don't have any pending commits, then
     2.  $git checkout master
