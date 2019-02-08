@@ -23,13 +23,16 @@
     1.	$git add -A
     2.	$git commit -m “Adds {put your name here}’s {2-3 word description of the feature/code you made}”
     3.  $git push
-    4.	$git push origin {branchname}
+    4.	$git push origin {without the curlies braces, branchname}
         1.	This passes up the whole branch
     5.  on your PERSONAL GitHub repo, accept and merge the pull requests
 8.  Make sure your local repo is always in sync.
     1. make sure you don't have any pending commits, then
     2.  $git checkout master
-    3. Bryant will let you know when to $git pull upstream master
+    3.  $git branch -d {without the curlies braces, your name all in lowercase}
+        1. this deletes your old branch
+    4. Bryant will let you know when to $git pull upstream master
+    5. $git checkout -b {without the curlies braces, your name all in lowercase}
 9.	Merging
     1.	On master GitHub link
         1.	Click green button called “compare & pull”
