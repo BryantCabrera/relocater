@@ -1,3 +1,38 @@
+##	Github workflow
+1.	Link to repo: https://github.com/BryantCabrera/relocater
+2.	Clone this onto your computer (your local repo)
+    1.	$git clone {without curly braces, put the clone link here}
+3.	In terminal, cd to the project repo $git checkout -b {without these curly braces, put your first name here in all lower case letters}
+    1.	EXAMPLE:  $git checkout -b bryant
+    2.	**any other time you are changing back to your branch, you don’t need to type the “-b” part anymore
+4.	$npm install
+    1.	This gets all of the react & express packages downloaded.
+5.	FOR EXPRESS: you’re only concerned with the following folders/files
+    1.	Controllers
+    2.	Db
+    3.	Models
+    4.	Public
+    5.	Routers
+    6.	.env
+    7.	Server.js
+6.	FOR REACT: you’re only concerned with the following folders:
+    1.	src (where you will be making ALL components)
+    2.	public
+7.	When you are 100% sure your data is ready to be merged into the master copy, make sure you are on YOUR OWN BRANCH (lower left of VScode):
+    1.	$git add -A
+    2.	$git commit -m “Adds {put your name here}’s {2-3 word description of the feature/code you made}”
+    3.	$git push origin {branchname}
+        1.	This passes up the whole branch
+8.	Merging
+    1.	On master GitHub link
+        1.	Click green button called “compare & pull”
+        2.	Create pull request
+            (a)	Title: {YourName in all lowercase} –{1-3 word description of new feature/code you made}
+            (b)	Description: {line numbers} : Describe in detail what change you made and what it does.
+        3.	Click send pull request
+    2.	DO NOT hit “merge”, Bryant will be handling this.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
