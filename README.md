@@ -25,9 +25,14 @@
     3.  $git push
     4.	$git push origin {without the curlies braces, branchname}
         1.	This passes up the whole branch
-    5.  on your PERSONAL GitHub repo, accept and merge the pull requests
+    5.  go to your PERSONAL GitHub repo
+        1.  OPTION 1: on your PERSONAL GitHub repo, accept and merge the pull requests
+        2.  OPTION 2 (if you don't see the button green button ABOVE the clone/download button on the right): 
+            1. in your PERSONAL remote repo, use the dorpdown on the left to switch to the branch that you made updates to
+            2.  click the "New Pull Request" button directly to the right of that dropdown menu
+            3.  on the new screen, make sure the left side points to the origin master, and the right side points to your personal branch that has your edits
 8.  Make sure your local repo is always in sync.
-    1. make sure you don't have any pending commits, then
+    1.  make sure you don't have any pending commits, then
     2.  $git checkout master
     3.  Bryant will let you know when to $git pull upstream master
     4.  $git branch -d {without the curlies braces, your name all in lowercase}
