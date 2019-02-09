@@ -35,7 +35,7 @@
     1.  make sure you don't have any pending commits, then
     2.  $git checkout master
     3.  Bryant will let you know when to $git pull upstream master
-    4.  $git branch -d {without the curlies braces, your name all in lowercase}
+    4.  $git branch -D {without the curlies braces, your name all in lowercase}
         1. this deletes your old branch
     5. $git checkout -b {without the curlies braces, your name all in lowercase}
 9.	Merging
