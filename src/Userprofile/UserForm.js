@@ -20,6 +20,7 @@ const UserForm = (props) =>
                     placeholder='County'
                     value={props.user.uCounty}
                 />
+                <br/>
                 <input
                     name='uIncome'
                     placeholder='Income'
