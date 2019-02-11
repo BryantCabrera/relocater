@@ -5,12 +5,9 @@ import './TopoMap.css'
 
 
 class TopoMap extends Component {
-    constructor(){
-        super()
-        this.state = {
-            mapData: [],
-            mousedOverCounty: ''
-        }
+    state = {
+        mapData: [],
+        mousedOverCounty: ''
     }
     handleMouseOver = (index) => {
         console.log(this.state.mapData[index])
