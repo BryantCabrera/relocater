@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GraphButton from '../Button/Button';
+import TopoMap from '../TopoMap/TopoMap'
 
 
 
@@ -15,6 +16,7 @@ class MainContainer extends Component {
 
         <p>this is the main container</p>
             <GraphButton/>
+            <TopoMap />
         </div>
     </div>
         )

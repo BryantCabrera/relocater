@@ -27,7 +27,7 @@ class TopoMap extends Component {
         return geoMercator()
             .scale(1000*2)
             .center([-120, 36])
-            .translate([650/2, 600/2])
+            .translate([600/2, 450/2])
     }
     componentDidMount(){
         fetch('/caCountiesTopoSimple.json')
@@ -46,7 +46,7 @@ class TopoMap extends Component {
     render(){
         return (
             <div className='map'>
-                <svg width={800} height={450} viewBox='0 0 800 450'>
+                <svg width={600} height={450} viewBox='0 0 600 450'>
                     <g className='counties'>
                         {
                         this.state.mapData.map((d, i) => (
