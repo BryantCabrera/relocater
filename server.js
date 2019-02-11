@@ -27,6 +27,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// cors
 const corsOptions = {
     origin: 'http://localhost:3000',
     credentials: true,
@@ -36,6 +37,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // require routers
+
 const indexRouter = require('./routers');
 const apiRouter = require('./routers/api');
 const countyRouter = require('./routers/counties');
@@ -47,11 +49,11 @@ app.use('/api', apiRouter);
 app.use('/counties', countyRouter);
 app.use('/users', userRouter);
 
+// start server on 9000
 //temporary view using ejs for Google Login testing
 // app.get('/', (req, res) => {
 //     res.render('index.ejs');
 // });
-
 app.listen(process.env.PORT || 9000, () => {
     console.log('listening on port 9000');
 });
