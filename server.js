@@ -3,8 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const session = require('express-session');
-const axios = require('axios');
-const convert = require('xml-js');
+
+require('dotenv').config()
+
 require('./db/db');
 
 app.use(session({
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
+
 const corsOptions = {
     origin: 'http://localhost:3000',
     credentials: true,
@@ -28,18 +30,15 @@ app.use(cors(corsOptions));
 
 
 // require routers
+  const apiRouter = require('./routers/api');
 const countyRouter = require('./routers/counties');
 const userRouter = require('./routers/users');
 
 // use routers
+app.use('/api', apiRouter);
 app.use('/counties', countyRouter);
 app.use('/users', userRouter);
 
-
-
-// require api's
-const zillowApi = require('./api/zillowApi');
-const socrataApi = require('./api/socrataApi');
 
 
 
