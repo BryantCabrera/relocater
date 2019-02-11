@@ -14,6 +14,7 @@ class TopoMap extends Component {
         this.handleMouseOver = this.handleMouseOver.bind(this)
     }
     handleMouseOver(index){
+        console.log(this.state.mapData[index])
         this.setState({
             mousedOver: this.state.mapData[index].properties.name
         })

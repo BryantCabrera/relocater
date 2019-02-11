@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <header>
-                <p><Link to= '/maincontainer'>Home</Link></p>
+            <div className="nav-bar">
+                <p className="nav-home"><Link to= '/home'>Home </Link></p>
                 <p><Link to ='/graphcontainer'>Graph Container</Link></p>
+            </div>
         </header>
     )
 }

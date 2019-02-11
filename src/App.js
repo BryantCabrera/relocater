@@ -20,7 +20,7 @@ class App extends Component {
       logged: true
     })
     //set state and go to route to get to main container
-    this.props.history.push('/maincontainer')
+    this.props.history.push('/home')
   }
 
   handleLogout = (username) => {
@@ -39,7 +39,7 @@ class App extends Component {
           this.state.logged
             ?  <Switch>
                 <Route exact path='/graphcontainer' component = {GraphContainer}/>
-                <Route exact path='/maincontainer' component = {MainContainer} />
+                <Route exact path='/home' component = {MainContainer} />
               </Switch>
             : <Login handleLogin={this.handleLogin}/>
         }
