@@ -4,6 +4,8 @@ import './App.css';
 import UserProfile from './Userprofile/Userprofile';
 import Login from './Login/Login'
 import GraphContainer from './GraphContainer/GraphContainer';
+import Header from './Header/Header'
+import { Route, Switch } from 'react-router-dom'
 
 class App extends Component {
   state = {
@@ -28,7 +30,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.logged ? <GraphContainer username={this.state.username} handleLogout={this.handleLogout}/> : <Login handleLogin={this.handleLogin}/>}
+        <Header />
+        <Switch>
+          <Route exact path = '/' component = {Login} />
+          <Route expact path='/graphcontainer' component = {GraphContainer}/>
+        </Switch>
+        {/* {this.state.logged ? <GraphContainer username={this.state.username} handleLogout={this.handleLogout}/> : <Login handleLogin={this.handleLogin}/>} */}
       </div>
     );
   }
