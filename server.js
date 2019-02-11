@@ -5,7 +5,6 @@ const cors = require('cors');
 const session = require('express-session');
 
 require('dotenv').config()
-
 require('./db/db');
 
 app.use(session({
@@ -18,8 +17,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-
-
+// cors
 const corsOptions = {
     origin: 'http://localhost:3000',
     credentials: true,
@@ -28,9 +26,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-
 // require routers
-  const apiRouter = require('./routers/api');
+const apiRouter = require('./routers/api');
 const countyRouter = require('./routers/counties');
 const userRouter = require('./routers/users');
 
@@ -39,11 +36,7 @@ app.use('/api', apiRouter);
 app.use('/counties', countyRouter);
 app.use('/users', userRouter);
 
-
-
-
-
-
+// start server on 9000
 app.listen(process.env.PORT || 9000, () => {
     console.log('listening on port 9000');
   });

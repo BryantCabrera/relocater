@@ -27,7 +27,6 @@ app.get('/socrata/:county', async (req, res) => {
 // to get into median cost of houses go into zindex._@ttribute
 // check the console.log if confused 
 app.get('/zillow/:county', async (req, res) => {
-
         axios.get(`http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=${zillowKey}&state=ca&childtype=county`)
         .then((response) =>  {
             let json = parser.xml2json(response.data); 

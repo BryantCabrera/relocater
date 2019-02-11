@@ -12,8 +12,7 @@ router.get('/', async (req, res, next) => {
           status: 200,
           data: allCounties
         });
-  
-      } catch (err){ 
+      } catch (err) { 
         res.send(err)
       }
 });
