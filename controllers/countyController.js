@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const County = require('../models/county');
 
+// index route
 router.get('/', async (req, res, next) => {
     // req.body this is from the fetch request
     // console.log(req.body, ' this is get all')
@@ -18,6 +19,7 @@ router.get('/', async (req, res, next) => {
   });
 
 
+// show route
 router.get('/:id', async (req, res, next) => {
     try  {
         const foundCounty = await County.findById(req.params.id);
