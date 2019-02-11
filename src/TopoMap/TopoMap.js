@@ -9,28 +9,27 @@ class TopoMap extends Component {
         super()
         this.state = {
             mapData: [],
-            mousedOver: ''
+            mousedOverCounty: ''
         }
-        this.handleMouseOver = this.handleMouseOver.bind(this)
     }
-    handleMouseOver(index){
+    handleMouseOver = (index) => {
         console.log(this.state.mapData[index])
         this.setState({
-            mousedOver: this.state.mapData[index].properties.name
+            mousedOverCounty: this.state.mapData[index].properties.name
         })
     }
-    resetTooltip(){
+    resetTooltip = () => {
         this.setState({
-            mousedOver: ''
+            mousedOverCounty: ''
         })
     }
-    projection(){
+    projection = () => {
         return geoMercator()
             .scale(1000*2)
             .center([-120, 36])
             .translate([600/2, 450/2])
     }
-    componentDidMount(){
+    componentDidMount = () => {
         fetch('/caCountiesTopoSimple.json')
             .then(response => {
                 if(!response.ok){
@@ -44,7 +43,7 @@ class TopoMap extends Component {
                 })
             })
     }
-    render(){
+    render = () => {
         return (
             <div className='map'>
                 <svg width={600} height={450} viewBox='0 0 600 450'>
@@ -65,7 +64,7 @@ class TopoMap extends Component {
                     </g>
                 </svg>
                 {
-                    this.state.mousedOver ?  <div className="tooltip">{this.state.mousedOver}</div> : null
+                    this.state.mousedOverCounty ?  <div className="tooltip">{this.state.mousedOverCounty}</div> : null
                 }    
             </div>
         )
