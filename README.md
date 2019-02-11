@@ -22,10 +22,9 @@
 7.	When you are 100% sure your data is ready to be merged into the master copy, make sure you are on YOUR OWN BRANCH (lower left of VScode), call Bryant to let him know you're merging, then:
     1.	$git add -A
     2.	$git commit -m “Adds {put your name here}’s {2-3 word description of the feature/code you made}”
-    3.  $git push
-    4.	$git push origin {without the curlies braces, branchname}
+    3.	$git push origin {without the curlies braces, branchname}
         1.	This passes up the whole branch
-    5.  go to your PERSONAL GitHub repo
+    4.  go to your PERSONAL GitHub repo
         1.  OPTION 1: on your PERSONAL GitHub repo, accept and merge the pull requests
         2.  OPTION 2 (if you don't see the button green button ABOVE the clone/download button on the right): 
             1. in your PERSONAL remote repo, use the dorpdown on the left to switch to the branch that you made updates to
