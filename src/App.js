@@ -18,6 +18,14 @@ class App extends Component {
     })
   }
 
+  // getAPIInfo = () =>
+    //axios('/getApi', res => {
+    //   console.log(res)
+    //  this.setState({
+          // data: Response.data
+    // })
+    // })
+
   handleLogout = (username) => {
     this.setState({
       username: username,
