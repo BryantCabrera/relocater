@@ -8,7 +8,7 @@ import GraphContainer from './GraphContainer/GraphContainer';
 class App extends Component {
   state = {
     logged: false,
-    username: ''
+    username: '',
   }
 
   handleLogin = (username) => {
