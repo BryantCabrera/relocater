@@ -4,6 +4,9 @@ import './App.css';
 import UserProfile from './Userprofile/Userprofile';
 import Login from './Login/Login'
 import GraphContainer from './GraphContainer/GraphContainer';
+import Header from './Header/Header'
+import MainContainer from './MainContainer/MainContainer'
+import { Route, Switch, withRouter } from 'react-router-dom'
 
 class App extends Component {
   state = {
@@ -16,6 +19,8 @@ class App extends Component {
       username: username,
       logged: true
     })
+    //set state and go to route to get to main container
+    this.props.history.push('/maincontainer')
   }
 
   // getAPIInfo = () =>
@@ -34,12 +39,20 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="App">
-        {this.state.logged ? <GraphContainer username={this.state.username} handleLogout={this.handleLogout}/> : <Login handleLogin={this.handleLogin}/>}
+        <Header />
+        {
+          this.state.logged
+            ?  <Switch>
+                <Route exact path='/graphcontainer' component = {GraphContainer}/>
+                <Route exact path='/maincontainer' component = {MainContainer} />
+              </Switch>
+            : <Login handleLogin={this.handleLogin}/>
+        }
       </div>
     );
   }
 }
-
-export default App;
+export default withRouter(App);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 export default class LineGraph extends Component {
     render(){
@@ -8,6 +8,7 @@ export default class LineGraph extends Component {
                 <XAxis dataKey='name'/>
                 <YAxis />
                 <CartesianGrid stroke="#ccc" strokeDasharray='5 5'/>
+                <Tooltip/>
                 <Line type='monotone' dataKey='uv' stroke='#ff0000'/>
                 <Line type='monotone' dataKey='pv' stroke='#00ff00'/>
             </LineChart>

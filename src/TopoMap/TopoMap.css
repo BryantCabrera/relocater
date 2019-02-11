@@ -1,0 +1,29 @@
+.map {
+    position: relative;
+    margin: 0 auto;
+	width: 600px;
+	margin-top: 1rem;
+}
+
+.county {
+    fill: steelblue
+}
+
+.county:hover {
+    fill: pink
+}
+
+.tooltip {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+	text-align: center;
+	width: 75px;
+	padding: 2px;
+	font: 12px sans-serif;
+	color: white;
+	background: black;
+	border: 0px;
+	border-radius: 8px;
+	pointer-events: none;
+}

@@ -7,6 +7,7 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
+    "d3-geo": "^1.11.3",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "mongoose": "^5.4.10",
@@ -17,7 +18,9 @@
     "recharts": "^1.4.2",
     "xml-js": "^1.6.9",
     "xml2json": "^0.11.2",
-    "xml2json-light": "^1.0.6"
+    "xml2json-light": "^1.0.6",
+    "topojson-client": "^3.0.0",
+    "xml-js": "^1.6.9"
   },
   "scripts": {
     "start": "react-scripts start",

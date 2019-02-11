@@ -16,13 +16,8 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-
         this.props.handleLogin(this.state.username)
     }
-
-
-
-
 
     render() {
         return (
@@ -46,9 +41,6 @@ class Login extends Component {
             </form>
         )
     }
-
-
-
 }
 
 
