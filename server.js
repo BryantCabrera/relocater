@@ -27,13 +27,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-// require controllers
-const countyController = require('./controllers/countyController');
-const userController = require('./controllers/userController');
+// require routers
+const countyRouter = require('./routers/counties');
+const userRouter = require('./routers/users');
 
-// use controllers
-app.use('/counties', countyController);
-app.use('/users', userController);
+// use routers
+app.use('/counties', countyRouter);
+app.use('/users', userRouter);
 
 
 
