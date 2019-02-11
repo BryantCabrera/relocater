@@ -11,14 +11,14 @@ class MainContainer extends Component {
 
     render (){
         return(
-    <div>
-        <div className="m-container">
+            <div>
+                <div className="m-container">
 
-        <p>this is the main container</p>
-            <GraphButton/>
-            <TopoMap />
-        </div>
-    </div>
+                <p>this is the main container</p>
+                    <GraphButton/>
+                    <TopoMap />
+                </div>
+            </div>
         )
     }
 }

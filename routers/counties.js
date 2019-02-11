@@ -16,8 +16,7 @@ router.get('/', async (req, res, next) => {
       } catch (err){ 
         res.send(err)
       }
-  });
-
+});
 
 // show route
 router.get('/:id', async (req, res, next) => {
@@ -32,5 +31,4 @@ router.get('/:id', async (req, res, next) => {
     }
 });
 
-
-  module.exports = router
+module.exports = router
