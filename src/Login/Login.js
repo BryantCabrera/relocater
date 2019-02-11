@@ -21,7 +21,8 @@ class Login extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="log-in" onSubmit={this.handleSubmit}>
+                <h1>Relocater</h1>
                 <input
                 placeholder = 'username'
                 type = 'text'

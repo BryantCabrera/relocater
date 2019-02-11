@@ -19,15 +19,15 @@ router.get('/', async (req, res, next) => {
 
 // show route
 router.get('/:id', async (req, res, next) => {
-    try  {
-        const foundCounty = await County.findById(req.params.id);
-        res.json({
-            status: 200,
-            data: foundCounty
-        });
-    } catch (err){
-    res.send(err);
-    }
+  try  {
+      const foundCounty = await County.findById(req.params.id);
+      res.json({
+          status: 200,
+          data: foundCounty
+      });
+  } catch (err){
+  res.send(err);
+  }
 });
 
 module.exports = router
