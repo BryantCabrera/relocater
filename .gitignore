@@ -22,3 +22,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# API KEY'S 
+# DON'T REMOVE THIS - ummer
+/api
+api 
+/api/zillowApi.js
+/api/socrataApi.js
