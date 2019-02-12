@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Signup from '../Login/Signup'
-import GoogleoAuth from './GoogleoAuth'
+import Signup from '../Login/Signup';
+import GoogleoAuth from './GoogleoAuth';
 
 class Login extends Component {
     state = {

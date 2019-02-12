@@ -4,7 +4,7 @@ const axios = require('axios');
 const parser = require('xml2json-light');
 const socrataKey = process.env.SOCRATA_KEY
 const zillowKey = process.env.ZILLOW_KEY
-
+const numbeoKey = process.env.NUMBEO_KEY
 
 // socrata API
 // median_income
@@ -37,6 +37,57 @@ app.get('/zillow/:county', async (req, res) => {
         console.log(error)
         })
 })
+
+
+// Numbeo API USA CRIME RATE DATA 
+app.get('/numbeo/crime', async (req, res) => {
+    axios.get(`https://www.numbeo.com/api/country_crime?api_key=${numbeoKey}&country=USA`)
+    .then((response) => {
+        // console.log(response.data)
+        return res.json(response.data)
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
+})
+
+
+// Numbeo API USA HEALTH CARE DATA
+app.get('/numbeo/health', async (req, res) => {
+    axios.get(`https://www.numbeo.com/api/country_healthcare?api_key=${numbeoKey}&country=USA`)
+    .then((response) => {
+        // console.log(response.data)
+        return res.json(response.data)
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
+})
+
+// Numbeo API USA POLLUTION DATA
+app.get('/numbeo/pollution', async (req, res) => {
+    axios.get(`https://www.numbeo.com/api/country_pollution?api_key=${numbeoKey}&country=USA`)
+    .then((response) => {
+        // console.log(response.data)
+        return res.json(response.data)
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
+})
+
+// Numbeo API USA TRAFFIC DATA
+app.get('/numbeo/traffic', async (req, res) => {
+    axios.get(`https://www.numbeo.com/api/country_traffic?api_key=${numbeoKey}&country=USA`)
+    .then((response) => {
+        // console.log(response.data)
+        return res.json(response.data)
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
+})
+
 
 
 
