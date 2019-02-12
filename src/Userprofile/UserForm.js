@@ -3,7 +3,7 @@ import React from 'react'
 const UserForm = (props) => 
             <div>
                 <input
-                    name='username'
+                    name='name'
                     placeholder='username'
                     value={props.user.username}
 
