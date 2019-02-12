@@ -17,7 +17,6 @@ class SignUp extends Component {
         })
     }
     
-
     handleSubmit = (e) => {
         e.preventDefault();
         this.state.handleChange(this.state.email)
@@ -25,9 +24,10 @@ class SignUp extends Component {
 
     render(){
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    {/* <label>name</label> */}
+            <div className='FormCenter'>
+                <form onSubmit={this.handleSubmit} className='FormFields'>
+                    <div className='FormField'>
+                    <label className='FormField__Label'>Enter your name</label>
                     <input 
                     type='text'
                     placeholder='Enter your name'
@@ -35,26 +35,35 @@ class SignUp extends Component {
                     value={this.state.name}
                     onChange={this.handleChange}
                     />
-                    <br/>
-                    {/* <label>email</label> */}
+                    </div>
+
+                    <div className='FormField'>
+                    <label className='FormField__Label'>Enter your email</label>
                     <input 
                     type='email' 
                     placeholder='Enter your email' 
                     name='email'
                     value={this.state.email}
                     onChange={this.handleChange}
+                    className="FormField__Input"
                     />
-                    <br/>
-                    {/* <label>password</label> */}
+                    </div>
+
+                    <div className='FormField'>
+                    <label className='FormField__Label'>Enter your password</label>
                     <input 
                     type='password'
                     placeholder='Enter your Password'
                     name='password'
                     value={this.state.password}
                     onChange={this.handleChange}
+                    className="FormField__Input"
                     />
-                    <br/>
-                    <button>Sign Up</button>
+                    </div>
+                   
+                   <div className='FormField'>
+                    <button className="FormField__Button">Sign Up</button>
+                    </div>
                 </form>
             </div>
         )

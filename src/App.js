@@ -5,7 +5,8 @@ import Login from './Login/Login';
 import GraphContainer from './GraphContainer/GraphContainer';
 import Header from './Header/Header';
 import MainContainer from './MainContainer/MainContainer';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter, NavLink } from 'react-router-dom';
+import Signup from './Login/Signup'
 
 class App extends Component {
   state = {
@@ -42,6 +43,34 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        {/* <div className="App__Aside"></div>
+          <div className="App__Form">
+            <div className="PageSwitcher">
+                <NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
+                <NavLink exact to="/" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
+              </div>
+
+              <div className="FormTitle">
+                  <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
+              </div>
+
+              <Route exact path="/" component={Signup}>
+              </Route>
+              <Route path="/sign-in" component={Login}>
+              </Route>
+          </div> */}
+
+
+
+
+
+
+
+
+
+
+
+
         {
           this.state.logged
             ?  <Switch>

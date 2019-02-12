@@ -4,7 +4,7 @@ import UserForm from './UserForm';
 
 class UserProfile extends Component {
     state= {
-        username: '',
+        name: '',
         email: '',
         uCounty: '',
         uIncome: 0,
@@ -14,9 +14,9 @@ class UserProfile extends Component {
     }
 
     editUser = userIndex => {
-        const {username, email, uCounty, uIncome} = this.state
+        const {name, email, uCounty, uIncome} = this.state
         this.setState({
-            username,
+            name,
             email,
             uCounty,
             uIncome,
