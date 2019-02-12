@@ -7,7 +7,8 @@ let hist;
 let parentFunc;
 
 const responseGoogle = async (response) => {
-    console.log(response);
+    console.log(response, ' this is responseGoogle');
+    // console.log(response.hg.id_token, ' this is responseGoogle.hg.id_token');
     console.log(hist);
     // hist.push('/home');
     const user = {
@@ -18,6 +19,8 @@ const responseGoogle = async (response) => {
     console.log(user);
 
     try {
+
+
         const loginResponse = await fetch('http://localhost:9000/users', {
             method: 'POST',
             credentials: 'include',
