@@ -8,6 +8,8 @@ import MainContainer from './MainContainer/MainContainer';
 import { Route, Switch, withRouter, NavLink } from 'react-router-dom';
 import Signup from './Login/Signup'
 
+import data from './data/db.json'
+
 class App extends Component {
   state = {
     logged: false,
@@ -38,7 +40,10 @@ class App extends Component {
     })
   }
 
+
+
   render() {
+    console.log(data)
     console.log(this.props)
     return (
       <div className="App">

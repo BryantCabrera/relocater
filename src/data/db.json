@@ -1,0 +1,530 @@
+[
+    { 
+    "County" : "Alameda",
+    "Population" : "1638220",
+    "Unemployment_Rate" : "4.7%",
+    "Median_Income" : "$73,775",
+    "Avg_Home_Price" : "$882,300",
+    "Median_Age" : "36"
+    },
+
+    {
+        "County": "Alpine",
+        "Population" : "1,110",
+        "Unemployment_Rate": "7.6%",
+        "Median_Income" : "$61,343",
+        "Avg_Home_Price" : "$337,450",
+        "Median_Age" : "43"
+    },
+
+    {
+        "County": "Amador",        
+        "Population" : "37,001",
+        "Unemployment_Rate": "6.1%",
+        "Median_Income" : "$52,964",
+        "Avg_Home_Price" : "$302,600",
+        "Median_Age" : "49"
+    },
+
+    {
+        "County": "Butte",
+        "Population" : "225,411",
+        "Unemployment_Rate": "7.2%",
+        "Median_Income" : "$43,165",
+        "Avg_Home_Price" : "$274,100",
+        "Median_Age" : "39"
+    },
+
+    {
+        "County": "Calaveras",
+        "Population" : "44,828",
+        "Unemployment_Rate": "6.0%",
+        "Median_Income" : "$54,936",
+        "Avg_Home_Price" : "$297,100",
+        "Median_Age" : "50"
+    },
+
+    {
+        "County": "Colusa",
+        "Population" : "21,482",
+        "Unemployment_Rate": "13.7%",
+        "Median_Income" : "$50,503",
+        "Avg_Home_Price" : "$243,400",
+        "Median_Age" : "34"
+    },
+
+    {
+        "County": "Contra Costa",
+        "Population" : "1,126,750",
+        "Unemployment_Rate": "4.9%",
+        "Median_Income" : "$79,799",
+        "Avg_Home_Price" : "$620,100",
+        "Median_Age" : "38"
+    },
+
+    {
+        "County": "Del Norte",
+        "Population" : "27,254",
+        "Unemployment_Rate": "7.4%",
+        "Median_Income" : "$39,302",
+        "Avg_Home_Price" : "$198,513",
+        "Median_Age" : "39"
+    },
+    
+    {
+        "County": "El Dorado",
+        "Population" : "184,452",
+        "Unemployment_Rate": "5.4%",
+        "Median_Income" : "$68,507",
+        "Avg_Home_Price" : "$465,300",
+        "Median_Age" : "44"
+
+    },
+    
+    {
+        "County": "Fresno",
+        "Population" : "974,861",
+        "Unemployment_Rate": "9.4%",
+        "Median_Income" : "$45,201",
+        "Avg_Home_Price" : "$239,500",
+        "Median_Age" : "31"
+    },
+    
+    {
+        "County": "Glenn",
+        "Population" : "28,017",
+        "Unemployment_Rate": "8.6%",
+        "Median_Income" : "$40,106",
+        "Avg_Home_Price" : "$199,900",
+        "Median_Age" : "36"
+    },
+    
+    {
+        "County": "Humboldt",
+        "Population" : "135,727",
+        "Unemployment_Rate": "5.2%",
+        "Median_Income" : "$42,153",
+        "Avg_Home_Price" : "$285,800",
+        "Median_Age" : "37"
+    },
+    
+    {
+        "County": "Imperial",
+        "Population" : "180,191",
+        "Unemployment_Rate": "23.7%",
+        "Median_Income" : "$41,772",
+        "Avg_Home_Price" : "$193,500",
+        "Median_Age" : "31"
+    },
+    
+    {
+        "County": "Inyo",
+        "Population" : "18,260",
+        "Unemployment_Rate": "5.3%",
+        "Median_Income" : "$45,625",
+        "Avg_Home_Price" : "$331,300",
+        "Median_Age" : "45"
+    },
+    
+    {
+        "County": "Kern",
+        "Population" : "882,176",
+        "Unemployment_Rate": "10.8%",
+        "Median_Income" : "$48,574",
+        "Avg_Home_Price" : "$207,000",
+        "Median_Age" : "31"
+    },
+    
+    {
+        "County": "Kings",
+        "Population" : "150,965",
+        "Unemployment_Rate": "10.2%",
+        "Median_Income" : "$47,341",
+        "Avg_Home_Price" : "$201,100",
+        "Median_Age" : "31"
+    },
+    
+    {
+        "County": "Lake",
+        "Population" : "64,591",
+        "Unemployment_Rate": "6.7%",
+        "Median_Income" : "$35,997",
+        "Avg_Home_Price" : "$240,000",
+        "Median_Age" : "45"
+    },
+    
+    {
+        "County": "Lassen",
+        "Population" : "31,345",
+        "Unemployment_Rate": "6.7%",
+        "Median_Income" : "$53,351",
+        "Avg_Home_Price" : "$156,100",
+        "Median_Age" : "19"
+    },
+    
+    {
+        "County": "Los Angeles",
+        "Population" : "10,170,300",
+        "Unemployment_Rate": "5.2%",
+        "Median_Income" : "$55,870",
+        "Avg_Home_Price" : "$606,200",
+        "Median_Age" : "35"
+    },
+    
+    {
+        "County": "Madera",
+        "Population" : "154,998",
+        "Unemployment_Rate": "9.4%",
+        "Median_Income" : "$45,490",
+        "Avg_Home_Price" : "$238,300",
+        "Median_Age" : "33"
+    },
+    
+    {
+        "County": "Marin",
+        "Population" : "261,221",
+        "Unemployment_Rate": "3.5%",
+        "Median_Income" : "$91,529",
+        "Avg_Home_Price" : "$1,114,300",
+        "Median_Age" : "45"
+    },
+    
+    {
+        "County": "Mariposa",
+        "Population" : "17,531",
+        "Unemployment_Rate": "5.8%",
+        "Median_Income" : "$50,560",
+        "Avg_Home_Price" : "$226,800",
+        "Median_Age" : "50"
+    },
+    
+    {
+        "County": "Mendocino",
+        "Population" : "87,649",
+        "Unemployment_Rate": "5.1%",
+        "Median_Income" : "$43,290",
+        "Avg_Home_Price" : "$353,600",
+        "Median_Age" : "42"
+    },
+    
+    {
+        "County": "Merced",
+        "Population" : "268,455",
+        "Unemployment_Rate": "10.6%",
+        "Median_Income" : "$43,066",
+        "Avg_Home_Price" : "$253,300",
+        "Median_Age" : "30"
+    },
+    
+    {
+        "County": "Mondoc",
+        "Population" : "8,965",
+        "Unemployment_Rate": "7.2%",
+        "Median_Income" : "$38,560",
+        "Avg_Home_Price" : "$212,658",
+        "Median_Age" : "47"
+    },
+    
+    {
+        "County": "Mono",
+        "Population" : "13,909",
+        "Unemployment_Rate": "5.9%",
+        "Median_Income" : "$61,814",
+        "Avg_Home_Price" : "$400,540",
+        "Median_Age" : "37"
+    },
+    
+    {
+        "County": "Monterey",
+        "Population" : "433,898",
+        "Unemployment_Rate": "6.2%",
+        "Median_Income" : "$58,582",
+        "Avg_Home_Price" : "$537,700",
+        "Median_Age" : "33"
+    },
+    
+    {
+        "County": "Napa",
+        "Population" : "142,456",
+        "Unemployment_Rate": "4.2%",
+        "Median_Income" : "$70,925",
+        "Avg_Home_Price" : "$658,300",
+        "Median_Age" : "40"
+    },
+    
+    {
+        "County": "Nevada",
+        "Population" : "98,877",
+        "Unemployment_Rate": "5.0%",
+        "Median_Income" : "$56,949",
+        "Avg_Home_Price" : "$447,600",
+        "Median_Age" : "48"
+    },
+    
+    {
+        "County": "Orange",
+        "Population" : "3,169,780",
+        "Unemployment_Rate": "4.4%",
+        "Median_Income" : "$75,998",
+        "Avg_Home_Price" : "$720,600",
+        "Median_Age" : "36"
+    },
+    
+    {
+        "County": "Placer",
+        "Population" : "375,391",
+        "Unemployment_Rate": "4.8%",
+        "Median_Income" : "$73,747",
+        "Avg_Home_Price" : "$486,300",
+        "Median_Age" : "40"
+    },
+    
+    {
+        "County": "Plumas",
+        "Population" : "18,409",
+        "Unemployment_Rate": "8.3%",
+        "Median_Income" : "$48,032",
+        "Avg_Home_Price" : "$247,200",
+        "Median_Age" : "50"
+
+    },
+    
+    {
+        "County": "Riverside",
+        "Population" : "2,361,030",
+        "Unemployment_Rate": "6.7%",
+        "Median_Income" : "$56,592",
+        "Avg_Home_Price" : "$370,600",
+        "Median_Age" : "34"
+    },
+    
+    {
+        "County": "Sacramento",
+        "Population" : "1,501,340",
+        "Unemployment_Rate": "5.9%",
+        "Median_Income" : "$55,615",
+        "Avg_Home_Price" : "$355,500",
+        "Median_Age" : "35"
+    },
+    
+    {
+        "County": "San Benito",
+        "Population" : "58,792",
+        "Unemployment_Rate": "6.9%",
+        "Median_Income" : "$67,874",
+        "Avg_Home_Price" : "$517,000",
+        "Median_Age" : "34"
+
+    },
+    
+    {
+        "County": "San Bernadino",
+        "Population" : "2,128,130",
+        "Unemployment_Rate": "6.4%",
+        "Median_Income" : "$54,100",
+        "Avg_Home_Price" : "$338,600",
+        "Median_Age" : "32"
+    },
+    
+    {
+        "County": "San Diego",
+        "Population" : "3,299,520",
+        "Unemployment_Rate": "5.1%",
+        "Median_Income" : "$63,996",
+        "Avg_Home_Price" : "$582,000",
+        "Median_Age" : "34"
+    },
+    
+    {
+        "County": "San Francisco",
+        "Population" : "864,816",
+        "Unemployment_Rate": "3.5%",
+        "Median_Income" : "$78,378",
+        "Avg_Home_Price" : "$1,344,500",
+        "Median_Age" : "38"
+    },
+    
+    {
+        "County": "San Joaquin",
+        "Population" : "726,106",
+        "Unemployment_Rate": "8.3%",
+        "Median_Income" : "$53,253",
+        "Avg_Home_Price" : "$353,700",
+        "Median_Age" : "33"
+    },
+    
+    {
+        "County": "San Luis Obispo",
+        "Population" : "281,401",
+        "Unemployment_Rate": "4.5%",
+        "Median_Income" : "$59,454",
+        "Avg_Home_Price" : "$590,300",
+        "Median_Age" : "39"
+
+    },
+    
+    {
+        "County": "San Mateo",
+        "Population" : "765,135",
+        "Unemployment_Rate": "3.3%",
+        "Median_Income" : "$91,421",
+        "Avg_Home_Price" : "$1,374,300",
+        "Median_Age" : "39"
+    },
+    
+    {
+        "County": "Santa Barbara",
+        "Population" : "444,769",
+        "Unemployment_Rate": "4.9%",
+        "Median_Income" : "$63,409",
+        "Avg_Home_Price" : "$590,900",
+        "Median_Age" : "33"
+
+    },
+    
+    {
+        "County": "Santa Clara",
+        "Population" : "1,918,040",
+        "Unemployment_Rate": "4.1%",
+        "Median_Income" : "$93,854",
+        "Avg_Home_Price" : "$1,283,700",
+        "Median_Age" : "36"
+    },
+    
+    {
+        "County": "Santa Cruz",
+        "Population" : "274,146",
+        "Unemployment_Rate": "6.3%",
+        "Median_Income" : "$66,923",
+        "Avg_Home_Price" : "$853,200",
+        "Median_Age" : "36"
+    },
+    
+    {
+        "County": "Shasta",
+        "Population" : "179,533",
+        "Unemployment_Rate": "7.2%",
+        "Median_Income" : "$44,556",
+        "Avg_Home_Price" : "$248,500",
+        "Median_Age" : "41"
+    },
+    
+    {
+        "County": "Sierra",
+        "Population" : "2,967",
+        "Unemployment_Rate": "7.4%",
+        "Median_Income" : "$43,107",
+        "Avg_Home_Price" : "$284,075",
+        "Median_Age" : "53"
+    },
+    
+    {
+        "County": "Siskiyou",
+        "Population" : "43,554",
+        "Unemployment_Rate": "7.5%",
+        "Median_Income" : "$37,495",
+        "Avg_Home_Price" : "$185,600",
+        "Median_Age" : "47"
+    },
+    
+    {
+        "County": "Solano",
+        "Population" : "436,092",
+        "Unemployment_Rate": "5.9%",
+        "Median_Income" : "$67,341",
+        "Avg_Home_Price" : "$430,00",
+        "Median_Age" : "37"
+    },
+    
+    {
+        "County": "Sonoma",
+        "Population" : "502,146",
+        "Unemployment_Rate": "4.2%",
+        "Median_Income" : "$63,799",
+        "Avg_Home_Price" : "$649,100",
+        "Median_Age" : "40"
+    },
+    
+    {
+        "County": "Stanislaus",
+        "Population" : "538,388",
+        "Unemployment_Rate": "9.2%",
+        "Median_Income" : "$49,575",
+        "Avg_Home_Price" : "$302,000",
+        "Median_Age" : "33"
+    },
+       
+    {
+        "County": "Sutter",
+        "Population" : "96,463",
+        "Unemployment_Rate": "9.8%",
+        "Median_Income" : "$51,527",
+        "Avg_Home_Price" : "$287,200",
+        "Median_Age" : "35"
+    },
+       
+    {
+        "County": "Tehama",
+        "Population" : "63,308",
+        "Unemployment_Rate": "7.8%",
+        "Median_Income" : "$42,369",
+        "Avg_Home_Price" : "$196,300",
+        "Median_Age" : "40"
+    },
+       
+    {
+        "County": "Trinity",
+        "Population" : "13,069",
+        "Unemployment_Rate": "6.4%",
+        "Median_Income" : "$36,862",
+        "Avg_Home_Price" : "$297,460",
+        "Median_Age" : "50"
+    },
+       
+    {
+        "County": "Tulare",
+        "Population" : "459,863",
+        "Unemployment_Rate": "10.8%",
+        "Median_Income" : "$42,863",
+        "Avg_Home_Price" : "$198,400",
+        "Median_Age" : "30"
+    },
+       
+    {
+        "County": "Tuolumne",
+        "Population" : "53,709",
+        "Unemployment_Rate": "6.4%",
+        "Median_Income" : "$48,493",
+        "Avg_Home_Price" : "$246,944",
+        "Median_Age" : "48"
+    },
+       
+    {
+        "County": "Ventura",
+        "Population" : "850,536",
+        "Unemployment_Rate": "5.4%",
+        "Median_Income" : "$77,335",
+        "Avg_Home_Price" : "$587,800",
+        "Median_Age" : "36"
+    },
+       
+    {
+        "County": "Yolo",
+        "Population" : "213,016",
+        "Unemployment_Rate": "5.9%",
+        "Median_Income" : "$55,508",
+        "Avg_Home_Price" : "$432,400",
+        "Median_Age" : "31"
+    },
+       
+    {
+        "County": "Yuba",
+        "Population" : "74,492",
+        "Unemployment_Rate": "8.8%",
+        "Median_Income" : "$45,470",
+        "Avg_Home_Price" : "$257,000",
+        "Median_Age" : "32"
+    }
+   
+]
+
