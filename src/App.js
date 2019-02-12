@@ -45,8 +45,9 @@ class App extends Component {
         {
           this.state.logged
             ?  <Switch>
-                <Route exact path='/graphcontainer' component = {GraphContainer}/>
-                <Route exact path='/home' component = {MainContainer} />
+                <Route exact path='/graphcontainer' component={GraphContainer}/>
+                <Route exact path='/home' component={MainContainer} />
+                <Route exact path='/profile' component={UserProfile} />
                 <Route path="/counties/:id" component={GraphContainer} />
               </Switch>
             : <Login handleLogin={this.handleLogin} history={this.props.history} />
