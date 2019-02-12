@@ -1,19 +1,57 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { GoogleLogin } from 'react-google-login';
 import { GoogleLogout } from 'react-google-login';
-import { Route, Switch, withRouter } from 'react-router-dom';
 
-const responseGoogle = (response) => {
+let hist;
+
+const responseGoogle = async (response) => {
     console.log(response);
-    this.props.history.push('/graphcontainer');
-}
+    console.log(hist);
+    // hist.push('/home');
+    const parsedGoogleResponse = response //await response.json();
+    const user = {
+        username: parsedGoogleResponse.profileObj.givenName, 
+        email: parsedGoogleResponse.profileObj.email,
+        googleId: parsedGoogleResponse.profileObj.googleId
+    }
+    console.log(user);
 
+    try {
+        const loginResponse = await fetch ('http://localhost:9000/users', {
+            method: 'POST',
+            credentials: 'include',
+            body: JSON.stringify(user),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if(!loginResponse.ok) {
+            throw Error()
+        }
+
+        const parsedResponse = await loginResponse.json();
+
+        //pushes the link to your browser history
+        //this references the routes you defined in App.js
+        if(parsedResponse.data === 'login successful') {
+            hist.push('/home');
+        }
+
+        console.log(parsedResponse, ' this is login response from express api');
+    } catch (err) {
+        console.log(err);
+    }
+}
 
 class Login extends Component {
     state = {
         username: '',
         password: ''
+    }
+
+    componentDidMount = () => {
+        hist = this.props.history;
     }
 
     handleInput =(e) => {
@@ -42,17 +80,17 @@ class Login extends Component {
                 name = 'username'
                 value = {this.state.username}
                 onChange = {this.handleInput}
-                 />
-                 <br/>
-                 <input
+                />
+                <br/>
+                <input
                     type = 'text'
                     name = 'password'
                     placeholder = 'password'
                     onChange = {this.handleInput}
-                 />
-                 <br/>
+                />
+                <br/>
 
-                 <GoogleLogin
+                <GoogleLogin
                     clientId="488901735794-ja73cuju18dd1j49s25366elmgn39jpf.apps.googleusercontent.com"
                     buttonText="Login"
                     onSuccess={responseGoogle}

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import UserProfile from './Userprofile/Userprofile';
 import Login from './Login/Login';
@@ -50,7 +49,7 @@ class App extends Component {
                 <Route exact path='/home' component = {MainContainer} />
                 <Route path="/counties/:id" component={GraphContainer} />
               </Switch>
-            : <Login handleLogin={this.handleLogin}/>
+            : <Login handleLogin={this.handleLogin} history={this.props.history} />
         }
       </div>
     );
