@@ -52,6 +52,7 @@ class TopoMap extends Component {
                                 d={geoPath().projection(this.projection())(d)}
                                 className='county'
                                 stroke='#FFFFFF'
+                                fill={ `rgba(0, 0, 255,${1 / this.state.mapData.length * i})` }
                                 strokeWidth={0.5}
                                 onMouseEnter={() => this.handleMouseOver(i)}
                                 onMouseOut={() => this.resetTooltip()}
