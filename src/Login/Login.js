@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { GoogleLogin } from 'react-google-login';
 import { GoogleLogout } from 'react-google-login';
+import Signup from '../Login/Signup'
 
 let hist;
 
@@ -9,14 +10,14 @@ const responseGoogle = async (response) => {
     console.log(hist);
     // hist.push('/home');
     const user = {
-        username: response.profileObj.givenName, 
+        username: response.profileObj.givenName,
         email: response.profileObj.email,
         googleId: response.profileObj.googleId
     }
     console.log(user);
 
     try {
-        const loginResponse = await fetch ('http://localhost:9000/users', {
+        const loginResponse = await fetch('http://localhost:9000/users', {
             method: 'POST',
             credentials: 'include',
             body: JSON.stringify(user),
@@ -25,7 +26,7 @@ const responseGoogle = async (response) => {
             }
         });
 
-        if(!loginResponse.ok) {
+        if (!loginResponse.ok) {
             throw Error()
         }
 
@@ -33,7 +34,7 @@ const responseGoogle = async (response) => {
 
         //pushes the link to your browser history
         //this references the routes you defined in App.js
-        if(parsedResponse.data === 'login successful') {
+        if (parsedResponse.data === 'login successful') {
             hist.push('/home');
         }
 
@@ -45,20 +46,20 @@ const responseGoogle = async (response) => {
 
 class Login extends Component {
     state = {
-        username: '',
-        password: ''
+        email: '',
+        name: '',
+        password: '',
     }
 
     componentDidMount = () => {
         hist = this.props.history;
     }
 
-    handleInput =(e) => {
+    handleInput = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
-
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -71,23 +72,35 @@ class Login extends Component {
 
     render() {
         return (
-            <form className="log-in" onSubmit={this.handleSubmit}>
-                <h1>Relocater</h1>
-                <input
-                placeholder = 'username'
-                type = 'text'
-                name = 'username'
-                value = {this.state.username}
-                onChange = {this.handleInput}
-                />
-                <br/>
-                <input
-                    type = 'text'
-                    name = 'password'
-                    placeholder = 'password'
-                    onChange = {this.handleInput}
-                />
-                <br/>
+            <div>
+                <div className='log-in'>
+                    <form className="log-in" onSubmit={this.handleSubmit}>
+                        <h1>Relocater</h1>
+                        <input
+                            placeholder='email'
+                            type='text'
+                            name='email'
+                            value={this.state.email}
+                            onChange={this.handleInput}
+                            required
+                        />
+                        <br />
+                        <input
+                            type='text'
+                            name='password'
+                            placeholder='password'
+                            value={this.state.password}
+                            onChange={this.handleInput}
+                            required
+                        />
+                        <br />
+                        <button type='submit'>log in</button> <br />
+                    </form>
+                </div>
+
+                <div className="sign-up">
+                    <Signup />
+                </div>
 
                 <GoogleLogin
                     clientId="488901735794-ja73cuju18dd1j49s25366elmgn39jpf.apps.googleusercontent.com"
@@ -98,9 +111,11 @@ class Login extends Component {
                 <GoogleLogout
                     buttonText="Logout"
                     onLogoutSuccess={this.logout}
-                    >
+                >
                 </GoogleLogout>
-            </form>
+            </div>
+
+
         )
     }
 }

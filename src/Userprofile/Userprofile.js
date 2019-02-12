@@ -4,10 +4,10 @@ import UserForm from './UserForm';
 
 class UserProfile extends Component {
     state= {
-        username: 'Dope Fiend',
-        email: 'dope@fiend.com',
-        uCounty: 'King',
-        uIncome: 100000,
+        username: '',
+        email: '',
+        uCounty: '',
+        uIncome: 0,
         editing: {}
 
 
