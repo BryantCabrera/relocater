@@ -3,6 +3,7 @@ import { GoogleLogin } from 'react-google-login';
 import { GoogleLogout } from 'react-google-login';
 
 let hist;
+let parentFunc;
 
 const responseGoogle = async (response) => {
     console.log(response);
@@ -38,6 +39,7 @@ const responseGoogle = async (response) => {
         }
 
         console.log(parsedResponse, ' this is login response from express api');
+        parentFunc();
     } catch (err) {
         console.log(err);
     }
@@ -51,6 +53,7 @@ class Login extends Component {
 
     componentDidMount = () => {
         hist = this.props.history;
+        parentFunc = this.props.handleLogin;
     }
 
     handleInput =(e) => {

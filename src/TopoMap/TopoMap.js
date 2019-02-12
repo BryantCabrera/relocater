@@ -10,7 +10,7 @@ class TopoMap extends Component {
         mousedOverCounty: ''
     }
     handleMouseOver = (index) => {
-        console.log(this.state.mapData[index])
+        // console.log(this.state.mapData[index])
         this.setState({
             mousedOverCounty: this.state.mapData[index].properties.name
         })
