@@ -43,7 +43,7 @@ class MainContainer extends Component {
 
                     <p>this is the main container</p>
                     <GraphButton />
-                    <TopoMap />
+                    <TopoMap history={this.props.history}/>
                 </div>
             </div>
         )
