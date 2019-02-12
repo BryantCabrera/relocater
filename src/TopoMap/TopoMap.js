@@ -55,6 +55,7 @@ class TopoMap extends Component {
                                 strokeWidth={0.5}
                                 onMouseEnter={() => this.handleMouseOver(i)}
                                 onMouseOut={() => this.resetTooltip()}
+                                onClick={() => this.props.history.push(`/counties/${this.state.mapData[i].properties.name}`)}
                             />
                             ))
                         }

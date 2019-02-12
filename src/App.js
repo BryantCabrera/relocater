@@ -48,6 +48,7 @@ class App extends Component {
             ?  <Switch>
                 <Route exact path='/graphcontainer' component = {GraphContainer}/>
                 <Route exact path='/home' component = {MainContainer} />
+                <Route path="/counties/:id" component={GraphContainer} />
               </Switch>
             : <Login handleLogin={this.handleLogin}/>
         }
