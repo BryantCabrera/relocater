@@ -8,11 +8,10 @@ const responseGoogle = async (response) => {
     console.log(response);
     console.log(hist);
     // hist.push('/home');
-    const parsedGoogleResponse = response //await response.json();
     const user = {
-        username: parsedGoogleResponse.profileObj.givenName, 
-        email: parsedGoogleResponse.profileObj.email,
-        googleId: parsedGoogleResponse.profileObj.googleId
+        username: response.profileObj.givenName, 
+        email: response.profileObj.email,
+        googleId: response.profileObj.googleId
     }
     console.log(user);
 
