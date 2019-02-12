@@ -6,11 +6,12 @@
 }
 
 .county {
-    fill: steelblue
+	/* fill: steelblue */
+	stroke: black
 }
 
 .county:hover {
-    fill: pink
+	fill: navajowhite;
 }
 
 .tooltip {
