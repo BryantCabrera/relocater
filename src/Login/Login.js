@@ -35,11 +35,12 @@ const responseGoogle = async (response) => {
         //pushes the link to your browser history
         //this references the routes you defined in App.js
         if(parsedResponse.data === 'login successful') {
-            hist.push('/home');
+            // hist.push('/home');
+            parentFunc();
         }
 
         console.log(parsedResponse, ' this is login response from express api');
-        parentFunc();
+        
     } catch (err) {
         console.log(err);
     }
