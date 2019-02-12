@@ -7,6 +7,8 @@ import Header from './Header/Header';
 import MainContainer from './MainContainer/MainContainer';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
+import data from './data/db.json'
+
 class App extends Component {
   state = {
     logged: false,
@@ -37,7 +39,10 @@ class App extends Component {
     })
   }
 
+
+
   render() {
+    console.log(data)
     console.log(this.props)
     return (
       <div className="App">
