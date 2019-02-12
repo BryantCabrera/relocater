@@ -1,4 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { GoogleLogin } from 'react-google-login';
+import { GoogleLogout } from 'react-google-login';
+import { Route, Switch, withRouter } from 'react-router-dom';
+
+const responseGoogle = (response) => {
+    console.log(response);
+    this.props.history.push('/graphcontainer');
+}
 
 
 class Login extends Component {
@@ -17,6 +26,10 @@ class Login extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.handleLogin(this.state.username)
+    }
+
+    logout = () => {
+        this.props.history.push('/home');
     }
 
     render() {
@@ -38,7 +51,18 @@ class Login extends Component {
                     onChange = {this.handleInput}
                  />
                  <br/>
-                 <button name = 'Login'>Log In</button>
+
+                 <GoogleLogin
+                    clientId="488901735794-ja73cuju18dd1j49s25366elmgn39jpf.apps.googleusercontent.com"
+                    buttonText="Login"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                />
+                <GoogleLogout
+                    buttonText="Logout"
+                    onLogoutSuccess={this.logout}
+                    >
+                </GoogleLogout>
             </form>
         )
     }

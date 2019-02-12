@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import UserProfile from './Userprofile/Userprofile';
-import Login from './Login/Login'
+import Login from './Login/Login';
 import GraphContainer from './GraphContainer/GraphContainer';
-import Header from './Header/Header'
-import MainContainer from './MainContainer/MainContainer'
-import { Route, Switch, withRouter } from 'react-router-dom'
+import Header from './Header/Header';
+import MainContainer from './MainContainer/MainContainer';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 class App extends Component {
   state = {
