@@ -11,29 +11,29 @@ import Signup from './Login/Signup'
 class App extends Component {
   state = {
     logged: false,
-    username: '',
+    user: {},
   }
 
-  handleLogin = (username) => {
+  handleLogin = (user) => {
     this.setState({
-      username: username,
+      user: user,
       logged: true
     })
     //set state and go to route to get to main container
-    this.props.history.push('/home')
+    // this.props.history.push('/home')
   }
 
   // getAPIInfo = () =>
-    //axios('/getApi', res => {
-    //   console.log(res)
-    //  this.setState({
-          // data: Response.data
-    // })
-    // })
+  //axios('/getApi', res => {
+  //   console.log(res)
+  //  this.setState({
+  // data: Response.data
+  // })
+  // })
 
-  handleLogout = (username) => {
+  handleLogout = () => {
     this.setState({
-      username: username,
+      user: {},
       logged: false
     })
   }
@@ -42,45 +42,16 @@ class App extends Component {
     console.log(this.props)
     return (
       <div className="App">
-        <Header />
-        {/* <div className="App__Aside"></div>
-          <div className="App__Form">
-            <div className="PageSwitcher">
-                <NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
-                <NavLink exact to="/" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
-              </div>
+        <Header user={this.state.user} />
+        <Switch>
+          <Route exact path='/graphcontainer' component={GraphContainer} />
+          <Route exact path='/home' component={MainContainer} />
+          <Route exact path='/profile/:id' component={UserProfile} />
+          <Route path="/counties/:id" component={GraphContainer} />
+          <Route exact path='/' component={() => <Login handleLogin={this.handleLogin} />} />
+        </Switch>
+            {/* <Login handleLogin={this.handleLogin} history={this.props.history} /> */}
 
-              <div className="FormTitle">
-                  <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
-              </div>
-
-              <Route exact path="/" component={Signup}>
-              </Route>
-              <Route path="/sign-in" component={Login}>
-              </Route>
-          </div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-        {
-          this.state.logged
-            ?  <Switch>
-                <Route exact path='/graphcontainer' component={GraphContainer}/>
-                <Route exact path='/home' component={MainContainer} />
-                <Route exact path='/profile' component={UserProfile} />
-                <Route path="/counties/:id" component={GraphContainer} />
-              </Switch>
-            : <Login handleLogin={this.handleLogin} history={this.props.history} />
-        }
       </div>
     );
   }

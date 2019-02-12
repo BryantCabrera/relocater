@@ -50,14 +50,12 @@ class Login extends Component {
                 </div>
 
                 <div className="sign-up">
-                    <Signup />
+                    <Signup handleLogin={this.props.handleLogin}/>
                 </div>
 
                 <GoogleoAuth />
                 
             </div>
-
-
         )
     }
 }
