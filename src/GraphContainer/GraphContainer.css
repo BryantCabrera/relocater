@@ -1,0 +1,27 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 636px 100px;
+    grid-template-rows: 416.88px 100px;
+    grid-template-areas: "graph info"
+                        "compareBox compareBox";
+    height: 50vh;
+    width: 50vw;
+    justify-self: center;
+    align-self: center;
+    margin: 0 auto;
+    
+}
+.g-container {
+    grid-area: graph;
+
+
+}
+.info-container {
+    grid-area: info;
+    font-size: 10px;
+}
+
+.compare-box {
+    grid-area: compareBox;
+}
+
