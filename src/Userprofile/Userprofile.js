@@ -72,7 +72,8 @@ class UserProfile extends Component {
             userCounty: county,
             userIncome: income
         } )
-            .then(res => console.log(res))
+            // redirect home
+            .then(this.props.history.push('/home'))
     }
 
     render(){
