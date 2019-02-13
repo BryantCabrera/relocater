@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import './Login-Signup.css'
 
 class SignUp extends Component {
     state = {
@@ -33,7 +34,7 @@ class SignUp extends Component {
         // this.setState({
         //     user: parsedResponse.user
         // // })
-        this.props.handleLogin(parsedResponse.user)
+        // this.props.handleLogin(parsedResponse.user)
 
         if (parsedResponse.data === 'login successful'){
             this.props.history.push(`/profile/${parsedResponse.user._id}`)
@@ -58,6 +59,7 @@ class SignUp extends Component {
                     name='username'
                     value={this.state.name}
                     onChange={this.handleChange}
+                    className="FormField__Input"
                     />
                     </div>
 

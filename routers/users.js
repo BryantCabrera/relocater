@@ -10,9 +10,6 @@ router.post('/', async (req, res) => {
     req.body.password = crypted;
     try {
         const user = await User.create(req.body);
-        req.session.logged = true;
-        req.session.username = req.body.username;
-        req.session.userId = user._id
         console.log('this is the user', user)
         res.json({
             status: 200,
@@ -24,6 +21,7 @@ router.post('/', async (req, res) => {
         res.send(err);
     }
 });
+
 //log-out //authentication/logout
 router.get('/logout', async(req, res) => {
     req.logout()
@@ -32,6 +30,34 @@ router.get('/logout', async(req, res) => {
     })
 })
 
+// log-in
+router.post('/login', async (req, res) => {
+    try {
+        //find logged in user //getting username from req.body (username was attached via form and kept in req.body)
+        const loggedUser = await User.findOne({ email: req.body.email })
+        console.log(loggedUser, 'asdfasdfasdf')
+        //if user exists
+        if (loggedUser) {
+            //check if the passwords match, if they do, redirect to page, if not, keep on splash page with message
+            //calling loggedUser's password from schema and comparing it to the form attached to req.body
+            if (bcrypt.compareSync(req.body.password, loggedUser.password) && req.body.email === loggedUser.email) {
+                //once find user
+                //have to set session.message to empty string
+                res.json({loggedUser, isLoggedIn: true})
+            } else {
+                res.json({ isLoggedIn: false})
+            }
+        } else {
+            res.json({
+                status: 200,
+                data: 'login successful',
+                user
+            })
+        }
+    } catch (err) {
+        res.send(err)
+    }
+});
 // show route
 router.get('/:id', async (req, res) => {
     try {
@@ -75,44 +101,33 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// log-in
-router.post('/login', async (req, res) => {
+
+// update route
+router.put('/:id', async (req, res) => {
     try {
-        //find logged in user //getting username from req.body (username was attached via form and kept in req.body)
-        const loggedUser = await User.findOne({ username: req.body.username })
-        // console.log(loggedUser)
-        //if user exists
-        if (loggedUser) {
-            //check if the passwords match, if they do, redirect to page, if not, keep on splash page with message
-            //calling loggedUser's password from schema and comparing it to the form attached to req.body
-            if (bcrypt.compareSync(req.body.password, loggedUser.password) && req.body.email === loggedUser.email) {
-                //once find user
-                //have to set session.message to empty string
-                req.session.message = '',
-                req.session.logged = true
-                req.session.username = loggedUser.username
-                req.session.userId = loggedUser._id
-                req.session.user = loggedUser
-                // res.locals.username = loggedUser.username
-            } else {
-                res.json({
-                    status: 200,
-                    data: 'login successful',
-                    user
-                })
-            }
-        } else {
-            res.json({
-                status: 200,
-                data: 'login successful',
-                user
-            })
-        }
+        const updatedUser = await User.findByIdAndUpdate(req.body.id);
+        res.json({
+            status: 200,
+            data: updatedUser
+        })
     } catch (err) {
+        console.log(err)
         res.send(err)
     }
-})
+});
 
-
+// Delete Route
+router.delete('/:id', async (req, res) => {
+    console.log('delete')
+    try {
+       const deletedUser = await User.findByIdAndRemove(req.params.id);
+        res.json({
+          status: 200,
+          data: deletedUser
+        });
+    } catch(err){
+      res.send(err);
+    }
+});
 
 module.exports = router;

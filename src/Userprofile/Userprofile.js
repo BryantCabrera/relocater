@@ -19,13 +19,13 @@ class UserProfile extends Component {
 
     componentDidMount () {
         this.getUser(this.props.match.params.id)
-//         axios(`/users/${this.props.match.params.id}`)
-//             .then(res => {
-//                 console.log(res.data, ' this is res.data from react');
-//                 this.setState({
-//                     user: res.data.data
-//                 });
-//             });
+        // axios(`/users/${this.props.match.params.id}`)
+        //     .then(res => {
+        //         console.log(res.data, ' this is res.data from react');
+        //         this.setState({
+        //             user: res.data.data
+        //         });
+        //     });
     }
 
     getUser = async (id) => {
@@ -36,13 +36,15 @@ class UserProfile extends Component {
             if(!response.ok) {
                 throw Error(response.statusText)
             }
-            console.log(response)
-            const userParsed = await response.json()
+            console.log(response, ' this is response from REACT Userprofile > getUser');
+            const userParsed = await response.json();
 
             this.setState({
                 user: userParsed.data
-            })
-            console.log(userParsed )
+            });
+
+            console.log(this.state, ' this is the state in REACT Userprofile.js')
+            console.log(userParsed, ' this is userParsed from REACTUserprofile');
         } catch (err) {
             console.log(err)
             return err
@@ -69,8 +71,12 @@ class UserProfile extends Component {
         axios.put(`/users/${this.state.user._id}`, {
             userCounty: county,
             userIncome: income
-        } )
-            .then(res => console.log(res))
+        })
+            .then((updatedUser) => this.props.updateParentState(updatedUser.data.data))
+            // redirect home
+            .then(this.props.history.push('/home'))
+
+        
     }
 
     render(){
@@ -88,6 +94,7 @@ class UserProfile extends Component {
             />
             <input name="salary" onChange={(e) => this.updateSearchBar(e)} type="Number" placeholder="Salary"/>
             <button onClick={this.handleSubmit}>Submit this</button>
+            <button onClick={() => this.props.deleteUser(this.state.user._id)}>Delete Your Profile</button>
             </div>
         )
     }
