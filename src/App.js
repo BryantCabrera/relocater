@@ -26,7 +26,7 @@ class App extends Component {
 
   componentDidMount() {
     socket.on('google', user => {
-      // this.popup.close()
+      this.popup.close()
       console.log(user, ' this is user');
       console.log(user.id, ' this is user.id');
       this.setState({user, logged: true})
@@ -105,6 +105,14 @@ class App extends Component {
     }
   }
 
+  updateParentState = (updatedUser) => {
+    // console.log(updatedUser, ' this is updatedUser passed to App.js from Userprofile.js')
+    this.setState({
+      user: updatedUser
+    });
+    // console.log(this.state, ' this is state from App.js after updateParentState')
+  }
+
   render() {
     // console.log(this.props)
     return (
@@ -113,7 +121,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
           <Route exact path='/home' component={MainContainer} />
-          <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser}/> } />
+          <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser} updateParentState={this.updateParentState} /> } />
           {/* <Route exact path='/profile/:id' component={UserProfile} deleteUser={this.deleteUser} /> */}
           <Route path="/counties/:id" render={(props) => <GraphContainer {...props} user={this.state.user}/> } />
         </Switch>

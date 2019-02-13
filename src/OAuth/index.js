@@ -12,7 +12,7 @@ class OAuth extends Component {
         const { socket, provider } = this.props;
     
         socket.on(provider, user => {  
-          this.popup.close()
+        //   this.popup.close()
           this.setState({user});
           console.log(user, 'this is user from REACT index.js OAuth')
         })

@@ -71,9 +71,12 @@ class UserProfile extends Component {
         axios.put(`/users/${this.state.user._id}`, {
             userCounty: county,
             userIncome: income
-        } )
+        })
+            .then((updatedUser) => this.props.updateParentState(updatedUser.data.data))
             // redirect home
             .then(this.props.history.push('/home'))
+
+        
     }
 
     render(){
