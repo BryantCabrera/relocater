@@ -4,7 +4,7 @@
     grid-template-rows: 416.88px 100px;
     grid-template-areas: "graph info"
                         "compareBox compareBox";
-    height: 50vh;
+    height: 85vh;
     width: 50vw;
     justify-self: center;
     align-self: center;
@@ -19,6 +19,7 @@
 .info-container {
     grid-area: info;
     font-size: 10px;
+
 }
 
 .compare-box {
@@ -28,4 +29,8 @@
 #compare-icon {
     height: 50px;
     width: 50px;
+}
+
+#footer {
+    /* margin-top: 15% */
 }
