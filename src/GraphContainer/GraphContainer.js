@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LineGraph from './LineGraph'
-
+import InfoContainer from './InfoContainer'
+import './GraphContainer.css'
 class GraphContainer extends Component {
     state = {
         socrataData: [],
@@ -46,12 +47,20 @@ class GraphContainer extends Component {
     // } 
     render = () => {
         return (
-            <div>
+            <div className="grid-container">
                 <div className="g-container">
                     <h1>{this.props.match.params.id} Median Income</h1>
                     {
                         this.state.socrataData.length > 0 && <LineGraph socrataData={this.state.socrataData} />
                     }
+                </div>
+                <div className="info-container">
+                    < InfoContainer countyName={this.props.match.params.id} />
+
+
+                </div>
+                <div className="compare-box">
+                COMPARE BOX
                 </div>
             </div>
         )

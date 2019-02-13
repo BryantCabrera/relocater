@@ -264,7 +264,7 @@
     },
     
     {
-        "County": "Mondoc",
+        "County": "Modoc",
         "Population" : "8965",
         "Unemployment_Rate": "7.2",
         "Median_Income" : "38560",
@@ -387,7 +387,7 @@
     },
     
     {
-        "County": "San Bernadino",
+        "County": "San Bernardino",
         "Population" : "2128130",
         "Unemployment_Rate": "6.4",
         "Median_Income" : "54100",
