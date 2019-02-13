@@ -26,7 +26,7 @@ class App extends Component {
 
   componentDidMount() {
     socket.on('google', user => {
-      this.popup.close()
+      // this.popup.close()
       console.log(user, ' this is user');
       console.log(user.id, ' this is user.id');
       this.setState({user, logged: true})
