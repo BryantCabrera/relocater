@@ -33,21 +33,36 @@ class App extends Component {
   // })
   // })
 
-  handleLogout = () => {
-    this.setState({
-      user: {},
-      logged: false
-    })
-  }
+  handleLogout= async() => {
+    try {
+        const response = await fetch('/users/logout')
+
+          if(!response.ok) {
+            throw Error(response.statusText)
+          } else {
+          console.log(response)
+          }
+          const deletedSession = await response.json()
+          console.log(deletedSession)
+          this.setState({
+            user: deletedSession.user || {}
+          })
+          this.props.history.push('/')
+
+       } catch (err) {
+        console.log(err)
+    }
+
+
+}
+
 
 
 
   render() {
-    console.log(data)
-    console.log(this.props)
     return (
       <div className="App">
-        <Header user={this.state.user} />
+        <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
           <Route exact path='/graphcontainer' component={GraphContainer} />
           <Route exact path='/home' component={MainContainer} />
@@ -56,7 +71,7 @@ class App extends Component {
           <Route exact path='/' component={() => <Login handleLogin={this.handleLogin} />} />
         </Switch>
             {/* <Login handleLogin={this.handleLogin} history={this.props.history} /> */}
-
+       
       </div>
     );
   }
