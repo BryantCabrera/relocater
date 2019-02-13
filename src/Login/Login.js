@@ -74,6 +74,7 @@ class Login extends Component {
     // }
 
     render() {
+        console.log(process.env);
         return (
             <div>
                 <div className='log-in'>

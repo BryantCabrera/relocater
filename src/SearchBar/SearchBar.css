@@ -1,0 +1,16 @@
+#search-results {
+    position: absolute;
+    top: 15%;
+    right: 47%;
+    background: black;
+    color: pink;
+    z-index: 2;
+    list-style-type: none;
+    /* padding: 1rem; */
+
+}
+
+.counties:hover{
+    background-color: white;
+    cursor: pointer;
+}

@@ -88,8 +88,22 @@ app.get('/numbeo/traffic', async (req, res) => {
     })
 })
 
+const ax = axios.create({
+    baseURL: 'http://localhost:9000/'
+  })
 
 
+
+app.get('/myapi', async (req, res) => {
+    ax.get('./data/db.json') 
+    .then((response) => {
+        console.log(response)
+        // return res.json(response)
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
+})
 
 
 

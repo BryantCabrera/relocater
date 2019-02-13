@@ -54,9 +54,10 @@ class GoogleoAuth extends Component {
     }
     
     render(){
+        let host = process.env.NODE_ENV === 'development' ? 'http://localhost:9000' : 'URL TBD AFTER DEPLOYMENT';
         return(
             <div>
-            <GoogleLogin
+            {/* <GoogleLogin
                 clientId="488901735794-ja73cuju18dd1j49s25366elmgn39jpf.apps.googleusercontent.com"
                 buttonText="Login"
                 onSuccess={responseGoogle}
@@ -66,7 +67,8 @@ class GoogleoAuth extends Component {
                 buttonText="Logout"
                 onLogoutSuccess={this.logout}
             >
-            </GoogleLogout>
+            </GoogleLogout> */}
+            <a href={`${host}/auth/google`}>LogIn with Google</a>
             </div>
         )
     }
