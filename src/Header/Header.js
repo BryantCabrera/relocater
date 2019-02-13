@@ -6,7 +6,7 @@ const Header = ( props) => {
     return (
         <header>
             <div className="nav-bar">
-                <p className="nav-home"><Link to='/home'><img class="housing-icon"src="../../housing-icon.png"></img></Link></p>
+                <p className="nav-home"><Link to='/home'><img className="housing-icon"src="../../housing-icon.png"></img></Link></p>
                 {
                     props.user._id
                         && 
