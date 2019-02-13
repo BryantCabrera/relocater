@@ -1,0 +1,17 @@
+#footer {
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    left: 10px;
+    height: 30px;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+
+}
+
+#footer:visited { text-decoration: none; }
+#footer:hover { text-decoration: none; }
+#footer:focus { text-decoration: none; }
+#footer:hover, a:active { text-decoration: none; }
+

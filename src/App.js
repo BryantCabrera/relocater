@@ -10,8 +10,8 @@ import Header from './Header/Header';
 import MainContainer from './MainContainer/MainContainer';
 import { Route, Switch, withRouter, NavLink } from 'react-router-dom';
 import Signup from './Login/Signup'
-
-
+import Footer from './Footer/Footer'
+import Contact from './Contact/Contact'
 const socket = io('http://localhost:3030');
 // const providers = ['twitter', 'google', 'facebook', 'github'];
 
@@ -87,7 +87,9 @@ class App extends Component {
           <Route exact path='/home' component={MainContainer} />
           <Route exact path='/profile/:id' component={UserProfile} />
           <Route path="/counties/:id" component={GraphContainer} />
+          <Route path="/contact" component={Contact} />
         </Switch>
+        <Footer />
       </div>
     );
   }
