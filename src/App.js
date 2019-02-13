@@ -112,11 +112,10 @@ class App extends Component {
         <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
           <Route exact path="/" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
-          <Route exact path='/graphcontainer' component={GraphContainer}/>
           <Route exact path='/home' component={MainContainer} />
           <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser}/> } />
           {/* <Route exact path='/profile/:id' component={UserProfile} deleteUser={this.deleteUser} /> */}
-          <Route path="/counties/:id" component={GraphContainer} />
+          <Route path="/counties/:id" render={(props) => <GraphContainer {...props} user={this.state.user}/> } />
         </Switch>
       </div>
     );
