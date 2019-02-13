@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Signup from '../Login/Signup';
 import GoogleoAuth from './GoogleoAuth';
+import OAuth from '../OAuth'
 
 class Login extends Component {
     state = {
@@ -106,7 +107,7 @@ class Login extends Component {
                     <Signup handleLogin={this.props.handleLogin}/>
                 </div>
 
-                <GoogleoAuth />
+                <OAuth socket={this.props.socket} provider={'google'}/>
                 
             </div>
         )

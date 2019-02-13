@@ -30,7 +30,7 @@ class App extends Component {
       console.log(user, ' this is user');
       console.log(user.id, ' this is user.id');
       this.setState({user, logged: true})
-      this.props.history.push(`/users/${user.id}`)
+      this.props.history.push(`/profile/${user._id}`)
     })
   }
 
@@ -80,18 +80,16 @@ class App extends Component {
       <div className="App">
         <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
+          <Route exact path="/" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
           <Route exact path='/graphcontainer' component={GraphContainer}/>
           <Route exact path='/home' component={MainContainer} />
           <Route exact path='/profile/:id' component={UserProfile} />
           <Route path="/counties/:id" component={GraphContainer} />
         </Switch>
-        <Login handleLogin={this.handleLogin} history={this.props.history} />
-          <OAuth 
-            provider={'google'}
-            socket={socket}
-          />
       </div>
     );
   }
 }
+
+//combined authO with login to give it an exact route to render
 export default withRouter(App);
