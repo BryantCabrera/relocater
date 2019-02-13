@@ -4,9 +4,11 @@ import GoogleoAuth from './GoogleoAuth';
 
 class Login extends Component {
     state = {
-        email: '',
-        name: '',
-        password: '',
+        user:{
+            email: '',
+            name: '',
+            password: ''
+        }        
     }
 
     handleInput = (e) => {
@@ -15,10 +17,61 @@ class Login extends Component {
         })
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault();
-        this.props.handleLogin(this.state.username)
+        // this.state.handleChange(this.state.email)
+        try{
+            const loginResponse = await fetch ('http://localhost:9000/users', {
+            method: 'POST',
+            credentials: 'include',
+            body: JSON.stringify(this.state),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
+        if(!loginResponse.ok) {
+            throw Error(loginResponse.statusText)
+        }
+
+        const parsedResponse = await loginResponse.json()
+        // this.setState({
+        //     user: parsedResponse.user
+        // // })
+        this.props.handleLogin(parsedResponse.user)
+
+        if (parsedResponse.data === 'login successful'){
+            this.props.history.push(`/profile/${parsedResponse.user._id}`)
+        }
+
+        console.log(parsedResponse, ' This is the login response')
+
+        } catch (err) {
+            console.log(err)
+        }
     }
+
+    // handleLogout= async (e) => {
+    //     try {
+    //         const response = await fetch('http://localhost:9000/users/logout', {
+    //             method: '',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             }
+    //         })
+
+    //         if(!response.ok) {
+    //             throw Error(response.statusText)
+    //         }
+
+    //         this.setState({
+    //             user:{}
+    //         })
+
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
+    // }
 
     render() {
         return (
@@ -30,7 +83,7 @@ class Login extends Component {
                             placeholder='email'
                             type='text'
                             name='email'
-                            value={this.state.email}
+                            value={this.state.user.email}
                             onChange={this.handleInput}
                             required
                         />
@@ -39,7 +92,7 @@ class Login extends Component {
                             type='text'
                             name='password'
                             placeholder='password'
-                            value={this.state.password}
+                            value={this.state.user.password}
                             onChange={this.handleInput}
                             required
                         />
