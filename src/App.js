@@ -10,6 +10,7 @@ import Header from './Header/Header';
 import MainContainer from './MainContainer/MainContainer';
 import { Route, Switch, withRouter, NavLink } from 'react-router-dom';
 import Signup from './Login/Signup'
+import axios from 'axios';
 
 
 const socket = io('http://localhost:3030');
@@ -29,38 +30,29 @@ class App extends Component {
       // this.popup.close()
       console.log(user, ' this is user');
       console.log(user.id, ' this is user.id');
-      this.setState({user, logged: true})
+      this.setState({ user, logged: true })
       user.isNew
         ? this.props.history.push(`/profile/${user._id}`)
         : this.props.history.push('/home')
     })
   }
 
-  handleLogin = (user) => {
-    this.setState({
-      user: user,
-      logged: true
-    })
-    //set state and go to route to get to main container
-    // this.props.history.push('/home')
-  }
 
-  // getAPIInfo = () =>
-    //axios('/getApi', res => {
-    //   console.log(res)
-    //  this.setState({
-          // data: Response.data
-    // })
-    // })
+    
+  // handleLoginSubmit = async (e, userInfo) => {
+  //   e.preventDefault()
+  //   axios.post('/users/login', userInfo)
+  //     .then(res => res.data.isLoggedIn ? this.props.history.push('/home') : this.props.history.push('/'))
+  // }
 
-    handleLogout = async () => {
-    try {
-      const response = await fetch('/users/logout')
+  handleLogout = async () => {
+      try {
+        const response = await fetch('/users/logout')
 
-        if(!response.ok) {
+        if (!response.ok) {
           throw Error(response.statusText)
         } else {
-        console.log(response)
+          console.log(response)
         }
         const deletedSession = await response.json()
         console.log(deletedSession)
@@ -70,7 +62,7 @@ class App extends Component {
         this.props.history.push('/')
 
       } catch (err) {
-      console.log(err)
+        console.log(err)
     }
   }
 
@@ -85,7 +77,7 @@ class App extends Component {
         credentials: 'include'
       });
 
-      if(!deletedUser.ok) {
+      if (!deletedUser.ok) {
         throw Error(deletedUser.statusText);
       }
 
@@ -111,10 +103,10 @@ class App extends Component {
       <div className="App">
         <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
-          <Route exact path="/" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
-          <Route exact path='/graphcontainer' component={GraphContainer}/>
+          <Route exact path="/" component={() => <Login socket={socket} />} />
+          <Route exact path='/graphcontainer' component={GraphContainer} />
           <Route exact path='/home' component={MainContainer} />
-          <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser}/> } />
+          <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser} />} />
           {/* <Route exact path='/profile/:id' component={UserProfile} deleteUser={this.deleteUser} /> */}
           <Route path="/counties/:id" component={GraphContainer} />
         </Switch>
