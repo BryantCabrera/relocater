@@ -2,528 +2,644 @@
     { 
     "County" : "Alameda",
     "Population" : "1638220",
-    "Unemployment_Rate" : "4.7%",
-    "Median_Income" : "$73,775",
-    "Avg_Home_Price" : "$882,300",
-    "Median_Age" : "36"
+    "Unemployment_Rate" : "4.7",
+    "Median_Income" : "73775",
+    "Avg_Home_Price" : "882300",
+    "Median_Age" : "36",
+    "Living_Wage" : "17.47",
+    "Poverty_Wage" : "5.84"
     },
 
     {
         "County": "Alpine",
-        "Population" : "1,110",
-        "Unemployment_Rate": "7.6%",
-        "Median_Income" : "$61,343",
-        "Avg_Home_Price" : "$337,450",
-        "Median_Age" : "43"
+        "Population" : "1110",
+        "Unemployment_Rate": "7.6",
+        "Median_Income" : "61343",
+        "Avg_Home_Price" : "337450",
+        "Median_Age" : "43",
+        "Living_Wage" : "11.59",
+        "Poverty_Wage" : "5.84"
     },
 
     {
         "County": "Amador",        
-        "Population" : "37,001",
-        "Unemployment_Rate": "6.1%",
-        "Median_Income" : "$52,964",
-        "Avg_Home_Price" : "$302,600",
-        "Median_Age" : "49"
+        "Population" : "37001",
+        "Unemployment_Rate": "6.1",
+        "Median_Income" : "52964",
+        "Avg_Home_Price" : "302600",
+        "Median_Age" : "49",
+        "Living_Wage" : "12.11",
+        "Poverty_Wage" : "5.84"
     },
 
     {
         "County": "Butte",
-        "Population" : "225,411",
-        "Unemployment_Rate": "7.2%",
-        "Median_Income" : "$43,165",
-        "Avg_Home_Price" : "$274,100",
-        "Median_Age" : "39"
+        "Population" : "225411",
+        "Unemployment_Rate": "7.2",
+        "Median_Income" : "43165",
+        "Avg_Home_Price" : "274100",
+        "Median_Age" : "39",
+        "Living_Wage" : "12.02",
+        "Poverty_Wage" : "5.84"
     },
 
     {
         "County": "Calaveras",
-        "Population" : "44,828",
-        "Unemployment_Rate": "6.0%",
-        "Median_Income" : "$54,936",
-        "Avg_Home_Price" : "$297,100",
-        "Median_Age" : "50"
+        "Population" : "44828",
+        "Unemployment_Rate": "6.0",
+        "Median_Income" : "54936",
+        "Avg_Home_Price" : "297100",
+        "Median_Age" : "50",
+        "Living_Wage" : "11.41",
+        "Poverty_Wage" : "5.84"
     },
 
     {
         "County": "Colusa",
-        "Population" : "21,482",
-        "Unemployment_Rate": "13.7%",
-        "Median_Income" : "$50,503",
-        "Avg_Home_Price" : "$243,400",
-        "Median_Age" : "34"
+        "Population" : "21482",
+        "Unemployment_Rate": "13.7",
+        "Median_Income" : "50503",
+        "Avg_Home_Price" : "243400",
+        "Median_Age" : "34",
+        "Living_Wage" : "10.93",
+        "Poverty_Wage" : "5.84"
     },
 
     {
         "County": "Contra Costa",
-        "Population" : "1,126,750",
-        "Unemployment_Rate": "4.9%",
-        "Median_Income" : "$79,799",
-        "Avg_Home_Price" : "$620,100",
-        "Median_Age" : "38"
+        "Population" : "1126750",
+        "Unemployment_Rate": "4.9",
+        "Median_Income" : "79799",
+        "Avg_Home_Price" : "620100",
+        "Median_Age" : "38",
+        "Living_Wage" : "17.47",
+        "Poverty_Wage" : "5.84"
     },
 
     {
         "County": "Del Norte",
-        "Population" : "27,254",
-        "Unemployment_Rate": "7.4%",
-        "Median_Income" : "$39,302",
-        "Avg_Home_Price" : "$198,513",
-        "Median_Age" : "39"
+        "Population" : "27254",
+        "Unemployment_Rate": "7.4",
+        "Median_Income" : "39302",
+        "Avg_Home_Price" : "198513",
+        "Median_Age" : "39",
+        "Living_Wage" : "11.70",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "El Dorado",
-        "Population" : "184,452",
-        "Unemployment_Rate": "5.4%",
-        "Median_Income" : "$68,507",
-        "Avg_Home_Price" : "$465,300",
-        "Median_Age" : "44"
-
+        "Population" : "184452",
+        "Unemployment_Rate": "5.4",
+        "Median_Income" : "68507",
+        "Avg_Home_Price" : "465300",
+        "Median_Age" : "44",
+        "Living_Wage" : "12.32",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Fresno",
-        "Population" : "974,861",
-        "Unemployment_Rate": "9.4%",
-        "Median_Income" : "$45,201",
-        "Avg_Home_Price" : "$239,500",
-        "Median_Age" : "31"
+        "Population" : "974861",
+        "Unemployment_Rate": "9.4",
+        "Median_Income" : "45201",
+        "Avg_Home_Price" : "239500",
+        "Median_Age" : "31",
+        "Living_Wage" : "11.93",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Glenn",
-        "Population" : "28,017",
-        "Unemployment_Rate": "8.6%",
-        "Median_Income" : "$40,106",
-        "Avg_Home_Price" : "$199,900",
-        "Median_Age" : "36"
+        "Population" : "28017",
+        "Unemployment_Rate": "8.6",
+        "Median_Income" : "40106",
+        "Avg_Home_Price" : "199900",
+        "Median_Age" : "36",
+        "Living_Wage" : "11.01",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Humboldt",
-        "Population" : "135,727",
-        "Unemployment_Rate": "5.2%",
-        "Median_Income" : "$42,153",
-        "Avg_Home_Price" : "$285,800",
-        "Median_Age" : "37"
+        "Population" : "135727",
+        "Unemployment_Rate": "5.2",
+        "Median_Income" : "42153",
+        "Avg_Home_Price" : "285800",
+        "Median_Age" : "37",
+        "Living_Wage" : "11.54",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Imperial",
-        "Population" : "180,191",
-        "Unemployment_Rate": "23.7%",
-        "Median_Income" : "$41,772",
-        "Avg_Home_Price" : "$193,500",
-        "Median_Age" : "31"
+        "Population" : "180191",
+        "Unemployment_Rate": "23.7",
+        "Median_Income" : "41772",
+        "Avg_Home_Price" : "193500",
+        "Median_Age" : "31",
+        "Living_Wage" : "11.12",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Inyo",
-        "Population" : "18,260",
-        "Unemployment_Rate": "5.3%",
-        "Median_Income" : "$45,625",
-        "Avg_Home_Price" : "$331,300",
-        "Median_Age" : "45"
+        "Population" : "18260",
+        "Unemployment_Rate": "5.3",
+        "Median_Income" : "45625",
+        "Avg_Home_Price" : "331300",
+        "Median_Age" : "45",
+        "Living_Wage" : "12.31",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Kern",
-        "Population" : "882,176",
-        "Unemployment_Rate": "10.8%",
-        "Median_Income" : "$48,574",
-        "Avg_Home_Price" : "$207,000",
-        "Median_Age" : "31"
+        "Population" : "882176",
+        "Unemployment_Rate": "10.8",
+        "Median_Income" : "48574",
+        "Avg_Home_Price" : "207000",
+        "Median_Age" : "31",
+        "Living_Wage" : "11.76",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Kings",
-        "Population" : "150,965",
-        "Unemployment_Rate": "10.2%",
-        "Median_Income" : "$47,341",
-        "Avg_Home_Price" : "$201,100",
-        "Median_Age" : "31"
+        "Population" : "150965",
+        "Unemployment_Rate": "10.2",
+        "Median_Income" : "47341",
+        "Avg_Home_Price" : "201100",
+        "Median_Age" : "31",
+        "Living_Wage" : "12.25",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Lake",
-        "Population" : "64,591",
-        "Unemployment_Rate": "6.7%",
-        "Median_Income" : "$35,997",
-        "Avg_Home_Price" : "$240,000",
-        "Median_Age" : "45"
+        "Population" : "64591",
+        "Unemployment_Rate": "6.7",
+        "Median_Income" : "35997",
+        "Avg_Home_Price" : "240000",
+        "Median_Age" : "45",
+        "Living_Wage" : "11.18",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Lassen",
-        "Population" : "31,345",
-        "Unemployment_Rate": "6.7%",
-        "Median_Income" : "$53,351",
-        "Avg_Home_Price" : "$156,100",
-        "Median_Age" : "19"
+        "Population" : "31345",
+        "Unemployment_Rate": "6.7",
+        "Median_Income" : "53351",
+        "Avg_Home_Price" : "156100",
+        "Median_Age" : "19",
+        "Living_Wage" : "11.26",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Los Angeles",
-        "Population" : "10,170,300",
-        "Unemployment_Rate": "5.2%",
-        "Median_Income" : "$55,870",
-        "Avg_Home_Price" : "$606,200",
-        "Median_Age" : "35"
+        "Population" : "10170300",
+        "Unemployment_Rate": "5.2",
+        "Median_Income" : "55870",
+        "Avg_Home_Price" : "606200",
+        "Median_Age" : "35",
+        "Living_Wage" : "11.26",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Madera",
-        "Population" : "154,998",
-        "Unemployment_Rate": "9.4%",
-        "Median_Income" : "$45,490",
-        "Avg_Home_Price" : "$238,300",
-        "Median_Age" : "33"
+        "Population" : "154998",
+        "Unemployment_Rate": "9.4",
+        "Median_Income" : "45490",
+        "Avg_Home_Price" : "238300",
+        "Median_Age" : "33",
+        "Living_Wage" : "12.06",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Marin",
-        "Population" : "261,221",
-        "Unemployment_Rate": "3.5%",
-        "Median_Income" : "$91,529",
-        "Avg_Home_Price" : "$1,114,300",
-        "Median_Age" : "45"
+        "Population" : "261221",
+        "Unemployment_Rate": "3.5",
+        "Median_Income" : "91529",
+        "Avg_Home_Price" : "1114300",
+        "Median_Age" : "45",
+        "Living_Wage" : "20.58",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Mariposa",
-        "Population" : "17,531",
-        "Unemployment_Rate": "5.8%",
-        "Median_Income" : "$50,560",
-        "Avg_Home_Price" : "$226,800",
-        "Median_Age" : "50"
+        "Population" : "17531",
+        "Unemployment_Rate": "5.8",
+        "Median_Income" : "50560",
+        "Avg_Home_Price" : "226800",
+        "Median_Age" : "50",
+        "Living_Wage" : "11.46",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Mendocino",
-        "Population" : "87,649",
-        "Unemployment_Rate": "5.1%",
-        "Median_Income" : "$43,290",
-        "Avg_Home_Price" : "$353,600",
-        "Median_Age" : "42"
+        "Population" : "87649",
+        "Unemployment_Rate": "5.1",
+        "Median_Income" : "43290",
+        "Avg_Home_Price" : "353600",
+        "Median_Age" : "42",
+        "Living_Wage" : "12.00",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Merced",
-        "Population" : "268,455",
-        "Unemployment_Rate": "10.6%",
-        "Median_Income" : "$43,066",
-        "Avg_Home_Price" : "$253,300",
-        "Median_Age" : "30"
+        "Population" : "268455",
+        "Unemployment_Rate": "10.6",
+        "Median_Income" : "43066",
+        "Avg_Home_Price" : "253300",
+        "Median_Age" : "30",
+        "Living_Wage" : "10.91",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Mondoc",
-        "Population" : "8,965",
-        "Unemployment_Rate": "7.2%",
-        "Median_Income" : "$38,560",
-        "Avg_Home_Price" : "$212,658",
-        "Median_Age" : "47"
+        "Population" : "8965",
+        "Unemployment_Rate": "7.2",
+        "Median_Income" : "38560",
+        "Avg_Home_Price" : "212658",
+        "Median_Age" : "47",
+        "Living_Wage" : "10.49",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Mono",
-        "Population" : "13,909",
-        "Unemployment_Rate": "5.9%",
-        "Median_Income" : "$61,814",
-        "Avg_Home_Price" : "$400,540",
-        "Median_Age" : "37"
+        "Population" : "13909",
+        "Unemployment_Rate": "5.9",
+        "Median_Income" : "61814",
+        "Avg_Home_Price" : "400540",
+        "Median_Age" : "37",
+        "Living_Wage" : "12.54",
+        "Poverty_Wage" : "5.84"        
     },
     
     {
         "County": "Monterey",
-        "Population" : "433,898",
-        "Unemployment_Rate": "6.2%",
-        "Median_Income" : "$58,582",
-        "Avg_Home_Price" : "$537,700",
-        "Median_Age" : "33"
+        "Population" : "433898",
+        "Unemployment_Rate": "6.2",
+        "Median_Income" : "58582",
+        "Avg_Home_Price" : "537700",
+        "Median_Age" : "33",
+        "Living_Wage" : "13.83",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Napa",
-        "Population" : "142,456",
-        "Unemployment_Rate": "4.2%",
-        "Median_Income" : "$70,925",
-        "Avg_Home_Price" : "$658,300",
-        "Median_Age" : "40"
+        "Population" : "142456",
+        "Unemployment_Rate": "4.2",
+        "Median_Income" : "70925",
+        "Avg_Home_Price" : "658300",
+        "Median_Age" : "40",
+        "Living_Wage" : "13.95",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Nevada",
-        "Population" : "98,877",
-        "Unemployment_Rate": "5.0%",
-        "Median_Income" : "$56,949",
-        "Avg_Home_Price" : "$447,600",
-        "Median_Age" : "48"
+        "Population" : "98877",
+        "Unemployment_Rate": "5.0",
+        "Median_Income" : "56949",
+        "Avg_Home_Price" : "447600",
+        "Median_Age" : "48",
+        "Living_Wage" : "12.32",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Orange",
-        "Population" : "3,169,780",
-        "Unemployment_Rate": "4.4%",
-        "Median_Income" : "$75,998",
-        "Avg_Home_Price" : "$720,600",
-        "Median_Age" : "36"
+        "Population" : "3169780",
+        "Unemployment_Rate": "4.4",
+        "Median_Income" : "75998",
+        "Avg_Home_Price" : "720600",
+        "Median_Age" : "36",
+        "Living_Wage" : "15.85",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Placer",
-        "Population" : "375,391",
-        "Unemployment_Rate": "4.8%",
-        "Median_Income" : "$73,747",
-        "Avg_Home_Price" : "$486,300",
-        "Median_Age" : "40"
+        "Population" : "375391",
+        "Unemployment_Rate": "4.8",
+        "Median_Income" : "73747",
+        "Avg_Home_Price" : "486300",
+        "Median_Age" : "40",
+        "Living_Wage" : "12.32",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Plumas",
-        "Population" : "18,409",
-        "Unemployment_Rate": "8.3%",
-        "Median_Income" : "$48,032",
-        "Avg_Home_Price" : "$247,200",
-        "Median_Age" : "50"
+        "Population" : "18409",
+        "Unemployment_Rate": "8.3",
+        "Median_Income" : "48032",
+        "Avg_Home_Price" : "247200",
+        "Median_Age" : "50",
+        "Living_Wage" : "11.23",
+        "Poverty_Wage" : "5.84"
 
     },
     
     {
         "County": "Riverside",
-        "Population" : "2,361,030",
-        "Unemployment_Rate": "6.7%",
-        "Median_Income" : "$56,592",
-        "Avg_Home_Price" : "$370,600",
-        "Median_Age" : "34"
+        "Population" : "2361030",
+        "Unemployment_Rate": "6.7",
+        "Median_Income" : "56592",
+        "Avg_Home_Price" : "370600",
+        "Median_Age" : "34",
+        "Living_Wage" : "12.39",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Sacramento",
-        "Population" : "1,501,340",
-        "Unemployment_Rate": "5.9%",
-        "Median_Income" : "$55,615",
-        "Avg_Home_Price" : "$355,500",
-        "Median_Age" : "35"
+        "Population" : "1501340",
+        "Unemployment_Rate": "5.9",
+        "Median_Income" : "55615",
+        "Avg_Home_Price" : "355500",
+        "Median_Age" : "35",
+        "Living_Wage" : "12.32",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "San Benito",
-        "Population" : "58,792",
-        "Unemployment_Rate": "6.9%",
-        "Median_Income" : "$67,874",
-        "Avg_Home_Price" : "$517,000",
-        "Median_Age" : "34"
+        "Population" : "58792",
+        "Unemployment_Rate": "6.9",
+        "Median_Income" : "67874",
+        "Avg_Home_Price" : "517000",
+        "Median_Age" : "34",
+        "Living_Wage" : "15.69",
+        "Poverty_Wage" : "5.84"
 
     },
     
     {
         "County": "San Bernadino",
-        "Population" : "2,128,130",
-        "Unemployment_Rate": "6.4%",
-        "Median_Income" : "$54,100",
-        "Avg_Home_Price" : "$338,600",
-        "Median_Age" : "32"
+        "Population" : "2128130",
+        "Unemployment_Rate": "6.4",
+        "Median_Income" : "54100",
+        "Avg_Home_Price" : "338600",
+        "Median_Age" : "32",
+        "Living_Wage" : "12.39",
+        "Poverty_Wage" : "5.84"
+
     },
     
     {
         "County": "San Diego",
-        "Population" : "3,299,520",
-        "Unemployment_Rate": "5.1%",
-        "Median_Income" : "$63,996",
-        "Avg_Home_Price" : "$582,000",
-        "Median_Age" : "34"
+        "Population" : "3299520",
+        "Unemployment_Rate": "5.1",
+        "Median_Income" : "63996",
+        "Avg_Home_Price" : "582000",
+        "Median_Age" : "34",
+        "Living_Wage" : "15.61",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "San Francisco",
-        "Population" : "864,816",
-        "Unemployment_Rate": "3.5%",
-        "Median_Income" : "$78,378",
-        "Avg_Home_Price" : "$1,344,500",
-        "Median_Age" : "38"
+        "Population" : "864816",
+        "Unemployment_Rate": "3.5",
+        "Median_Income" : "78378",
+        "Avg_Home_Price" : "1344500",
+        "Median_Age" : "38",
+        "Living_Wage" : "20.58",
+        "Poverty_Wage" : "5.84"        
     },
     
     {
         "County": "San Joaquin",
-        "Population" : "726,106",
-        "Unemployment_Rate": "8.3%",
-        "Median_Income" : "$53,253",
-        "Avg_Home_Price" : "$353,700",
-        "Median_Age" : "33"
+        "Population" : "726106",
+        "Unemployment_Rate": "8.3",
+        "Median_Income" : "53253",
+        "Avg_Home_Price" : "353700",
+        "Median_Age" : "33",
+        "Living_Wage" : "11.49",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "San Luis Obispo",
-        "Population" : "281,401",
-        "Unemployment_Rate": "4.5%",
-        "Median_Income" : "$59,454",
-        "Avg_Home_Price" : "$590,300",
-        "Median_Age" : "39"
+        "Population" : "281401",
+        "Unemployment_Rate": "4.5",
+        "Median_Income" : "59454",
+        "Avg_Home_Price" : "590300",
+        "Median_Age" : "39",
+        "Living_Wage" : "13.73",
+        "Poverty_Wage" : "5.84"
 
     },
     
     {
         "County": "San Mateo",
-        "Population" : "765,135",
-        "Unemployment_Rate": "3.3%",
-        "Median_Income" : "$91,421",
-        "Avg_Home_Price" : "$1,374,300",
-        "Median_Age" : "39"
+        "Population" : "765135",
+        "Unemployment_Rate": "3.3",
+        "Median_Income" : "91421",
+        "Avg_Home_Price" : "1374300",
+        "Median_Age" : "39",
+        "Living_Wage" : "20.58",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Santa Barbara",
-        "Population" : "444,769",
-        "Unemployment_Rate": "4.9%",
-        "Median_Income" : "$63,409",
-        "Avg_Home_Price" : "$590,900",
-        "Median_Age" : "33"
+        "Population" : "444769",
+        "Unemployment_Rate": "4.9",
+        "Median_Income" : "63409",
+        "Avg_Home_Price" : "590900",
+        "Median_Age" : "33",
+        "Living_Wage" : "16.50",
+        "Poverty_Wage" : "5.84"
 
     },
     
     {
         "County": "Santa Clara",
-        "Population" : "1,918,040",
-        "Unemployment_Rate": "4.1%",
-        "Median_Income" : "$93,854",
-        "Avg_Home_Price" : "$1,283,700",
-        "Median_Age" : "36"
+        "Population" : "1918040",
+        "Unemployment_Rate": "4.1",
+        "Median_Income" : "93854",
+        "Avg_Home_Price" : "1283700",
+        "Median_Age" : "36",
+        "Living_Wage" : "18.62",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Santa Cruz",
-        "Population" : "274,146",
-        "Unemployment_Rate": "6.3%",
-        "Median_Income" : "$66,923",
-        "Avg_Home_Price" : "$853,200",
-        "Median_Age" : "36"
+        "Population" : "274146",
+        "Unemployment_Rate": "6.3",
+        "Median_Income" : "66923",
+        "Avg_Home_Price" : "853200",
+        "Median_Age" : "36",
+        "Living_Wage" : "18.62",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Shasta",
-        "Population" : "179,533",
-        "Unemployment_Rate": "7.2%",
-        "Median_Income" : "$44,556",
-        "Avg_Home_Price" : "$248,500",
-        "Median_Age" : "41"
+        "Population" : "179533",
+        "Unemployment_Rate": "7.2",
+        "Median_Income" : "44556",
+        "Avg_Home_Price" : "248500",
+        "Median_Age" : "41",
+        "Living_Wage" : "11.67",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Sierra",
-        "Population" : "2,967",
-        "Unemployment_Rate": "7.4%",
-        "Median_Income" : "$43,107",
-        "Avg_Home_Price" : "$284,075",
-        "Median_Age" : "53"
+        "Population" : "2967",
+        "Unemployment_Rate": "7.4",
+        "Median_Income" : "43107",
+        "Avg_Home_Price" : "284075",
+        "Median_Age" : "53",
+        "Living_Wage" : "12.72",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Siskiyou",
-        "Population" : "43,554",
-        "Unemployment_Rate": "7.5%",
-        "Median_Income" : "$37,495",
-        "Avg_Home_Price" : "$185,600",
-        "Median_Age" : "47"
+        "Population" : "43554",
+        "Unemployment_Rate": "7.5",
+        "Median_Income" : "37495",
+        "Avg_Home_Price" : "185600",
+        "Median_Age" : "47",
+        "Living_Wage" : "10.79",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Solano",
-        "Population" : "436,092",
-        "Unemployment_Rate": "5.9%",
-        "Median_Income" : "$67,341",
-        "Avg_Home_Price" : "$430,00",
-        "Median_Age" : "37"
+        "Population" : "436092",
+        "Unemployment_Rate": "5.9",
+        "Median_Income" : "67341",
+        "Avg_Home_Price" : "43000",
+        "Median_Age" : "37",
+        "Living_Wage" : "13.09",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Sonoma",
-        "Population" : "502,146",
-        "Unemployment_Rate": "4.2%",
-        "Median_Income" : "$63,799",
-        "Avg_Home_Price" : "$649,100",
-        "Median_Age" : "40"
+        "Population" : "502146",
+        "Unemployment_Rate": "4.2",
+        "Median_Income" : "63799",
+        "Avg_Home_Price" : "649100",
+        "Median_Age" : "40",
+        "Living_Wage" : "15.39",
+        "Poverty_Wage" : "5.84"
     },
     
     {
         "County": "Stanislaus",
-        "Population" : "538,388",
-        "Unemployment_Rate": "9.2%",
-        "Median_Income" : "$49,575",
-        "Avg_Home_Price" : "$302,000",
-        "Median_Age" : "33"
+        "Population" : "538388",
+        "Unemployment_Rate": "9.2",
+        "Median_Income" : "49575",
+        "Avg_Home_Price" : "302000",
+        "Median_Age" : "33",
+        "Living_Wage" : "12.12",
+        "Poverty_Wage" : "5.84"
     },
        
     {
         "County": "Sutter",
-        "Population" : "96,463",
-        "Unemployment_Rate": "9.8%",
-        "Median_Income" : "$51,527",
-        "Avg_Home_Price" : "$287,200",
-        "Median_Age" : "35"
+        "Population" : "96463",
+        "Unemployment_Rate": "9.8",
+        "Median_Income" : "51527",
+        "Avg_Home_Price" : "287200",
+        "Median_Age" : "35",
+        "Living_Wage" : "11.77",
+        "Poverty_Wage" : "5.84"
     },
        
     {
         "County": "Tehama",
-        "Population" : "63,308",
-        "Unemployment_Rate": "7.8%",
-        "Median_Income" : "$42,369",
-        "Avg_Home_Price" : "$196,300",
-        "Median_Age" : "40"
+        "Population" : "63308",
+        "Unemployment_Rate": "7.8",
+        "Median_Income" : "42369",
+        "Avg_Home_Price" : "196300",
+        "Median_Age" : "40",
+        "Living_Wage" : "11.04",
+        "Poverty_Wage" : "5.84"
     },
        
     {
         "County": "Trinity",
-        "Population" : "13,069",
-        "Unemployment_Rate": "6.4%",
-        "Median_Income" : "$36,862",
-        "Avg_Home_Price" : "$297,460",
-        "Median_Age" : "50"
+        "Population" : "13069",
+        "Unemployment_Rate": "6.4",
+        "Median_Income" : "36862",
+        "Avg_Home_Price" : "297460",
+        "Median_Age" : "50",
+        "Living_Wage" : "11.17",
+        "Poverty_Wage" : "5.84"
     },
        
     {
         "County": "Tulare",
-        "Population" : "459,863",
-        "Unemployment_Rate": "10.8%",
-        "Median_Income" : "$42,863",
-        "Avg_Home_Price" : "$198,400",
-        "Median_Age" : "30"
+        "Population" : "459863",
+        "Unemployment_Rate": "10.8",
+        "Median_Income" : "42863",
+        "Avg_Home_Price" : "198400",
+        "Median_Age" : "30",
+        "Living_Wage" : "11.48",
+        "Poverty_Wage" : "5.84"
     },
        
     {
         "County": "Tuolumne",
-        "Population" : "53,709",
-        "Unemployment_Rate": "6.4%",
-        "Median_Income" : "$48,493",
-        "Avg_Home_Price" : "$246,944",
-        "Median_Age" : "48"
+        "Population" : "53709",
+        "Unemployment_Rate": "6.4",
+        "Median_Income" : "48493",
+        "Avg_Home_Price" : "246944",
+        "Median_Age" : "48",
+        "Living_Wage" : "11.64",
+        "Poverty_Wage" : "5.84"
     },
        
     {
         "County": "Ventura",
-        "Population" : "850,536",
-        "Unemployment_Rate": "5.4%",
-        "Median_Income" : "$77,335",
-        "Avg_Home_Price" : "$587,800",
-        "Median_Age" : "36"
+        "Population" : "850536",
+        "Unemployment_Rate": "5.4",
+        "Median_Income" : "77335",
+        "Avg_Home_Price" : "587800",
+        "Median_Age" : "36",
+        "Living_Wage" : "14.63",
+        "Poverty_Wage" : "5.84"
     },
        
     {
         "County": "Yolo",
-        "Population" : "213,016",
-        "Unemployment_Rate": "5.9%",
-        "Median_Income" : "$55,508",
-        "Avg_Home_Price" : "$432,400",
-        "Median_Age" : "31"
+        "Population" : "213016",
+        "Unemployment_Rate": "5.9",
+        "Median_Income" : "55508",
+        "Avg_Home_Price" : "432400",
+        "Median_Age" : "31",
+        "Living_Wage" : "12.92",
+        "Poverty_Wage" : "5.84"
     },
        
     {
         "County": "Yuba",
-        "Population" : "74,492",
-        "Unemployment_Rate": "8.8%",
-        "Median_Income" : "$45,470",
-        "Avg_Home_Price" : "$257,000",
-        "Median_Age" : "32"
+        "Population" : "74492",
+        "Unemployment_Rate": "8.8",
+        "Median_Income" : "45470",
+        "Avg_Home_Price" : "257000",
+        "Median_Age" : "32",
+        "Living_Wage" : "11.77s",
+        "Poverty_Wage" : "5.84"
     }
    
 ]
