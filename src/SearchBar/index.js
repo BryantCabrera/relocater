@@ -34,7 +34,7 @@ export default class SearchBar extends Component {
                     (
                         this.state.filteredList.map((c, i) => {
                             if(this.state.search){
-                                return <li onClick={() => this.populateHandler} key={i} className='counties'>{c}</li>
+                                return <li onClick={this.populateHandler.bind(this)} key={i} className='counties'>{c}</li>
                             }
                         })
                     ) :
