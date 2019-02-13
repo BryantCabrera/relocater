@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import '../Login/Login-Signup.css'
-
-
+import { withRouter } from 'react-router-dom'
 
 class SignUp extends Component {
     state = {
-        email: '',
-        password: '',
-        name: '',
+        user: {}
     }
 
     handleChange = (e) => {
@@ -17,9 +12,38 @@ class SignUp extends Component {
         })
     }
     
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault();
-        this.state.handleChange(this.state.email)
+        // this.state.handleChange(this.state.email)
+        try{
+            const loginResponse =  await fetch ('/users', {
+            method: 'POST',
+            credentials: 'include',
+            body: JSON.stringify(this.state),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
+        if(!loginResponse.ok) {
+            throw Error(loginResponse.statusText)
+        }
+
+        const parsedResponse = await loginResponse.json()
+        // this.setState({
+        //     user: parsedResponse.user
+        // // })
+        this.props.handleLogin(parsedResponse.user)
+
+        if (parsedResponse.data === 'login successful'){
+            this.props.history.push(`/profile/${parsedResponse.user._id}`)
+        }
+
+        console.log(parsedResponse, ' This is the login response')
+
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     render(){
@@ -31,7 +55,7 @@ class SignUp extends Component {
                     <input 
                     type='text'
                     placeholder='Enter your name'
-                    name='name'
+                    name='username'
                     value={this.state.name}
                     onChange={this.handleChange}
                     />
@@ -70,4 +94,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+export default withRouter(SignUp);

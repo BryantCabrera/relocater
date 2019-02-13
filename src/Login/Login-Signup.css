@@ -1,4 +1,4 @@
-/* .sign-up {
+.sign-up {
     display: block;
     margin-bottom: 3rem;
 }
@@ -8,9 +8,9 @@
     width: 50%;
     padding: 10px;
     margin-top: 4%
-  } */
+  } 
 
-  /* .App__Aside {
+ .App__Aside {
     width: 50%;
     background-color: #66DAC7;
   }
@@ -126,4 +126,4 @@
     display: inline-block;
     border-bottom: 1.5px solid #225E62;
     padding-bottom: 5px;
-  } */
+  }

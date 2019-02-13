@@ -49,7 +49,9 @@ class GraphContainer extends Component {
             <div>
                 <div className="g-container">
                     <h1>{this.props.match.params.id} Median Income</h1>
-                    <LineGraph socrataData={this.state.socrataData} />
+                    {
+                        this.state.socrataData.length > 0 && <LineGraph socrataData={this.state.socrataData} />
+                    }
                 </div>
             </div>
         )

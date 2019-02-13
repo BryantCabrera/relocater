@@ -11,18 +11,19 @@ import MainContainer from './MainContainer/MainContainer';
 import { Route, Switch, withRouter, NavLink } from 'react-router-dom';
 import Signup from './Login/Signup'
 
+
 const socket = io('http://localhost:3030');
 // const providers = ['twitter', 'google', 'facebook', 'github'];
 
 class App extends Component {
   state = {
     logged: false,
+
     username: '',
     user: {},
 
   }
 
-  //from GreenSpot
   componentDidMount() {
     socket.on('google', user => {
       // this.popup.close()
@@ -33,13 +34,13 @@ class App extends Component {
     })
   }
 
-  handleLogin = (username) => {
+  handleLogin = (user) => {
     this.setState({
-      username: username,
+      user: user,
       logged: true
     })
     //set state and go to route to get to main container
-    this.props.history.push('/home')
+    // this.props.history.push('/home')
   }
 
   // getAPIInfo = () =>
@@ -50,38 +51,38 @@ class App extends Component {
     // })
     // })
 
-  handleLogout = (username) => {
-    this.setState({
-      username: username,
-      logged: false
-    })
-  }
+    handleLogout= async() => {
+    try {
+        const response = await fetch('/users/logout')
+
+          if(!response.ok) {
+            throw Error(response.statusText)
+          } else {
+          console.log(response)
+          }
+          const deletedSession = await response.json()
+          console.log(deletedSession)
+          this.setState({
+            user: deletedSession.user || {}
+          })
+          this.props.history.push('/')
+
+       } catch (err) {
+        console.log(err)
+    }
+
+
+}
 
   render() {
     // console.log(this.props)
     return (
       <div className="App">
-        <Header />
-        {/* <div className="App__Aside"></div>
-          <div className="App__Form">
-            <div className="PageSwitcher">
-                <NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
-                <NavLink exact to="/" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
-              </div>
-
-              <div className="FormTitle">
-                  <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
-              </div>
-
-              <Route exact path="/" component={Signup}>
-              </Route>
-              <Route path="/sign-in" component={Login}>
-              </Route>
-          </div> */}
+        <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
           <Route exact path='/graphcontainer' component={GraphContainer}/>
           <Route exact path='/home' component={MainContainer} />
-          <Route exact path='/profile' component={UserProfile} />
+          <Route exact path='/profile/:id' component={UserProfile} />
           <Route path="/counties/:id" component={GraphContainer} />
         </Switch>
         <Login handleLogin={this.handleLogin} history={this.props.history} />
