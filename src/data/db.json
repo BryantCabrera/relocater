@@ -1,13 +1,13 @@
 [
     { 
-    "County" : "Alameda",
-    "Population" : "1638220",
-    "Unemployment_Rate" : "4.7",
-    "Median_Income" : "73775",
-    "Avg_Home_Price" : "882300",
-    "Median_Age" : "36",
-    "Living_Wage" : "17.47",
-    "Poverty_Wage" : "5.84"
+        "County" : "Alameda",
+        "Population" : "1638220",
+        "Unemployment_Rate" : "4.7",
+        "Median_Income" : "73775",
+        "Avg_Home_Price" : "882300",
+        "Median_Age" : "36",
+        "Living_Wage" : "17.47",
+        "Poverty_Wage" : "5.84"
     },
 
     {
