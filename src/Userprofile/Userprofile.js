@@ -1,9 +1,11 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import axios from 'axios';
 import UserForm from './UserForm';
 
 
 class UserProfile extends Component {
     state= {
+        user: '',
         name: '',
         email: '',
         uCounty: '',
@@ -11,6 +13,17 @@ class UserProfile extends Component {
         editing: {}
 
 
+    }
+
+    //from GreenSpot
+    componentDidMount () {
+        axios(`/users/${this.props.match.params.id}`)
+            .then(res => {
+                console.log(res.data, ' this is res.data from react');
+                this.setState({
+                    user: res.data.data
+                });
+            });
     }
 
     editUser = userIndex => {

@@ -68,7 +68,7 @@ class GoogleoAuth extends Component {
                 onLogoutSuccess={this.logout}
             >
             </GoogleLogout> */}
-            <a href={`${host}/auth/google`}>LogIn with Google</a>
+            {/* <a href={`${host}/auth/google`}>LogIn with Google</a> */}
             </div>
         )
     }
