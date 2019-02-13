@@ -54,19 +54,20 @@ app.use(session({
     saveUninitialized: true 
 }))
 
+// cors
+// const corsOptions = {
+//     origin: 'http://localhost:3000',
+//     credentials: true,
+//     optionsSuccessStatus: 200
+// }
+
+app.use(cors());
+
 // Connecting sockets to the server and adding them to the request 
 // so that we can access them later in the controller
 const io = socketio(server)
 app.set('io', io)
 
-// cors
-const corsOptions = {
-    origin: 'http://localhost:3000',
-    credentials: true,
-    optionsSuccessStatus: 200
-}
-
-app.use(cors());
 
 // require routers
 const indexRouter = require('./routers');

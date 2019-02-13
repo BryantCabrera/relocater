@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
         res.send(err);
     }
 });
+
 //log-out //authentication/logout
 router.get('/logout', async(req, res) => {
     req.logout()
@@ -57,20 +58,6 @@ router.post('/:id', async (req, res) => {
     } catch (err) {
         console.log(err);
         res.send(err);
-    }
-});
-
-// update route
-router.put('/:id', async (req, res) => {
-    try {
-        const updatedUser = await User.findByIdAndUpdate(req.body.id);
-        res.json({
-            status: 200,
-            data: updatedUser
-        })
-    } catch (err) {
-        console.log(err)
-        res.send(err)
     }
 });
 
@@ -110,8 +97,34 @@ router.post('/login', async (req, res) => {
     } catch (err) {
         res.send(err)
     }
-})
+});
 
+// update route
+router.put('/:id', async (req, res) => {
+    try {
+        const updatedUser = await User.findByIdAndUpdate(req.body.id);
+        res.json({
+            status: 200,
+            data: updatedUser
+        })
+    } catch (err) {
+        console.log(err)
+        res.send(err)
+    }
+});
 
+// Delete Route
+router.delete('/:id', async (req, res) => {
+    console.log('delete')
+    try {
+       const deletedUser = await User.findByIdAndRemove(req.params.id);
+        res.json({
+          status: 200,
+          data: deletedUser
+        });
+    } catch(err){
+      res.send(err);
+    }
+});
 
 module.exports = router;

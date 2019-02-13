@@ -51,28 +51,57 @@ class App extends Component {
     // })
     // })
 
-    handleLogout= async() => {
+    handleLogout = async () => {
     try {
-        const response = await fetch('/users/logout')
+      const response = await fetch('/users/logout')
 
-          if(!response.ok) {
-            throw Error(response.statusText)
-          } else {
-          console.log(response)
-          }
-          const deletedSession = await response.json()
-          console.log(deletedSession)
-          this.setState({
-            user: deletedSession.user || {}
-          })
-          this.props.history.push('/')
+        if(!response.ok) {
+          throw Error(response.statusText)
+        } else {
+        console.log(response)
+        }
+        const deletedSession = await response.json()
+        console.log(deletedSession)
+        this.setState({
+          user: deletedSession.user || {}
+        })
+        this.props.history.push('/')
 
-       } catch (err) {
-        console.log(err)
+      } catch (err) {
+      console.log(err)
     }
+  }
 
+  deleteUser = async (id) => {
+    // e.preventDefault();
 
-}
+    try {
+      console.log(id, ' this is the id passed to Delete Route');
+
+      const deletedUser = await fetch(`/users/${id}`, {
+        method: 'DELETE',
+        credentials: 'include'
+      });
+
+      if(!deletedUser.ok) {
+        throw Error(deletedUser.statusText);
+      }
+
+      const parsedDeletedUser = await deletedUser.json();
+      console.log(parsedDeletedUser, ' this is parsedDeletedUser');
+
+      this.setState({
+        logged: false,
+        username: '',
+        user: {}
+      });
+
+      this.props.history.push('/')
+    } catch (err) {
+      console.log(err, ' this is err from deleteUser in React - App.js');
+      return err
+    }
+  }
 
   render() {
     // console.log(this.props)
@@ -83,7 +112,8 @@ class App extends Component {
           <Route exact path="/" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
           <Route exact path='/graphcontainer' component={GraphContainer}/>
           <Route exact path='/home' component={MainContainer} />
-          <Route exact path='/profile/:id' component={UserProfile} />
+          <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser}/> } />
+          {/* <Route exact path='/profile/:id' component={UserProfile} deleteUser={this.deleteUser} /> */}
           <Route path="/counties/:id" component={GraphContainer} />
         </Switch>
       </div>
