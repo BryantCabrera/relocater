@@ -25,3 +25,7 @@
     grid-area: compareBox;
 }
 
+#compare-icon {
+    height: 50px;
+    width: 50px;
+}

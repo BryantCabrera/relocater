@@ -1,0 +1,13 @@
+.nav-bar {
+    justify-content: center;
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+.housing-icon {
+    height: 30px;
+    width: 30px;
+}
