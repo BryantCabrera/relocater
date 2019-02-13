@@ -60,7 +60,8 @@ class GraphContainer extends Component {
 
                 </div>
                 <div className="compare-box">
-                COMPARE BOX
+                {/* placeholder icons for now ? we can change them - ummer */}
+                <br></br><img id="compare-icon" src="../compare-icon.png"></img>
                 </div>
             </div>
         )

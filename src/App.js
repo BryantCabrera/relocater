@@ -30,7 +30,9 @@ class App extends Component {
       console.log(user, ' this is user');
       console.log(user.id, ' this is user.id');
       this.setState({user, logged: true})
-      this.props.history.push(`/profile/${user._id}`)
+      user.isNew
+        ? this.props.history.push(`/profile/${user._id}`)
+        : this.props.history.push('/home')
     })
   }
 

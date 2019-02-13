@@ -61,6 +61,21 @@ router.post('/:id', async (req, res) => {
     }
 });
 
+// update route
+router.put('/:id', async (req, res) => {
+    console.log(req.body)
+    try {
+        const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        res.json({
+            status: 200,
+            data: updatedUser
+        })
+    } catch (err) {
+        console.log(err)
+        res.send(err)
+    }
+});
+
 // log-in
 router.post('/login', async (req, res) => {
     try {
