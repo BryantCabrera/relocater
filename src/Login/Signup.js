@@ -16,7 +16,7 @@ class SignUp extends Component {
         e.preventDefault();
         // this.state.handleChange(this.state.email)
         try{
-            const loginResponse =  await fetch ('http://localhost:9000/users', {
+            const loginResponse =  await fetch ('/users', {
             method: 'POST',
             credentials: 'include',
             body: JSON.stringify(this.state),
