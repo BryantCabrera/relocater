@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import Signup from '../Login/Signup';
 import GoogleoAuth from './GoogleoAuth';
 import OAuth from '../OAuth'
+import axios from 'axios'
+import { withRouter } from 'react-router-dom'
 
 class Login extends Component {
     state = {
-        user:{
-            email: '',
-            name: '',
-            password: ''
-        }        
+        email:'',
+        password: ''        
     }
 
     handleInput = (e) => {
@@ -18,64 +17,13 @@ class Login extends Component {
         })
     }
 
-    handleSubmit = async (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
-        // this.state.handleChange(this.state.email)
-        try{
-            const loginResponse = await fetch ('http://localhost:9000/users', {
-            method: 'POST',
-            credentials: 'include',
-            body: JSON.stringify(this.state),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-
-        if(!loginResponse.ok) {
-            throw Error(loginResponse.statusText)
-        }
-
-        const parsedResponse = await loginResponse.json()
-        // this.setState({
-        //     user: parsedResponse.user
-        // // })
-        this.props.handleLogin(parsedResponse.user)
-
-        if (parsedResponse.data === 'login successful'){
-            this.props.history.push(`/profile/${parsedResponse.user._id}`)
-        }
-
-        console.log(parsedResponse, ' This is the login response')
-
-        } catch (err) {
-            console.log(err)
-        }
+        axios.post('/users/login', this.state)
+        .then(res => res.data.isLoggedIn ? this.props.history.push('/home') : this.props.history.push('/'))
     }
 
-    // handleLogout= async (e) => {
-    //     try {
-    //         const response = await fetch('http://localhost:9000/users/logout', {
-    //             method: '',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         })
-
-    //         if(!response.ok) {
-    //             throw Error(response.statusText)
-    //         }
-
-    //         this.setState({
-    //             user:{}
-    //         })
-
-    //     } catch (err) {
-    //         console.log(err)
-    //     }
-    // }
-
     render() {
-        console.log(process.env);
         return (
             <div>
                 <div className='log-in'>
@@ -85,7 +33,7 @@ class Login extends Component {
                             placeholder='email'
                             type='text'
                             name='email'
-                            value={this.state.user.email}
+                            value={this.state.email}
                             onChange={this.handleInput}
                             required
                         />
@@ -94,7 +42,7 @@ class Login extends Component {
                             type='text'
                             name='password'
                             placeholder='password'
-                            value={this.state.user.password}
+                            value={this.state.password}
                             onChange={this.handleInput}
                             required
                         />
@@ -115,4 +63,4 @@ class Login extends Component {
 }
 
 
-export default Login
+export default withRouter(Login)
