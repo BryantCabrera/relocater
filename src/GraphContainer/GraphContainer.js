@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 import LineGraph from './LineGraph'
 import InfoContainer from './InfoContainer'
 import './GraphContainer.css'
+
 class GraphContainer extends Component {
     state = {
         socrataData: [],
+        user: {}
         // zillowData: []
     }
     componentDidMount = () => {
-        this.getSocrataData()
+        this.getSocrataData();
         // this.getZillowData()
+        this.setState({
+            user: this.props.user
+        })
     }
     getSocrataData = async () => {
         try {
@@ -46,8 +51,10 @@ class GraphContainer extends Component {
     //     }
     // } 
     render = () => {
+        console.log(this.state, ' this is GraphContainers state');
         return (
             <div className="grid-container">
+                <p>{this.props.user.userIncome}</p>
                 <div className="g-container">
                     <h1>{this.props.match.params.id} Median Income</h1>
                     {

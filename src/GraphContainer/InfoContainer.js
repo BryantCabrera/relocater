@@ -8,9 +8,7 @@ import data from '../data/db.json'
 class InfoContainer extends Component {
     render = () => {
         for (let i = 0; i < data.length; i++) {
-            console.log(data[i].County)
             if (data[i].County == this.props.countyName ) {
-                console.log(data[i].County);
                 return (
                     <div>
                         <h2>Population {data[i].Population}</h2>
