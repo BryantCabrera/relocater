@@ -5,7 +5,7 @@ export default class LineGraph extends Component {
     render() {
         return (
             <div className="line-graph">
-                <LineChart width={600} height={300} data={this.props.socrataData}>
+                <LineChart width={725} height={300} data={this.props.socrataData}>
                     <XAxis dataKey='taxable_year' />
                     <CartesianGrid stroke="#ccc" strokeDasharray='5 5' />
                     <Tooltip />
