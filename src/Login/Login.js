@@ -33,11 +33,13 @@ class Login extends Component {
         console.log(this.props)
         return (
             <div className='FormCenter'>
+            <img id="relocater-logo" src="../../../imgs/relocater.png"></img>
             <div className='PageSwitcher'>
+                
           <NavLink exact to="/Login" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
           <NavLink exact to="/Signup" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
         </div>
-        <img id="relocater-logo" src="../roof.png"></img>
+        
                 <div>
                     <form className="FormFields" onSubmit={this.handleSubmit}>
                         <div className='FormField'>

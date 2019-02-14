@@ -50,6 +50,7 @@ class SignUp extends Component {
     render(){
         return(
             <div className='FormCenter'>
+            <img id="relocater-logo" src="../../../imgs/relocater.png"></img>
             <div className='PageSwitcher'>
           <NavLink exact to="/Login" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
           <NavLink exact to="/Signup" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
