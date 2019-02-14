@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
 import './TopoMap.css'
+import data from '../data/db'
+
+// find min and max
+const incomes = []
+data.forEach(d => incomes.push(d.Median_Income))
+const sortedIncomes = incomes.sort((a, b) => a - b)
+
+const minIncome = sortedIncomes[0]
+const maxIncome = sortedIncomes[incomes.length - 1]
+
 
 
 class TopoMap extends Component {
@@ -27,6 +37,7 @@ class TopoMap extends Component {
             .translate([650/2, 600/2])
     }
     componentDidMount = () => {
+        console.log(data)
         fetch('/caCountiesTopoSimple.json')
             .then(response => {
                 if(!response.ok){
@@ -39,6 +50,12 @@ class TopoMap extends Component {
                     })
                 })
             })
+        window.addEventListener('resize', () => {
+            this.setState({
+                width: window.innerWidth,
+                height: window.innerHeight
+            })
+        })
     }
     render = () => {
         return (
@@ -52,7 +69,7 @@ class TopoMap extends Component {
                                 d={geoPath().projection(this.projection())(d)}
                                 className='county'
                                 stroke='#FFFFFF'
-                                fill={ `rgba(0, 0, 255,${1 / this.state.mapData.length * i})` }
+                                fill={ `rgba(0, 0, 255, ${(incomes[i] - minIncome) / (maxIncome - minIncome)})` }
                                 strokeWidth={0.5}
                                 onMouseEnter={() => this.handleMouseOver(i)}
                                 onMouseOut={() => this.resetTooltip()}
