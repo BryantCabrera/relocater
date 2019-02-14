@@ -14,9 +14,7 @@
     justify-self: center;
     align-self: center;
 }
-.data__graph--main {
-    /* grid-area: graph; */
-}
+
 .data__info {
     /* grid-area: info; */
     align-self: center;

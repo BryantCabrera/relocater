@@ -83,7 +83,7 @@ class GraphContainer extends Component {
                         :
                             <div></div>
                         }
-                    <br></br><img id="compare-icon" src="../imgs/compare-icon.png"></img>
+                    <br></br>
                     </div>
                 </div>
             </div>
