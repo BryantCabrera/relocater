@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import UserForm from './UserForm';
 
+import './Userprofile.css'
+
 import SearchBar from '../SearchBar'
 
 import data from '../data/db.json'
@@ -81,29 +83,41 @@ class UserProfile extends Component {
 
     render(){
         return(
-            <div>
-            <h1> User Profile</h1>
-            <p>{this.state.user.username}</p>
-            <p>{this.state.user.email}</p>
-            <SearchBar 
-                updateSearchBar={this.updateSearchBar} 
-                populateHandler={this.populateHandler}
-                search={this.state.search}
-                toggle={this.state.toggle}
-                filteredList={this.state.filteredList}
-            />
-            <input name="salary" onChange={(e) => this.updateSearchBar(e)} type="Number" placeholder="Salary"/>
-            <button onClick={this.handleSubmit}>Submit this</button>
-            <button onClick={() => this.props.deleteUser(this.state.user._id)}>Delete Your Profile</button>
+            <div className="user-profile">
 
+                <div className="profile-info"> 
+                    <p>{this.state.user.username}</p>
+                    <p>{this.state.user.email}</p>
+                    <p>Salary<br></br> ${this.state.user.userIncome}</p>
+                    <p>County<br></br> {this.state.user.userCounty}</p>
+                </div>
+                
+                <div className="edit-profile">
+                    
+                    <p>Edit Your Profile</p>
 
-            <div>
-               <h3>Salary: ${this.state.user.userIncome}</h3>
-               <h3>County: {this.state.user.userCounty}</h3>
-            </div>
-
-
-
+                    <div className="select-box">
+                        <SearchBar 
+                            updateSearchBar={this.updateSearchBar} 
+                            populateHandler={this.populateHandler}
+                            search={this.state.search}
+                            toggle={this.state.toggle}
+                            filteredList={this.state.filteredList}
+                        />
+                    </div>
+                    
+                    <div className="salary-input">
+                        <input name="salary" onChange={(e) => this.updateSearchBar(e)} type="Number" placeholder="Salary"/>
+                    </div>
+                    
+                    <button className="profile-button"onClick={this.handleSubmit}>Submit</button>
+                    
+                </div>
+                    
+                <div className="delete-button-holder">
+                    <button className="delete-button"onClick={() => this.props.deleteUser(this.state.user._id)}>Delete Your Profile</button>
+                </div>
+            
             </div>
 
         )
