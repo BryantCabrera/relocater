@@ -23,8 +23,6 @@
   }
   
   .PageSwitcher {
-    display: flex;
-    justify-content: flex-end;
     margin-bottom: 10%;
   }
   
@@ -126,4 +124,10 @@
     display: inline-block;
     border-bottom: 1.5px solid #225E62;
     padding-bottom: 5px;
+  }
+
+
+  #relocater-logo {
+    width: 30%;
+    height: 30%;
   }

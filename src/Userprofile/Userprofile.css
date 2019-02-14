@@ -1,0 +1,87 @@
+.user-profile {
+    font-family: 'Questrial', sans-serif;
+
+    display: grid;
+    grid-template-columns: 40rem 40rem; 
+    grid-template-rows: 40rem 10rem; 
+    grid-template-areas: "info edit"
+                         "delete delete";
+    justify-content: center;
+ 
+}
+
+.user-profile .profile-info {
+    grid-area: info;
+    font-size: 3rem;
+    display: inline-block;
+    border-radius: 0%
+   
+}
+
+.user-profile .edit-profile {
+    grid-area: edit;
+    padding: 10px;
+    font-size: 3rem;
+    display: inline-block;
+}
+
+.user-profile .delete-button-holder {
+    grid-area: delete;
+}
+
+.user-profile .profile-button {
+    background-color: #52C4B9;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 7px 43px;
+    font-size: .5em;
+    font-weight: 500;
+  }
+
+.user-profile .profile-button:hover {
+    background-color: #616E7F;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 7px 43px;
+    font-size: .5em;
+    font-weight: 500;
+  }
+
+  .user-profile .delete-button {
+    background-color: #52C4B9;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+
+.user-profile .delete-button:hover {
+    background-color: #616E7F;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: .5em;
+    font-weight: 500;
+  }
+
+
+
+.user-profile .select-box {
+    color: #52C4B9
+}
+
+
+input[type="number"] {
+    padding: 1rem;
+    margin: 2rem;
+}
+
