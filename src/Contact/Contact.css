@@ -34,3 +34,14 @@
 #peter {
     grid-area: peter;
 }
+
+.mail-tag {
+    text-decoration: none;
+    color: black;
+}
+
+.mail-tag:hover {
+    color: #52C4B9
+}
+
+

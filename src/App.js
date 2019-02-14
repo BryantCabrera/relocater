@@ -131,7 +131,6 @@ class App extends Component {
           {/* <Route exact path='/profile/:id' component={UserProfile} deleteUser={this.deleteUser} /> */}
           <Route path="/counties/:id" render={(props) => <GraphContainer {...props} user={this.state.user}/> } />
         </Switch>
-        <Footer />
       </div>
     );
   }
