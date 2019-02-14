@@ -95,7 +95,17 @@ class UserProfile extends Component {
             <input name="salary" onChange={(e) => this.updateSearchBar(e)} type="Number" placeholder="Salary"/>
             <button onClick={this.handleSubmit}>Submit this</button>
             <button onClick={() => this.props.deleteUser(this.state.user._id)}>Delete Your Profile</button>
+
+
+            <div>
+               <h3>Salary: ${this.state.user.userIncome}</h3>
+               <h3>County: {this.state.user.userCounty}</h3>
             </div>
+
+
+
+            </div>
+
         )
     }
 

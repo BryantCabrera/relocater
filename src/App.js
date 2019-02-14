@@ -38,6 +38,16 @@ class App extends Component {
     })
   }
 
+  doLoginUser = (user) =>
+    axios.post('/users/login', user)
+      .then(res => {
+        console.log(res)
+        this.setState({
+          user: res.data.loggedUser
+        })
+        res.data.isLoggedIn ? this.props.history.push('/home') : this.props.history.push('/')
+      })
+
 
     
   // handleLoginSubmit = async (e, userInfo) => {
@@ -110,9 +120,23 @@ class App extends Component {
     // console.log(this.props)
     return (
       <div className="App">
+
+      {/* <div className='App__Aside'></div>
+      <div classNAme='App__Form'>
+        <div className='PageSwitcher'>
+          <NavLink exact to="/Login" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
+          <NavLink exact to="/Signup" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
+        </div>
+
+      </div> */}
+
+
+
         <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
-          <Route exact path="/" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
+          <Route exact path="/Login" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} doLoginUser={this.doLoginUser} history={this.props.history} />} />
+          <Route exact path="/Signup" component={() =>  <Signup socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
+          <Route exact path="/" component={(props) =>  <Login {...props} socket={socket} handleLogin={this.handleLogin} history={this.props.history} updateParentState={this.updateParentState} doLoginUser={this.doLoginUser} />} />
           <Route exact path='/home' component={MainContainer} />
           <Route path="/contact" component={Contact} />
           <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser} updateParentState={this.updateParentState} /> } />
