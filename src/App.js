@@ -120,18 +120,6 @@ class App extends Component {
     // console.log(this.props)
     return (
       <div className="App">
-
-      {/* <div className='App__Aside'></div>
-      <div classNAme='App__Form'>
-        <div className='PageSwitcher'>
-          <NavLink exact to="/Login" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
-          <NavLink exact to="/Signup" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
-        </div>
-
-      </div> */}
-
-
-
         <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
           <Route exact path="/Login" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} doLoginUser={this.doLoginUser} history={this.props.history} />} />

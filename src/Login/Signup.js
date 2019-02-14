@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, NavLink } from 'react-router-dom'
 import './Login-Signup.css'
 
 class SignUp extends Component {
@@ -50,6 +50,10 @@ class SignUp extends Component {
     render(){
         return(
             <div className='FormCenter'>
+            <div className='PageSwitcher'>
+          <NavLink exact to="/Login" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
+          <NavLink exact to="/Signup" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
+        </div>
                 <form onSubmit={this.handleSubmit} className='FormFields'>
                     <div className='FormField'>
                     <label className='FormField__Label'>Enter your name</label>
