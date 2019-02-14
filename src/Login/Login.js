@@ -30,7 +30,6 @@ class Login extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className='FormCenter'>
             <img id="relocater-logo" src="../../../imgs/relocater.png" alt="Relocater Logo" title="Relocater Logo"></img>

@@ -1,5 +1,5 @@
 .nav-bar {
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 2rem;
     align-items: center;
     display: flex;
@@ -35,7 +35,7 @@
     height: 60px;
     width: 60px;
     margin-top: 3px;
-    margin-left: 20px
+    margin-left: 20px;
 }
 
 p{
@@ -65,9 +65,9 @@ p{
     padding: 7px 30px;
     font-size: .5em;
     font-weight: 500;
-  }
+}
 
-  .contact-button:hover {
+.contact-button:hover {
     background-color: #616E7F;
     color: white;
     border: none;
@@ -76,4 +76,4 @@ p{
     padding: 7px 30px;
     font-size: .5em;
     font-weight: 500;
-  }
+}
