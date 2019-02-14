@@ -7,7 +7,7 @@ const Header = ( props) => {
         <header>
             <div className="nav-bar">
                 <div className="nav-main">            
-                    <p className="nav-home"><Link to='/home'><img className="housing-icon" src="../../../imgs/logoin.png" alt="Home Icon" title="alt="Home Icon></img></Link></p>
+                    <p className="nav-home"><Link to='/home'><img className="housing-icon" src="../../../imgs/logoin.png" alt="Home Icon" title="Home Icon"></img></Link></p>
                     <div className="nav-logout-profile">
                         {
                             props.user._id
