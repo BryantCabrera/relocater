@@ -1,20 +1,16 @@
-/* #footer {
+#footer {
     text-align: center;
-    position: relative;
     bottom: 0rem;
     left: 1rem;
     height: 3rem;
     width: 100%;
-    color: black;
-    text-decoration: none;
-    font-size: 2rem;
 
 }
 
-#footer:visited { text-decoration: none; }
+/* #footer:visited { text-decoration: none; }
 #footer:hover { text-decoration: none; }
 #footer:focus { text-decoration: none; }
-#footer:hover, a:active { text-decoration: none; } */
+#footer:hover, a:active { text-decoration: none; } */ */
 
 .FormField__Button {
     background-color: #52C4B9;
