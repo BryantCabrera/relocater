@@ -73,7 +73,7 @@ class Login extends Component {
                 <div className="sign-up">
                     {/* <Signup handleLogin={this.props.handleLogin}/> */}
                 </div>
-
+                    
                 <OAuth socket={this.props.socket} provider={'google'}/>
                 
             </div>

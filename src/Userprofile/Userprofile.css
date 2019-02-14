@@ -2,10 +2,10 @@
     font-family: 'Questrial', sans-serif;
 
     display: grid;
-    grid-template-columns: 40rem 40rem; 
-    grid-template-rows: 40rem 10rem; 
-    grid-template-areas: "info edit"
-                         "delete delete";
+    grid-template-columns: 11rem 18rem 30rem; 
+    grid-template-rows: 20rem ; 
+    grid-template-areas: "name info edit"
+                         "delete delete blank";
     justify-content: center;
  
 }
@@ -14,20 +14,29 @@
     grid-area: info;
     font-size: 3rem;
     display: inline-block;
-    border-radius: 0%
-   
+    border-radius: 0%;
+    justify-self: start;
+    text-align: right;
 }
 
 .user-profile .edit-profile {
     grid-area: edit;
-    padding: 10px;
+    /* padding: 10px; */
     font-size: 3rem;
     display: inline-block;
 }
 
 .user-profile .delete-button-holder {
     grid-area: delete;
+    justify-self: center;
 }
+
+.user-profile .profile-names {
+    grid-area: name;
+    justify-self: end;
+    text-align: left
+}
+
 
 .user-profile .profile-button {
     background-color: #52C4B9;
