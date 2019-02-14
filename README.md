@@ -1,4 +1,5 @@
-# Relocater
+# Relocater <img src="public/imgs/relocater.png" alt="Relocater logo" title="Relocater logo" height="50">
+
 
 ## A. Description
 Relocater is a single-page CRUD app that *caters* to a user's relocation needs.  The app determines what salary he/she/they/zhe needs to make in order to maintain the same lifestyle in a new county. The calculation is based on the user's current salary, current county's median income, and selected county's median income.
@@ -56,6 +57,7 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
     1. passport
     2. google OAuth 2
     3. sockets
+    4. bcrypt
 
 > Planning/Organization
     
@@ -72,7 +74,7 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
     2. If you click Sign In, you can log into your account using your Relocater account or your Google account.
         1.  If signing in with your Relocater account, just enter your email and password.
         2.  If signing in with your Google account, a popup will let you choose which Google account you want to sign in with.
-2.  Soon after, you will be redirected to a map of California where you can hover and click on the county you are interested in moving to.
+2.  Soon after, you will be redirected to a map of California where you can hover and click on the county you are interested in moving to.  The opacity is a normalized value that increases with increasing median income.
 3.  On the following page, you will see data pertaining to that county.
     1.  In the center of the screen, there will be a line graph charting the median income for that county.
     2.  To the right of the graph, there will be a list of statistics for that county.
@@ -137,16 +139,17 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
 
 ## F. Next Steps
 1. Unsolved problems
-    - [ ] On refresh, the app state is lost.
-    - [ ] Logging in via Google OAuth redirects to /home instead of /profile/:id.
+    - [ ] On refresh, the app state is lost
+    - [ ] Logging in via Google OAuth redirects to /home instead of /profile/:id
 2. Planned features
-    - [ ] Save previous searches onto a user's profile.
+    - [ ] Save previous searches onto a user's profile
     - [ ] Authentication with other social media
         - [ ] Facebook
         - [ ] Twitter
     - [ ] Incorporate other APIs
         - [ ] grocery price data from Yelp or data by city from Numbeo
         - [ ] shopping price data by city from Numbeo
+    - [ ] Expand to other states
 
 
 
