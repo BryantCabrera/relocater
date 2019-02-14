@@ -6,12 +6,12 @@ import './GraphContainer.css'
 class GraphContainer extends Component {
     state = {
         socrataData: [],
-        user: {}
-        // zillowData: []
+        user: {},
+        userCountyData: {}
     }
     componentDidMount = () => {
         this.getSocrataData();
-        // this.getZillowData()
+        this.getUserCountyData();
         this.setState({
             user: this.props.user
         })
@@ -25,38 +25,48 @@ class GraphContainer extends Component {
             const parsedResponse = await response.json()
             const sortedData = parsedResponse.sort((a, b) => a.taxable_year - b.taxable_year)
             this.setState({
-                socrataData: sortedData
+                socrataData: sortedData,
+                lastEntry: sortedData[sortedData.length - 1]
             })
+            this.calculate()
         } catch(err) {
             console.log(err)
             return err
         }
     }
-    // getZillowData = async () => {
-    //     try {
-    //         const response = await fetch('/api/zillow/all')
-    //         if(!response.ok){
-    //             throw Error(response.statusText)
-    //         }
-    //         const parsedResponse = await response.json()
-    //         const filteredData = parsedResponse.filter(county => county.name === `${this.props.match.params.id} County`);
-
-    //         this.setState({
-    //             zillowData: filteredData
-    //         })
-
-    //     } catch(err) {
-    //         console.log(err)
-    //         return err;
-    //     }
-    // } 
+    getUserCountyData = async () => {
+        try {
+            const res = await fetch(`/api/socrata/${this.props.user.userCounty}`)
+            if(!res.ok){
+                throw Error(res.statusText)
+            }
+            const parsedRes = await res.json()
+            console.log('parsedRes', parsedRes)
+            const lastEntry = parsedRes[parsedRes.length - 1]
+            this.setState({
+                userCountyData: lastEntry
+            })
+            this.calculate()
+        } catch(err) {
+            console.log(err);
+            return err;
+        }
+    }
+    calculate = () => {
+        const x = this.state.lastEntry && this.props.user.userIncome && this.state.userCountyData ?
+            this.state.lastEntry.median_income * (this.props.user.userIncome / this.state.userCountyData.median_income) : 0;
+        this.setState({
+            magicNumber: x.toFixed(2)
+        })
+    }
     render = () => {
-        console.log(this.state, ' this is GraphContainers state');
+        console.log(this.state.magicNumber, 'the result of our math')
+        console.log(this.state.lastEntry)
         return (
             <div>
                 <h1>{this.props.match.params.id} Median Income</h1>
                 <div className="grid-container">
-                    <p>{this.props.user.userIncome}</p>
+
                     <div className="g-container">
                         {
                             this.state.socrataData.length > 0 && <LineGraph socrataData={this.state.socrataData} />
@@ -66,7 +76,13 @@ class GraphContainer extends Component {
                         < InfoContainer countyName={this.props.match.params.id} />
                     </div>
                     <div className="compare-box">
-                    {/* placeholder icons for now ? we can change them - ummer */}
+                        { this.state.magicNumber > 0?
+                            <div>
+                                <p id="calculation-blurb">This is how much you would need to make to maintain your same lifestyle in {this.props.match.params.id} county: <span id="magicNumber">${this.state.magicNumber}</span></p>
+                            </div>
+                        :
+                            <div></div>
+                        }
                     <br></br><img id="compare-icon" src="../compare-icon.png"></img>
                     </div>
                 </div>
