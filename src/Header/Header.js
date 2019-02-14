@@ -10,7 +10,7 @@ const Header = ( props) => {
                 {
                     props.user._id
                         && 
-                            [<p key={99}><Link to={`/profile/${props.user._id}`}><button>Profile</button> </Link></p>,
+                            [<p key={99}><Link to={`/profile/${props.user._id}`}><img className="profile-icon" src="../../profile-icon.png"></img> </Link></p>,
                             <p key={23423}onClick={props.handleLogout}> <button>Logout</button></p>]
                 }
 

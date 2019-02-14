@@ -21,6 +21,12 @@ class Login extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.doLoginUser(this.state)
+//         axios.post('/users/login', this.state)
+//         .then(res => {
+//             this.props.updateParentState(res.data.loggedUser, ' this is loggedUser')
+//             return res
+//         })
+//         .then(res => res.data.isLoggedIn ? this.props.history.push('/home') : this.props.history.push('/'))
     }
 
     render() {

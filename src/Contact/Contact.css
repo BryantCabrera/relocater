@@ -1,0 +1,36 @@
+.github-logo {
+    height: 5rem;
+    width: 5rem
+}
+.linkedin-logo {
+    height: 4rem;
+    width: 4rem
+}
+
+#contact-page {
+    display: grid;
+    grid-template-columns: 30rem 30rem;
+    grid-template-rows: 30rem 30rem;
+    grid-template-areas: "bryant kevin"
+                         "ummer peter";
+    justify-content: center;
+    font-size: 2rem;
+    padding: 3rem
+
+}
+
+#bryant {
+    grid-area: bryant;
+}
+
+#kevin {
+    grid-area: kevin;
+}
+
+#ummer {
+    grid-area: ummer;
+}
+
+#peter {
+    grid-area: peter;
+}

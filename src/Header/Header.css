@@ -1,5 +1,6 @@
 .nav-bar {
     justify-content: center;
+    padding: 2rem;
 }
 
 /* button {
@@ -10,4 +11,9 @@
 .housing-icon {
     height: 30px;
     width: 30px;
+}
+
+.profile-icon {
+    height: 35px;
+    width: 35px;
 }

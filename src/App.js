@@ -10,8 +10,9 @@ import Header from './Header/Header';
 import MainContainer from './MainContainer/MainContainer';
 import { Route, Switch, withRouter, NavLink } from 'react-router-dom';
 import Signup from './Login/Signup'
+import Footer from './Footer/Footer'
+import Contact from './Contact/Contact'
 import axios from 'axios';
-
 
 const socket = io('http://localhost:3030');
 // const providers = ['twitter', 'google', 'facebook', 'github'];
@@ -133,17 +134,16 @@ class App extends Component {
 
         <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
-          <Route exact path="/" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} history={this.props.history} doLoginUser={this.doLoginUser}/>} />
-          <Route exact path='/home' component={MainContainer} />
-
           <Route exact path="/Login" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} doLoginUser={this.doLoginUser} history={this.props.history} />} />
           <Route exact path="/Signup" component={() =>  <Signup socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
-
-
+          <Route exact path="/" component={(props) =>  <Login {...props} socket={socket} handleLogin={this.handleLogin} history={this.props.history} updateParentState={this.updateParentState} doLoginUser={this.doLoginUser} />} />
+          <Route exact path='/home' component={MainContainer} />
+          <Route path="/contact" component={Contact} />
           <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser} updateParentState={this.updateParentState} /> } />
           {/* <Route exact path='/profile/:id' component={UserProfile} deleteUser={this.deleteUser} /> */}
           <Route path="/counties/:id" render={(props) => <GraphContainer {...props} user={this.state.user}/> } />
         </Switch>
+        <Footer />
       </div>
     );
   }
