@@ -1,5 +1,93 @@
-##	Github workflow
-1.	Link to repo: https://github.com/BryantCabrera/relocater.  
+# Relocater
+
+## A. Description
+Relocater is a single-page CRUD app that *caters* to a user's relocation needs.  The app determines what salary he/she/they/zhe needs to make in order to maintain the same lifestyle in a new county. The calculation is based on the user's current salary, current county's median income, and selected county's median income.
+
+```
+Relocater was built in 5 days by:
+Bryant Cabrera - GitLab Manager/Scrum Master/Documenter
+Kevin Cuison - Scrum Master/Designer
+Peter Feinman - Data Visualization/Database Manager
+Ummer Khan - Database Manager/API Manager & Creator/Designer
+```
+
+## B. Images
+1. Wireframe
+    > ![Image of Wireframe - Relocater Register](public/imgs/README/Relocater__register.png)
+    > ![Image of Wireframe - Relocater Login](public/imgs/README/Relocater__login.png)
+    > ![Image of Wireframe - Relocater Enter Salary](public/imgs/README/Relocater__salary.png)
+    > ![Image of Wireframe - Relocater Enter City](public/imgs/README/Relocater__city.png)
+    > ![Image of Wireframe - Relocater User Profile](public/imgs/README/Relocater__user-profile.png)
+    > ![Image of Wireframe - Relocater California Map](public/imgs/README/Relocater__CA-map.png)
+    > ![Image of Wireframe - Relocater Selected California County](public/imgs/README/Relocater__selected-county.png)
+2. 
+
+
+## C. Technologies Used
+> Front-End
+    
+    1. React
+    2. BEM
+    3. flaticon.com
+
+> Back-End
+
+    1. node
+    2. express
+    3. mongoose
+    4. mongoDB
+    5. axios
+    6. xml2json
+
+> APIs
+    
+    1. socrata
+    2. zillow
+    3. bestplaces.net
+
+> Data Visualization
+  
+    1. d3-geo
+    2. topo-json-client
+    3. recharts
+
+> Authentication
+    
+    1. passport
+    2. google OAuth 2
+    3. sockets
+
+> Planning/Organization
+    
+    1. Adobe XD
+    2. Adobe Photoshop
+    3. trello
+
+
+## D. Getting Started
+1. LOGGING IN: At the top center, toggle between Sign Up & Sign In.
+    1. If you click Sign Up, you can create a new account. 
+        1.  Enter your email address and password.
+        2.  You will then be redirected to your profile page where you can enter your salary and choose the county you currently live in.
+    2. If you click Sign In, you can log into your account using your Relocater account or your Google account.
+        1.  If signing in with your Relocater account, just enter your email and password.
+        2.  If signing in with your Google account, a popup will let you choose which Google account you want to sign in with.
+2.  Soon after, you will be redirected to a map of California where you can hover and click on the county you are interested in moving to.
+3.  On the following page, you will see data pertaining to that county.
+    1.  In the center of the screen, there will be a line graph charting the median income for that county.
+    2.  To the right of the graph, there will be a list of statistics for that county.
+        > 1. Population
+        > 2. Unemployment Rate
+        > 3. Average House Cost
+        > 4. Median Age
+        > 5. Living Wage
+        > 6. Poverty Wage
+    3.  Underneath that graph, the app will list the amount you would need to make in that county to maintain the same lifestyle/purchasing freedom you have with your current salary in the county you currently live in.  This is calculated with Bryant & Peter's custom algorithm.
+4.  If you choose *__not__* to Sign Up or Log In, at the top center, you can click the house icon to navigate to the same map of California and see county names on hover.  You can click on a county and see its respective data, but you won't have access to the income estimator underneath the graph.
+
+
+## E. Github workflow
+1.	Link to repo: [https://github.com/BryantCabrera/relocater](https://github.com/BryantCabrera/relocater).  
 2.	On your personal repo (NOT the General Assembly) enterprise, log in.  then click link above and fork the repo.  Make sure the repo is in your personal GitHub (go to your personal GitHub account and the project repo “relocater” should be there).  Then, from YOUR PERSONAL FORK, clone it to your local repo.
     1.	$git clone {without curly braces, put the clone link here}
     2.  $git remote add upstream https://github.com/BryantCabrera/relocater
@@ -47,9 +135,22 @@
     2.	DO NOT hit “merge”, Bryant will be handling this.
 
 
+## F. Next Steps
+1. Unsolved problems
+    - [ ] On refresh, the app state is lost.
+    - [ ] Logging in via Google OAuth redirects to /home instead of /profile/:id.
+2. Planned features
+    - [ ] Save previous searches onto a user's profile.
+    - [ ] Authentication with other social media
+        - [ ] Facebook
+        - [ ] Twitter
+    - [ ] Incorporate other APIs
+        - [ ] grocery price data from Yelp or data by city from Numbeo
+        - [ ] shopping price data by city from Numbeo
 
 
-##React Documentation
+
+## <u>React Documentation</u>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
