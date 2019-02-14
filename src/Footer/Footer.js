@@ -8,7 +8,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div id="footer">
-            <Link to="/contact"><div>CONTACT US</div></Link>
+            <Link to="/contact"><div>CONTACT</div></Link>
         </div>
     )
 }
