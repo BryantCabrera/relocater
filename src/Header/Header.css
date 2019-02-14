@@ -1,9 +1,20 @@
 .nav-bar {
-    justify-content: left;
+    justify-content: space-between;
     padding: 2rem;
     align-items: center;
+    display: flex;
 }
 
+.nav-main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nav-logout-profile {
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+}
 /* button {
     background-color: black;
     color: white;
@@ -30,3 +41,31 @@
 p{
     font-size: 20px;
 }
+
+.contact-container {
+    justify-items: right;
+    /* margin-top: 3px;
+    margin-left: 85vw */
+}
+
+.contact-button {
+    background-color: #52C4B9;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 7px 30px;
+    font-size: .5em;
+    font-weight: 500;
+  }
+
+  .contact-button:hover {
+    background-color: #616E7F;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 7px 30px;
+    font-size: .5em;
+    font-weight: 500;
+  }
