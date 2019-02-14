@@ -33,7 +33,7 @@ class Login extends Component {
         console.log(this.props)
         return (
             <div className='FormCenter'>
-            <img id="relocater-logo" src="../../../imgs/relocater.png"></img>
+            <img id="relocater-logo" src="../../../imgs/relocater.png" alt="Relocater Logo" title="Relocater Logo"></img>
             <div className='PageSwitcher'>
                 
           <NavLink exact to="/Login" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client'
-import OAuth from './OAuth'
+// import OAuth from './OAuth'
 // import { API_URL } from './config'
 import './App.css';
 import UserProfile from './Userprofile/Userprofile';
@@ -8,7 +8,7 @@ import Login from './Login/Login';
 import GraphContainer from './GraphContainer/GraphContainer';
 import Header from './Header/Header';
 import MainContainer from './MainContainer/MainContainer';
-import { Route, Switch, withRouter, NavLink } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import Signup from './Login/Signup'
 import Contact from './Contact/Contact'
 import axios from 'axios';
