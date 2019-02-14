@@ -10,7 +10,6 @@ import Header from './Header/Header';
 import MainContainer from './MainContainer/MainContainer';
 import { Route, Switch, withRouter, NavLink } from 'react-router-dom';
 import Signup from './Login/Signup'
-import Footer from './Footer/Footer'
 import Contact from './Contact/Contact'
 import axios from 'axios';
 
