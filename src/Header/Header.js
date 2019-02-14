@@ -17,7 +17,7 @@ const Header = ( props) => {
                         }
                     </div>
                 </div>
-                <div className="contact-container"><Link to="/contact"><button className="contact-button">CONTACT</button></Link></div>
+                {/* <div className="contact-container"><Link to="/contact"><button className="contact-button">CONTACT</button></Link></div> */}
                         
             </div>
         </header>
