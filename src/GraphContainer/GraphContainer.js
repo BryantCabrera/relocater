@@ -63,19 +63,19 @@ class GraphContainer extends Component {
         console.log(this.state.magicNumber, 'the result of our math')
         console.log(this.state.lastEntry)
         return (
-            <div>
+            <div class="data">
                 <h1>{this.props.match.params.id} Median Income</h1>
-                <div className="grid-container">
+                <div className="data__graph">
 
-                    <div className="g-container">
+                    <div className="data__graph--main">
                         {
                             this.state.socrataData.length > 0 && <LineGraph socrataData={this.state.socrataData} />
                         }
                     </div>
-                    <div className="info-container">
+                    <div className="data__info">
                         < InfoContainer countyName={this.props.match.params.id} />
                     </div>
-                    <div className="compare-box">
+                    <div className="data__compare">
                         { this.state.magicNumber > 0?
                             <div>
                                 <p id="calculation-blurb">This is how much you would need to make to maintain your same lifestyle in {this.props.match.params.id} county: <span id="magicNumber">${this.state.magicNumber}</span></p>
