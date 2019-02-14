@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { GoogleLogin } from 'react-google-login';
-import { GoogleLogout } from 'react-google-login';
+// import { GoogleLogin } from 'react-google-login';
+// import { GoogleLogout } from 'react-google-login';
 
 let hist;
 let parentFunc;
