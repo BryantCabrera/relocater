@@ -30,3 +30,12 @@
 p{
     font-size: 20px;
 }
+
+.contact-header {
+    float: right;
+}
+
+.login {
+    height: 40px;
+    width: 40px;
+}

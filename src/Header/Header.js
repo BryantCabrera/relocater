@@ -9,9 +9,10 @@ const Header = ( props) => {
                 <p className="nav-home"><Link to='/home'><img className="housing-icon"src="../../../imgs/logoin.png"></img></Link></p>
                 {
                     props.user._id
-                        && 
+                        ?
                             [<p key={99}><Link to={`/profile/${props.user._id}`}>| &nbsp; PROFILE &nbsp; </Link></p>,
                             <p key={23423}onClick={props.handleLogout}>| &nbsp; LOGOUT</p>]
+                        :  <Link to="/Login"><img className="login"src="../../../imgs/login.png"></img></Link>
                 }
 
             </div>

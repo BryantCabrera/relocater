@@ -23,7 +23,7 @@
   }
   
   .PageSwitcher {
-    margin-bottom: 10%;
+    margin-bottom: 3%;
   }
   
   .PageSwitcher__Item {
@@ -130,4 +130,5 @@
   #relocater-logo {
     width: 30%;
     height: 30%;
+    margin-bottom: 2%;
   }
