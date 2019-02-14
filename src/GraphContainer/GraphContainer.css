@@ -1,31 +1,43 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: 72.5rem 20rem;
+.data__graph {
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* display: grid;
+    grid-template-columns: 72.5rem 30rem;
     grid-template-rows: 35rem 10rem;
     grid-template-areas: "graph info"
-                        "compareBox compareBox";
+                        "compareBox compareBox"; */
     height: 85vh;
     width: 50vw;
     justify-self: center;
     align-self: center;
-    margin: 0 auto;
-    
 }
-.g-container {
-    grid-area: graph;
-
-
+.data__graph--main {
+    /* grid-area: graph; */
 }
-.info-container {
-    grid-area: info;
+.data__info {
+    /* grid-area: info; */
+    align-self: center;
     font-size: 10px;
+    border: 2px solid #52C4B9;
+    height: 8rem;
 
 }
 
-.compare-box {
-    grid-area: compareBox;
+.data__info--container {
+    display: flex;
+    justify-content: center;
+}
+
+.data__info--container h4 {
+    padding: .5rem;
+}
+
+.data__compare {
+    /* grid-area: compareBox; */
     float: left; 
-    margin: 0px 200px 0px 0px
 }
 
 #compare-icon {
@@ -36,4 +48,10 @@
 
 #magicNumber {
     color: steelblue
+}
+
+.line-graph {
+    float:left;
+    height: 30vh;
+    width: 40vw;
 }
