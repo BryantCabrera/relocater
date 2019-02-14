@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import Signup from '../Login/Signup';
-// import GoogleoAuth from './GoogleoAuth';
+import GoogleoAuth from './GoogleoAuth';
 import OAuth from '../OAuth'
-// import axios from 'axios'
+import axios from 'axios'
 import { withRouter,  NavLink} from 'react-router-dom'
 import './Login-Signup.css'
 

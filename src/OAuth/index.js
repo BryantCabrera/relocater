@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import FontAwesome from 'react-fontawesome';
-// import { API_URL } from './config';
+import FontAwesome from 'react-fontawesome';
+import { API_URL } from './config';
 
 class OAuth extends Component {
     state = {
