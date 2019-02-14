@@ -54,7 +54,7 @@ class GraphContainer extends Component {
         console.log(this.state, ' this is GraphContainers state');
         return (
             <div className="grid-container">
-                <p>{this.props.user.userIncome}</p>
+                <p>{this.state.user.userIncome}</p>
                 <div className="g-container">
                     <h1>{this.props.match.params.id} Median Income</h1>
                     {
