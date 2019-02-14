@@ -29,7 +29,8 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
     
     1. React
     2. BEM
-    3. flaticon.com
+    3. Google fonts
+    4. flaticon.com
 
 > Back-End
 
