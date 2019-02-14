@@ -1,7 +1,7 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 636px 100px;
-    grid-template-rows: 416.88px 100px;
+    grid-template-columns: 72.5rem 20rem;
+    grid-template-rows: 35rem 10rem;
     grid-template-areas: "graph info"
                         "compareBox compareBox";
     height: 85vh;
@@ -24,6 +24,8 @@
 
 .compare-box {
     grid-area: compareBox;
+    float: left; 
+    margin: 0px 200px 0px 0px
 }
 
 #compare-icon {
@@ -31,6 +33,3 @@
     width: 50px;
 }
 
-#footer {
-    /* margin-top: 15% */
-}

@@ -53,22 +53,22 @@ class GraphContainer extends Component {
     render = () => {
         console.log(this.state, ' this is GraphContainers state');
         return (
-            <div className="grid-container">
-                <p>{this.props.user.userIncome}</p>
-                <div className="g-container">
-                    <h1>{this.props.match.params.id} Median Income</h1>
-                    {
-                        this.state.socrataData.length > 0 && <LineGraph socrataData={this.state.socrataData} />
-                    }
-                </div>
-                <div className="info-container">
-                    < InfoContainer countyName={this.props.match.params.id} />
-
-
-                </div>
-                <div className="compare-box">
-                {/* placeholder icons for now ? we can change them - ummer */}
-                <br></br><img id="compare-icon" src="../compare-icon.png"></img>
+            <div>
+                <h1>{this.props.match.params.id} Median Income</h1>
+                <div className="grid-container">
+                    <p>{this.props.user.userIncome}</p>
+                    <div className="g-container">
+                        {
+                            this.state.socrataData.length > 0 && <LineGraph socrataData={this.state.socrataData} />
+                        }
+                    </div>
+                    <div className="info-container">
+                        < InfoContainer countyName={this.props.match.params.id} />
+                    </div>
+                    <div className="compare-box">
+                    {/* placeholder icons for now ? we can change them - ummer */}
+                    <br></br><img id="compare-icon" src="../compare-icon.png"></img>
+                    </div>
                 </div>
             </div>
         )
