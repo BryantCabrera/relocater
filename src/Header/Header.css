@@ -1,26 +1,23 @@
-.nav-bar {
-    /* justify-content: space-between; */
+.nav {
+    justify-content: space-between;
     padding: 2rem;
     align-items: center;
     display: flex;
 }
 
-.nav-main {
+.nav__left {
     display: flex;
     flex-flow: row wrap;
 }
 
-.nav-logout-profile {
+.nav__profile-login {
     padding: 1.5rem;
     display: flex;
     flex-flow: row wrap;
 }
-/* button {
-    background-color: black;
-    color: white;
-} */
 
-.housing-icon {
+
+.nav__housing-icon {
     height: 60px;
     width: 60px;
 }
@@ -49,14 +46,19 @@ p{
 .login {
     height: 40px;
     width: 40px;
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-self: left;
+
 }
-.contact-container {
+.nav__contact {
     justify-items: right;
     /* margin-top: 3px;
     margin-left: 85vw */
 }
 
-.contact-button {
+.nav__contact-button {
     background-color: #52C4B9;
     color: white;
     border: none;
@@ -77,3 +79,4 @@ p{
     font-size: .5em;
     font-weight: 500;
 }
+
