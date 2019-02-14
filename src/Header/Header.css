@@ -17,7 +17,7 @@
 }
 
 
-.nav__housing-icon {
+.nav__housing--icon {
     height: 60px;
     width: 60px;
 }
@@ -58,7 +58,7 @@ p{
     margin-left: 85vw */
 }
 
-.nav__contact-button {
+.nav__contact--button {
     background-color: #52C4B9;
     color: white;
     border: none;

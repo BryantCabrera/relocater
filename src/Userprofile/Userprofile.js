@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
@@ -11,14 +11,14 @@ const nameData = data.map(d => d.County)
 
 
 class UserProfile extends Component {
-    state= {
+    state = {
         user: {},
         search: '',
         toggle: false,
         filteredList: [...nameData]
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.getUser(this.props.match.params.id)
         // axios(`/users/${this.props.match.params.id}`)
         //     .then(res => {
@@ -34,7 +34,7 @@ class UserProfile extends Component {
             const response = await fetch(`http://localhost:9000/users/${id}`, {
             })
 
-            if(!response.ok) {
+            if (!response.ok) {
                 throw Error(response.statusText)
             }
             console.log(response, ' this is response from REACT Userprofile > getUser');
@@ -77,11 +77,11 @@ class UserProfile extends Component {
             // redirect home
             .then(this.props.history.push('/home'))
 
-        
+
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="user-profile">
 
                 <div className="profile-names">
@@ -92,39 +92,39 @@ class UserProfile extends Component {
                 </div>
 
 
-                <div className="profile-info"> 
+                <div className="profile-info">
                     <p> {this.state.user.username}</p>
                     <p> {this.state.user.email}</p>
                     <p> ${this.state.user.userIncome}</p>
                     <p> {this.state.user.userCounty}</p>
                 </div>
-                
+
                 <div className="edit-profile">
-                    
+
                     <p>Edit Your Profile</p>
 
                     <div className="select-box">
-                        <SearchBar 
-                            updateSearchBar={this.updateSearchBar} 
+                        <SearchBar
+                            updateSearchBar={this.updateSearchBar}
                             populateHandler={this.populateHandler}
                             search={this.state.search}
                             toggle={this.state.toggle}
                             filteredList={this.state.filteredList}
                         />
                     </div>
-                    
+
                     <div className="salary-input">
-                        <input name="salary" onChange={(e) => this.updateSearchBar(e)} type="Number" placeholder="Salary"/>
+                        <input name="salary" onChange={(e) => this.updateSearchBar(e)} type="Number" placeholder="Salary" />
                     </div>
-                    
-                    <button className="profile-button"onClick={this.handleSubmit}>Submit</button>
-                    
+
+                    <button className="profile-button" onClick={this.handleSubmit}>Submit</button>
+
                 </div>
-                    
+
                 <div className="delete-button-holder">
-                    <button className="delete-button"onClick={() => this.props.deleteUser(this.state.user._id)}>Delete Your Profile</button>
+                    <button className="delete-button" onClick={() => this.props.deleteUser(this.state.user._id)}>Delete Your Profile</button>
                 </div>
-            
+
 
                 <div className="blank">
 
