@@ -1,13 +1,13 @@
-.github-logo {
+.contact__github-logo {
     height: 5rem;
     width: 5rem
 }
-.linkedin-logo {
+.contact__linkedin-logo {
     height: 4rem;
     width: 4rem
 }
 
-#contact-page {
+.contact {
     display: grid;
     grid-template-columns: 30rem 30rem;
     grid-template-rows: 30rem 30rem;
@@ -35,12 +35,12 @@
     grid-area: peter;
 }
 
-.mail-tag {
+.contact__mail-tag {
     text-decoration: none;
     color: black;
 }
 
-.mail-tag:hover {
+.contact__mail-tag:hover {
     color: #52C4B9
 }
 
