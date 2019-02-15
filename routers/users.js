@@ -4,7 +4,7 @@ const User = require('../models/user');
 const bcrypt = require('bcrypt');
 
 
-// create route
+// Create Route
 router.post('/', async (req, res) => {
     let crypted = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     req.body.password = crypted;
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// log-out 
+// Log-Out 
 router.get('/logout', async(req, res) => {
     req.logout()
     res.json({
@@ -29,7 +29,7 @@ router.get('/logout', async(req, res) => {
     });
 });
 
-// log-in
+// Log-In
 router.post('/login', async (req, res) => {
     try {
         //find logged in user //getting username from req.body (username was attached via form and kept in req.body)
@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// show route
+// Show Route
 router.get('/:id', async (req, res) => {
     try {
         const foundUser = await User.findById(req.params.id);
@@ -71,7 +71,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// edit route
+// Edit Route
 router.post('/:id', async (req, res) => {
     try {
         const foundUser = await User.findById(req.params.id);
@@ -85,25 +85,10 @@ router.post('/:id', async (req, res) => {
     }
 });
 
-// update route
+// Update Route
 router.put('/:id', async (req, res) => {
     try {
         const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {new: true});
-        res.json({
-            status: 200,
-            data: updatedUser
-        })
-    } catch (err) {
-        console.log(err);
-        res.send(err);
-    }
-});
-
-
-// update route
-router.put('/:id', async (req, res) => {
-    try {
-        const updatedUser = await User.findByIdAndUpdate(req.body.id);
         res.json({
             status: 200,
             data: updatedUser
