@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import data from '../data/db.json'
-import './InfoContainer.css'
+import data from '../data/db.json';
+import './InfoContainer.css';
 
 class InfoContainer extends Component {
     render = () => {
@@ -21,4 +21,4 @@ class InfoContainer extends Component {
     }
 }
 
-export default InfoContainer
+export default InfoContainer;

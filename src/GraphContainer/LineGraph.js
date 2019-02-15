@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import './GraphContainer.css'
+import './GraphContainer.css';
 
 
 export default class LineGraph extends Component {
