@@ -16,7 +16,11 @@ class UserProfile extends Component {
     }
 
     componentDidMount() {
-        this.getUser(this.props.match.params.id);
+        const passedUser = this.props.user;
+        this.setState({
+            user: passedUser
+        });
+        // this.getUser(this.props.match.params.id);
     }
 
     getUser = async (id) => {
@@ -29,7 +33,6 @@ class UserProfile extends Component {
             }
 
             const userParsed = await response.json();
-
             this.setState({
                 user: userParsed.data
             });

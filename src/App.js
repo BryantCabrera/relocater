@@ -99,7 +99,7 @@ class App extends Component {
           <Route exact path="/" component={(props) =>  <Login {...props} socket={socket} handleLogin={this.handleLogin} history={this.props.history} updateParentState={this.updateParentState} doLoginUser={this.doLoginUser} />} />
           <Route exact path='/home' component={MainContainer} />
           <Route path="/contact" component={Contact} />
-          <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser} updateParentState={this.updateParentState} /> } />
+          <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser} updateParentState={this.updateParentState} user={this.state.user} /> } />
           <Route path="/counties/:id" render={(props) => <GraphContainer {...props} user={this.state.user}/> } />
         </Switch>
       </div>
