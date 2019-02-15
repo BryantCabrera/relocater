@@ -94,9 +94,9 @@ class App extends Component {
       <div className="App">
         <Header user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
-          <Route exact path="/Login" component={() =>  <Login socket={socket} handleLogin={this.handleLogin} doLoginUser={this.doLoginUser} history={this.props.history} />} />
-          <Route exact path="/Signup" component={() =>  <Signup socket={socket} handleLogin={this.handleLogin} history={this.props.history} />} />
-          <Route exact path="/" component={(props) =>  <Login {...props} socket={socket} handleLogin={this.handleLogin} history={this.props.history} updateParentState={this.updateParentState} doLoginUser={this.doLoginUser} />} />
+          <Route exact path="/Login" component={() =>  <Login socket={socket} doLoginUser={this.doLoginUser} history={this.props.history} />} />
+          <Route exact path="/Signup" component={() =>  <Signup socket={socket} history={this.props.history} />} />
+          <Route exact path="/" component={(props) =>  <Login {...props} socket={socket} history={this.props.history} updateParentState={this.updateParentState} doLoginUser={this.doLoginUser} />} />
           <Route exact path='/home' component={MainContainer} />
           <Route path="/contact" component={Contact} />
           <Route exact path='/profile/:id' render={(props) => <UserProfile {...props} deleteUser={this.deleteUser} updateParentState={this.updateParentState} user={this.state.user} /> } />
