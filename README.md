@@ -2,7 +2,9 @@
 
 
 ## A. Description
-Relocater is a single-page CRUD app that *caters* to a user's relocation needs.  The app determines what salary he/she/they/zhe needs to make in order to maintain the same lifestyle in a new county. The calculation is based on the user's current salary, current county's median income, and selected county's median income.
+Relocater is a single-page CRUD app that *caters* to a user's relocation needs.  Relocater was made to aggregate and compare relevant data for California county's and help inform a user's decision to relocate.  The app determines what salary he/she/they/zhe needs to make in order to maintain the same lifestyle in a new county. The calculation is based on the user's current salary, current county's median income, and selected county's median income.  
+
+Link to deployed app: [https://github.com/BryantCabrera/relocater](https://github.com/BryantCabrera/relocater)
 
 ```
 Relocater was built in 5 days by:
@@ -14,40 +16,40 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
 
 ## B. User Stories
 ```
-As a *__user__*, I want to be able to check out some of the app's features without having to sign up.
+As a user, I want to be able to check out some of the app's features without having to sign up.
 ```
 ```
-As a *__user__*, I want to be able to sign in with my Google account for safer authorization.
+As a user, I want to be able to sign in with my Google account for safer authorization.
 ```
 ```
-As a *__user__*, immediately after signign up, I want to be directed to my profile to edit my current salary and current county to improve my user experience.
+As a user, immediately after signign up, I want to be directed to my profile to edit my current salary and current county to improve my user experience.
 ```
 ```
-As a *__user__*, I want the app to save my current county and urrent salary so I can browse each county's stats without having to re-enter my information.
+As a user, I want the app to save my current county and urrent salary so I can browse each county's stats without having to re-enter my information.
 ```
 ```
-As a *__user__*, I want a responsive navigation bar because I want access to appropriate components of the app.
+As a user, I want a responsive navigation bar because I want access to appropriate components of the app.
 ```
 ```
-As a *__user__*, I want to check living expenses in different counties because it will help inform my relocation decisions.
+As a user, I want to check living expenses in different counties because it will help inform my relocation decisions.
 ```
 ```
-As a *__user__*, I want to see a map of the different counties in California because its geographic location will help inform my decision to relocate.
+As a user, I want to see a map of the different counties in California because its geographic location will help inform my decision to relocate.
 ```
 ```
-As a *__user__*, I want to see a heat map of median income for the different counties in California because it will be easier to see which counties are more likely to be expensive to live in.
+As a user, I want to see a heat map of median income for the different counties in California because it will be easier to see which counties are more likely to be expensive to live in.
 ```
 ```
-As a *__user__*, I want to see a line graph charting the median income over the past few years for the selected county because I want to see how it's trending.
+As a user, I want to see a line graph charting the median income over the past few years for the selected county because I want to see how it's trending.
 ```
 ```
-As a *__user__*, I want to see the statistics for population, unemployment rate, average house cost, median age, living wage, and poverty wage for the selected county because I want to base my decision on more than just median income.
+As a user, I want to see the statistics for population, unemployment rate, average house cost, median age, living wage, and poverty wage for the selected county because I want to base my decision on more than just median income.
 ```
 ```
-As a *__user__*, I want to see an estimate of the salary I'd need to make in order to maintain my current lifestyle in the selected county because it will inform my decision to relocate.
+As a user, I want to see an estimate of the salary I'd need to make in order to maintain my current lifestyle in the selected county because it will inform my decision to relocate.
 ```
 ```
-As a *__user__*, I want to see the line graph, statistics, and estimated salary all on the same page because it will be more convenient to have the information for 1 county all on the same page.
+As a user, I want to see the line graph, statistics, and estimated salary all on the same page because it will be more convenient to have the information for 1 county all on the same page.
 ```
 
 ## C. Images
@@ -59,7 +61,7 @@ As a *__user__*, I want to see the line graph, statistics, and estimated salary 
     > ![Image of Wireframe - Relocater User Profile](public/imgs/README/Relocater__user-profile.png)
     > ![Image of Wireframe - Relocater California Map](public/imgs/README/Relocater__CA-map.png)
     > ![Image of Wireframe - Relocater Selected California County](public/imgs/README/Relocater__selected-county.png)
-2. 
+2. Trello Board
 
 
 ## D. Technologies Used
