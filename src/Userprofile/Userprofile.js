@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import './Userprofile.css';
+import SearchBar from '../SearchBar';
+import data from '../data/db.json';
 
-import './Userprofile.css'
-
-import SearchBar from '../SearchBar'
-
-import data from '../data/db.json'
-const nameData = data.map(d => d.County)
+const nameData = data.map(d => d.County);
 
 
 class UserProfile extends Component {
@@ -19,39 +17,29 @@ class UserProfile extends Component {
     }
 
     componentDidMount() {
-        this.getUser(this.props.match.params.id)
-        // axios(`/users/${this.props.match.params.id}`)
-        //     .then(res => {
-        //         console.log(res.data, ' this is res.data from react');
-        //         this.setState({
-        //             user: res.data.data
-        //         });
-        //     });
+        this.getUser(this.props.match.params.id);
     }
 
     getUser = async (id) => {
         try {
             const response = await fetch(`http://localhost:9000/users/${id}`, {
-            })
+            });
 
             if (!response.ok) {
                 throw Error(response.statusText)
             }
-            console.log(response, ' this is response from REACT Userprofile > getUser');
+
             const userParsed = await response.json();
 
             this.setState({
                 user: userParsed.data
             });
 
-            console.log(this.state, ' this is the state in REACT Userprofile.js')
-            console.log(userParsed, ' this is userParsed from REACTUserprofile');
         } catch (err) {
-            console.log(err)
+            console.log(err);
             return err
         }
     }
-
 
     updateSearchBar = (e) => {
         this.setState({
@@ -63,12 +51,12 @@ class UserProfile extends Component {
         this.setState({
             search: e.target.textContent,
             toggle: false
-        })
+        });
     }
 
     handleSubmit = () => {
-        const county = this.state.county
-        const income = this.state.salary
+        const county = this.state.county;
+        const income = this.state.salary;
         axios.put(`/users/${this.state.user._id}`, {
             userCounty: county,
             userIncome: income
@@ -76,8 +64,6 @@ class UserProfile extends Component {
             .then((updatedUser) => this.props.updateParentState(updatedUser.data.data))
             // redirect home
             .then(this.props.history.push('/home'))
-
-
     }
 
     render() {
@@ -125,13 +111,11 @@ class UserProfile extends Component {
                     <button className="delete-button" onClick={() => this.props.deleteUser(this.state.user._id)}>Delete Your Profile</button>
                 </div>
 
-
                 <div className="blank">
 
                 </div>
 
             </div>
-
         )
     }
 
