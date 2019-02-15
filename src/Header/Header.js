@@ -7,25 +7,6 @@ const Header = (props) => {
         <header>
             <div className="nav">
                 <div className="nav__left">
-<<<<<<< HEAD
-                    <p className="nav__home"><Link to='/home'><img className="nav__housing-icon" src="../../../imgs/logoin.png" alt="Home Icon" title="Home Icon"></img></Link></p>
-                        <div className="nav__profile-login">
-                            {
-                                props.user._id
-                                    ?
-                                        [<p className="nav__profile" key={99}><Link to={`/profile/${props.user._id}`}>| &nbsp; PROFILE &nbsp; </Link></p>,
-                                        <p className="nav__logout" key={23423}onClick={props.handleLogout}>| &nbsp; LOGOUT</p>]
-                                    :  <Link to="/Login"><img className="nav__login"src="../../../imgs/login.png"></img></Link>
-                            }
-                        </div>
-                </div>
-                    <div className="nav__contact">
-                        <Link to="/contact"><button className="nav__contact-button">CONTACT</button></Link>
-                    </div>
-           </div>
-       </header>
-
-=======
                     <p className="nav__home"><Link to='/home'><img className="nav__housing--icon" src="../../../imgs/logoin.png" alt="Home Icon" title="Home Icon"></img></Link></p>
                     <div className="nav__profile-login">
                         {
@@ -42,7 +23,6 @@ const Header = (props) => {
                 </div>
             </div>
         </header>
->>>>>>> e542bf500e2859a87c67977d76a60afcea01386a
     )
 }
 
