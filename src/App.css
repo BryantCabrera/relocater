@@ -19,12 +19,12 @@ html {
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  background-color: #282c34;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -42,27 +42,6 @@ html {
   }
 }
 
-
-/* .g-container {
-  border: 2px solid black;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 1rem;
-} */
-
-/* .m-container {
-  border: 2px solid black;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 14rem;
-} */
-
 .nav-bar {
   display: flex;
   margin-left: 1rem;
@@ -74,5 +53,4 @@ a {
 
 .nav-home {
   padding-right: 1rem;
-
 }
