@@ -68,6 +68,7 @@ As a user, I want to see the line graph, statistics, and estimated salary all on
     > ![Image of Wireframe - Relocater California Map](public/imgs/README/Relocater__CA-map.png)
     > ![Image of Wireframe - Relocater Selected California County](public/imgs/README/Relocater__selected-county.png)
 2. Trello Board
+    > ![Image of Trellow Board](public/imgs/README/trello.png)
 
 
 ## D. Technologies Used
@@ -77,6 +78,7 @@ As a user, I want to see the line graph, statistics, and estimated salary all on
     2. BEM
     3. Google fonts
     4. flaticon.com
+    5. fetch
 
 > Back-End
 
@@ -114,16 +116,23 @@ As a user, I want to see the line graph, statistics, and estimated salary all on
 
 
 ## E. Getting Started
+
 1. LOGGING IN: At the top center, toggle between Sign Up & Sign In.
     1. If you click Sign Up, you can create a new account. 
         1.  Enter your email address and password.
+            > ![Image of Signup](public/imgs/README/signup.png)
         2.  You will then be redirected to your profile page where you can enter your salary and choose the county you currently live in.
+            > ![Image of Profile Page Edit](public/imgs/README/user__profile--edit.png)
     2. If you click Sign In, you can log into your account using your Relocater account or your Google account.
         1.  If signing in with your Relocater account, just enter your email and password.
         2.  If signing in with your Google account, a popup will let you choose which Google account you want to sign in with.
+            > ![Image of Login](public/imgs/README/signin.png)
 2.  Soon after, you will be redirected to a map of California where you can hover and click on the county you are interested in moving to.  The opacity is a normalized value that increases with increasing median income.
+    > ![Image of California Heat Map](public/imgs/README/CA-map.png)
 3.  On the following page, you will see data pertaining to that county.
+    > ![Image of Registered User View](public/imgs/README/registered-view.png)
     1.  In the center of the screen, there will be a line graph charting the median income for that county.
+        > ![Image of Line Chart](public/imgs/README/line-chart.png)
     2.  To the right of the graph, there will be a list of statistics for that county.
         > 1. Population
         > 2. Unemployment Rate
@@ -131,8 +140,11 @@ As a user, I want to see the line graph, statistics, and estimated salary all on
         > 4. Median Age
         > 5. Living Wage
         > 6. Poverty Wage
+        > ![Image of County Statistics](public/imgs/README/statistics.png)
     3.  Underneath that graph, the app will list the amount you would need to make in that county to maintain the same lifestyle/purchasing freedom you have with your current salary in the county you currently live in.  This is calculated with Bryant & Peter's custom algorithm.
+        > ![Image of Estimated Salary](public/imgs/README/salary-estimate.png)
 4.  If you choose *__not__* to Sign Up or Log In, at the top center, you can click the house icon to navigate to the same map of California and see county names on hover.  You can click on a county and see its respective data, but you won't have access to the income estimator underneath the graph.
+    > ![Image of Unregistered User View](public/imgs/README/unregistered-view.png)
 
 
 ## F. Github workflow
