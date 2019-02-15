@@ -3,22 +3,22 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
-const https = require('https');
+const http = require('http');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
-const socketio = require('socket.io');
 const session = require('express-session');
 const passport = require('passport');
+const server = http.Server(app);
+const socketio = require('socket.io')(server);
 
 const authRouter = require('./lib/auth.router');
 const passportInit = require('./lib/passport.init');
 
-const server = require('http').Server(app);
-
 require('dotenv').config();
 require('./db/db');
+
 
 //view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,9 +45,12 @@ app.use(session({
 app.use(cors());
 
 // Connects sockets to the server and adds them to the request 
-// so that we can access them later in the controller
-const io = socketio(server);
-app.set('io', io);
+
+app.set('io', socketio);
+
+
+// console.log(app);
+
 
 // requires routers
 const indexRouter = require('./routers');
@@ -61,8 +64,11 @@ app.use('/api', apiRouter);
 app.use('/counties', countyRouter);
 app.use('/users', userRouter);
 
-server.listen(3030);
+app.get('/*', function(req,res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
-app.listen(process.env.PORT || 9000, () => {
+
+server.listen(process.env.PORT || 9000, () => {
     console.log('listening on port 9000');
 });

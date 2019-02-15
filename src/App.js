@@ -11,7 +11,7 @@ import Signup from './Login/Signup'
 import Contact from './Contact/Contact'
 import axios from 'axios';
 
-const socket = io('http://localhost:3030');
+const socket = io('http://localhost:9000');
 
 class App extends Component {
   state = {
