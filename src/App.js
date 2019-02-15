@@ -10,8 +10,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import Signup from './Login/Signup'
 import Contact from './Contact/Contact'
 import axios from 'axios';
-
-const socket = io('http://localhost:9000');
+const socket = io(process.env.REACT_APP_URL);
 
 class App extends Component {
   state = {
