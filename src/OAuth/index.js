@@ -10,7 +10,7 @@ class OAuth extends Component {
         const { socket, provider } = this.props;
 
         socket.on(provider, user => {
-            this.popup.close()
+            this.popup.close();
             this.setState({ user });
         });
     }
@@ -19,10 +19,10 @@ class OAuth extends Component {
     // if the user closes the popup without authenticating.
     checkPopup() {
         const check = setInterval(() => {
-            const { popup } = this
+            const { popup } = this;
             if (!popup || popup.closed || popup.closed === undefined) {
                 clearInterval(check)
-                this.setState({ disabled: '' })
+                this.setState({ disabled: '' });
             }
         }, 1000);
     }
