@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import './Header.css'
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 const Header = (props) => {
     return (
@@ -14,7 +14,7 @@ const Header = (props) => {
                                 ?
                                 [<p key={99}><Link to={`/profile/${props.user._id}`}>| &nbsp; PROFILE &nbsp; </Link></p>,
                                 <p key={23423} onClick={props.handleLogout}>| &nbsp; LOGOUT</p>]
-                                : <Link to="/Login"><img className="nav__login" src="../../../imgs/login.png"></img></Link>
+                                : <Link to="/Login"><img className="nav__login" src="../../../imgs/login.png" alt="LogIn Icon" title="Log In Icon"></img></Link>
                         }
                     </div>
                 </div>
@@ -26,4 +26,4 @@ const Header = (props) => {
     )
 }
 
-export default Header
+export default Header;

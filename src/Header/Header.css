@@ -39,10 +39,6 @@ p{
     font-size: 20px;
 }
 
-/* .contact-header {
-    float: right;
-} */
-
 .nav__login {
     height: 40px;
     width: 40px;
@@ -52,10 +48,9 @@ p{
     justify-self: left;
 
 }
+
 .nav__contact {
     justify-items: right;
-    /* margin-top: 3px;
-    margin-left: 85vw */
 }
 
 .nav__contact--button {
@@ -80,7 +75,6 @@ p{
     font-weight: 500;
 }
 
-
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     
     .nav__profile {
@@ -94,8 +88,4 @@ p{
         padding-top: 2rem;
         text-align: center;
     }
-    
-    
-
-}
-    
+}    
