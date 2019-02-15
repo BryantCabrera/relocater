@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import './Userprofile.css';
-import SearchBar from '../SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
 import data from '../data/db.json';
 
 const nameData = data.map(d => d.County);
-
 
 class UserProfile extends Component {
     state = {

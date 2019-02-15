@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import OAuth from '../OAuth';
+import OAuth from '../OAuth/OAuth';
 import { withRouter, NavLink } from 'react-router-dom';
 import './Login-Signup.css';
 
