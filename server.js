@@ -1,3 +1,4 @@
+require('dotenv').config();
 const createError = require('http-errors');
 const express = require('express');
 const app = express();
@@ -16,7 +17,6 @@ const socketio = require('socket.io')(server);
 const authRouter = require('./lib/auth.router');
 const passportInit = require('./lib/passport.init');
 
-require('dotenv').config();
 require('./db/db');
 
 
