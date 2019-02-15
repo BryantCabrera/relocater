@@ -50,12 +50,12 @@ class TopoMap extends Component {
                     })
                 })
             })
-        window.addEventListener('resize', () => {
-            this.setState({
-                width: window.innerWidth,
-                height: window.innerHeight
-            })
-        })
+        // window.addEventListener('resize', () => {
+        //     this.setState({
+        //         width: window.innerWidth,
+        //         height: window.innerHeight
+        //     })
+        // })
     }
     render = () => {
         return (
