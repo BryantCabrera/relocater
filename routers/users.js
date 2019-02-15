@@ -49,7 +49,7 @@ router.post('/login', async (req, res) => {
             res.json({
                 status: 200,
                 data: 'login successful',
-                user
+                user: loggedUser
             });
         }
     } catch (err) {

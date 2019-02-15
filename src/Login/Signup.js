@@ -32,6 +32,7 @@ class SignUp extends Component {
             const parsedResponse = await loginResponse.json();
 
             if (parsedResponse.data === 'login successful'){
+                this.props.updateParentState(parsedResponse.user);
                 this.props.history.push(`/profile/${parsedResponse.user._id}`);
             }
 
