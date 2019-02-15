@@ -6,13 +6,51 @@ Relocater is a single-page CRUD app that *caters* to a user's relocation needs. 
 
 ```
 Relocater was built in 5 days by:
-Bryant Cabrera - GitLab Manager/Scrum Master/Documenter
+Bryant Cabrera - GitLab Manager/Scrum Master/Documenter/Designer
 Kevin Cuison - Scrum Master/Designer
 Peter Feinman - Data Visualization/Database Manager
 Ummer Khan - Database Manager/API Manager & Creator/Designer
 ```
 
-## B. Images
+## B. User Stories
+```
+As a *__user__*, I want to be able to check out some of the app's features without having to sign up.
+```
+```
+As a *__user__*, I want to be able to sign in with my Google account for safer authorization.
+```
+```
+As a *__user__*, immediately after signign up, I want to be directed to my profile to edit my current salary and current county to improve my user experience.
+```
+```
+As a *__user__*, I want the app to save my current county and urrent salary so I can browse each county's stats without having to re-enter my information.
+```
+```
+As a *__user__*, I want a responsive navigation bar because I want access to appropriate components of the app.
+```
+```
+As a *__user__*, I want to check living expenses in different counties because it will help inform my relocation decisions.
+```
+```
+As a *__user__*, I want to see a map of the different counties in California because its geographic location will help inform my decision to relocate.
+```
+```
+As a *__user__*, I want to see a heat map of median income for the different counties in California because it will be easier to see which counties are more likely to be expensive to live in.
+```
+```
+As a *__user__*, I want to see a line graph charting the median income over the past few years for the selected county because I want to see how it's trending.
+```
+```
+As a *__user__*, I want to see the statistics for population, unemployment rate, average house cost, median age, living wage, and poverty wage for the selected county because I want to base my decision on more than just median income.
+```
+```
+As a *__user__*, I want to see an estimate of the salary I'd need to make in order to maintain my current lifestyle in the selected county because it will inform my decision to relocate.
+```
+```
+As a *__user__*, I want to see the line graph, statistics, and estimated salary all on the same page because it will be more convenient to have the information for 1 county all on the same page.
+```
+
+## C. Images
 1. Wireframe
     > ![Image of Wireframe - Relocater Register](public/imgs/README/Relocater__register.png)
     > ![Image of Wireframe - Relocater Login](public/imgs/README/Relocater__login.png)
@@ -24,7 +62,7 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
 2. 
 
 
-## C. Technologies Used
+## D. Technologies Used
 > Front-End
     
     1. React
@@ -67,7 +105,7 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
     3. trello
 
 
-## D. Getting Started
+## E. Getting Started
 1. LOGGING IN: At the top center, toggle between Sign Up & Sign In.
     1. If you click Sign Up, you can create a new account. 
         1.  Enter your email address and password.
@@ -89,7 +127,7 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
 4.  If you choose *__not__* to Sign Up or Log In, at the top center, you can click the house icon to navigate to the same map of California and see county names on hover.  You can click on a county and see its respective data, but you won't have access to the income estimator underneath the graph.
 
 
-## E. Github workflow
+## F. Github workflow
 1.	Link to repo: [https://github.com/BryantCabrera/relocater](https://github.com/BryantCabrera/relocater).  
 2.	On your personal repo (NOT the General Assembly) enterprise, log in.  then click link above and fork the repo.  Make sure the repo is in your personal GitHub (go to your personal GitHub account and the project repo “relocater” should be there).  Then, from YOUR PERSONAL FORK, clone it to your local repo.
     1.	$git clone {without curly braces, put the clone link here}
@@ -138,7 +176,7 @@ Ummer Khan - Database Manager/API Manager & Creator/Designer
     2.	DO NOT hit “merge”, Bryant will be handling this.
 
 
-## F. Next Steps
+## G. Next Steps
 1. Unsolved problems
     - [ ] On refresh, the app state is lost
     - [ ] Logging in via Google OAuth redirects to /home instead of /profile/:id
