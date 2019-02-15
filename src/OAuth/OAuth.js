@@ -35,7 +35,8 @@ class OAuth extends Component {
         const width = 600, height = 600;
         const left = (window.innerWidth / 2) - (width / 2);
         const top = (window.innerHeight / 2) - (height / 2);
-        const url = `${process.env.REACT_APP_URL}/${provider}?socketId=${socket.id}`;
+        const host = process.env === 'DEVELOPMENT' ? 'http://localhost:9000' : 'https://relocater.herokuapp.com';
+        const url = `${host}/${provider}?socketId=${socket.id}`;
 
         return window.open(url, '',
             `toolbar=no, location=no, directories=no, status=no, menubar=no, 
