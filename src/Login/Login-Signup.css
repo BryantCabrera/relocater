@@ -126,9 +126,12 @@
   padding-bottom: 5px;
 }
 
-
 #relocater-logo {
   width: 30%;
   height: 30%;
   margin-bottom: 2%;
+}
+
+.FormCenter div:last-child {
+  margin-top: 1rem;
 }

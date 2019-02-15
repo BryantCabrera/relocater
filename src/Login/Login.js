@@ -57,6 +57,7 @@ class Login extends Component {
                         </div>
                     </form>
                 </div>
+                
                 <OAuth socket={this.props.socket} provider={'google'} />
             </div>
         )
