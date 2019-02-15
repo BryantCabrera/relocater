@@ -5,7 +5,6 @@ const County = require('../models/county');
 // index route
 router.get('/', async (req, res, next) => {
   // req.body this is from the fetch request
-  // console.log(req.body, ' this is get all')
     try  {
     const allCounties = await County.find();
       res.json({
@@ -30,4 +29,4 @@ router.get('/:id', async (req, res, next) => {
   }
 });
 
-module.exports = router
+module.exports = router;

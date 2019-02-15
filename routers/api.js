@@ -2,109 +2,97 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const parser = require('xml2json-light');
-const socrataKey = process.env.SOCRATA_KEY
-const zillowKey = process.env.ZILLOW_KEY
-const numbeoKey = process.env.NUMBEO_KEY
+const socrataKey = process.env.SOCRATA_KEY;
+const zillowKey = process.env.ZILLOW_KEY;
+const numbeoKey = process.env.NUMBEO_KEY;
 
 // socrata API
-// median_income
-// county
-// taxable_year
+    // median_income
+    // county
+    // taxable_year
 
-// get socrata API data by county
+// gets socrata API data by county
 app.get('/socrata/:county', async (req, res) => {
     axios.get(`https://data.ftb.ca.gov/resource/5hsv-c2q6.json?county=${req.params.county}&$$app_token=${socrataKey}`)
     .then(function (response) {
         return res.json(response.data)
     })
     .catch(function (error) {
-    console.log(error)
-    })
-})
+        console.log(error)
+    });
+});
 
 // zillow api 
-// to get into the county name go into 'name'
-// to get into median cost of houses go into zindex._@ttribute
-// check the console.log if confused 
+    // to get into the county name go into 'name'
+    // to get into median cost of houses go into zindex._@ttribute
+    // check the console.log if confused 
 app.get('/zillow/:county', async (req, res) => {
     axios.get(`http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=${zillowKey}&state=ca&childtype=county`)
     .then((response) =>  {
         let json = parser.xml2json(response.data); 
-        // console.log(json.RegionChildren.response.list.region);
         return res.json(json.RegionChildren.response.list.region);
     })
     .catch(function (error) {
-    console.log(error)
-    })
-})
+        console.log(error)
+    });
+});
 
-
-// Numbeo API USA CRIME RATE DATA 
+// Numbeo API USA crime rate data
 app.get('/numbeo/crime', async (req, res) => {
     axios.get(`https://www.numbeo.com/api/country_crime?api_key=${numbeoKey}&country=USA`)
     .then((response) => {
-        // console.log(response.data)
         return res.json(response.data)
     })
     .catch(function (error) {
         console.log(error)
-    })
-})
+    });
+});
 
-
-// Numbeo API USA HEALTH CARE DATA
+// Numbeo API USA health care data
 app.get('/numbeo/health', async (req, res) => {
     axios.get(`https://www.numbeo.com/api/country_healthcare?api_key=${numbeoKey}&country=USA`)
     .then((response) => {
-        // console.log(response.data)
         return res.json(response.data)
     })
     .catch(function (error) {
         console.log(error)
-    })
-})
+    });
+});
 
-// Numbeo API USA POLLUTION DATA
+// Numbeo API USA pollution data
 app.get('/numbeo/pollution', async (req, res) => {
     axios.get(`https://www.numbeo.com/api/country_pollution?api_key=${numbeoKey}&country=USA`)
     .then((response) => {
-        // console.log(response.data)
         return res.json(response.data)
     })
     .catch(function (error) {
         console.log(error)
-    })
-})
+    });
+});
 
-// Numbeo API USA TRAFFIC DATA
+// Numbeo API USA traffic data
 app.get('/numbeo/traffic', async (req, res) => {
     axios.get(`https://www.numbeo.com/api/country_traffic?api_key=${numbeoKey}&country=USA`)
     .then((response) => {
-        // console.log(response.data)
         return res.json(response.data)
     })
     .catch(function (error) {
         console.log(error)
-    })
-})
+    });
+});
 
 const ax = axios.create({
     baseURL: 'http://localhost:9000/'
-  })
-
-
+});
 
 app.get('/myapi', async (req, res) => {
     ax.get('./data/db.json') 
     .then((response) => {
-        console.log(response)
-        // return res.json(response)
+        console.log(response, ' this is the response from app.get in routers > api.js');
     })
     .catch(function (error) {
         console.log(error)
-    })
-})
+    });
+});
 
-
-
-module.exports = app
+module.exports = app;
