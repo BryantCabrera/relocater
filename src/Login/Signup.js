@@ -31,10 +31,6 @@ class SignUp extends Component {
         }
 
         const parsedResponse = await loginResponse.json()
-        // this.setState({
-        //     user: parsedResponse.user
-        // // })
-        // this.props.handleLogin(parsedResponse.user)
 
         if (parsedResponse.data === 'login successful'){
             this.props.history.push(`/profile/${parsedResponse.user._id}`)

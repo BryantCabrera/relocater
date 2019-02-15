@@ -63,7 +63,7 @@ class GraphContainer extends Component {
         console.log(this.state.magicNumber, 'the result of our math')
         console.log(this.state.lastEntry)
         return (
-            <div class="data">
+            <div className="data">
                 <h1>{this.props.match.params.id} Median Income</h1>
                 <div className="data__graph">
 
@@ -83,7 +83,7 @@ class GraphContainer extends Component {
                         :
                             <div></div>
                         }
-                    <br></br><img id="compare-icon" src="../imgs/compare-icon.png"></img>
+                    <br></br>
                     </div>
                 </div>
             </div>
