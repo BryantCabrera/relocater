@@ -108,7 +108,7 @@ As a user, I want to see the line graph, statistics, and estimated salary all on
     3. sockets
     4. bcrypt
 
-> Planning/Organization
+> Planning/Organization/Design
     
     1. Adobe XD
     2. Adobe Photoshop
