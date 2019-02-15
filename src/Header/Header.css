@@ -39,11 +39,11 @@ p{
     font-size: 20px;
 }
 
-.contact-header {
+/* .contact-header {
     float: right;
-}
+} */
 
-.login {
+.nav__login {
     height: 40px;
     width: 40px;
     padding: 1.5rem;
@@ -80,3 +80,22 @@ p{
     font-weight: 500;
 }
 
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    
+    .nav__profile {
+        font-size: 10px;
+        padding-top: 2rem;
+        text-align: center;
+    }
+     
+    .nav__logout {
+        font-size: 10px;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    
+    
+
+}
+    
