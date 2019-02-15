@@ -15,7 +15,7 @@ Finally, the index router uses google OAuth 2 and passport handshakes to add a s
 ```
 Relocater was built in 5 days by:
 Bryant Cabrera - GitLab Manager/Scrum Master/Documenter/Designer
-Kevin Cuison - Scrum Master/Designer
+Kevin Cuison - Scrum Master/Designer/React Lead
 Peter Feinman - Data Visualization/Database Manager
 Ummer Khan - Database Manager/API Manager & Creator/Designer
 ```
