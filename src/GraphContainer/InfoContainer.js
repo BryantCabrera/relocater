@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import data from '../data/db.json';
-import './InfoContainer.css';
 
 class InfoContainer extends Component {
     render = () => {
