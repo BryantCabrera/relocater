@@ -1,43 +1,43 @@
 import React, { Component } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import './TopoMap.css'
-import data from '../data/db'
+import './TopoMap.css';
+import data from '../data/db';
 
-// find min and max
-const incomes = []
-data.forEach(d => incomes.push(d.Median_Income))
-const sortedIncomes = incomes.sort((a, b) => a - b)
+// finds min and max
+const incomes = [];
+data.forEach(d => incomes.push(d.Median_Income));
+const sortedIncomes = incomes.sort((a, b) => a - b);
 
-const minIncome = sortedIncomes[0]
-const maxIncome = sortedIncomes[incomes.length - 1]
-
-
+const minIncome = sortedIncomes[0];
+const maxIncome = sortedIncomes[incomes.length - 1];
 
 class TopoMap extends Component {
     state = {
         mapData: [],
         mousedOverCounty: ''
     }
+
     handleMouseOver = (index) => {
-        // console.log(this.state.mapData[index])
         this.setState({
             mousedOverCounty: this.state.mapData[index].properties.name
-        })
+        });
     }
+
     resetTooltip = () => {
         this.setState({
             mousedOverCounty: ''
-        })
+        });
     }
+
     projection = () => {
         return geoMercator()
             .scale(1000 * 2)
             .center([-120, 36])
             .translate([650 / 2, 600 / 2])
     }
+
     componentDidMount = () => {
-        console.log(data)
         fetch('/caCountiesTopoSimple.json')
             .then(response => {
                 if (!response.ok) {
@@ -50,13 +50,8 @@ class TopoMap extends Component {
                     })
                 })
             })
-        // window.addEventListener('resize', () => {
-        //     this.setState({
-        //         width: window.innerWidth,
-        //         height: window.innerHeight
-        //     })
-        // })
     }
+
     render = () => {
         return (
             <div className='map'>
@@ -87,4 +82,4 @@ class TopoMap extends Component {
     }
 }
 
-export default TopoMap
+export default TopoMap;
