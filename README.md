@@ -6,6 +6,12 @@ Relocater is a single-page CRUD app that *caters* to a user's relocation needs. 
 
 Link to deployed app: [https://github.com/BryantCabrera/relocater](https://github.com/BryantCabrera/relocater)
 
+
+Relocater's back-end architecture features a users router with complete CRUD capabilities using RESTful routing.  This router also features authentication using bcrypt.  
+The counties router uses RESTful routing for getting appropriate data.  
+The api router uses axios to make API calls to get data.  
+Finally, the index router uses google OAuth 2 and passport handshakes to add a second form of authentication for users.
+
 ```
 Relocater was built in 5 days by:
 Bryant Cabrera - GitLab Manager/Scrum Master/Documenter/Designer
