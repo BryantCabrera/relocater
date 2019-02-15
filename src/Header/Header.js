@@ -12,9 +12,9 @@ const Header = ( props) => {
                             {
                                 props.user._id
                                     ?
-                                        [<p key={99}><Link to={`/profile/${props.user._id}`}>| &nbsp; PROFILE &nbsp; </Link></p>,
-                                        <p key={23423}onClick={props.handleLogout}>| &nbsp; LOGOUT</p>]
-                                    :  <Link to="/Login"><img className="login"src="../../../imgs/login.png"></img></Link>
+                                        [<p className="nav__profile" key={99}><Link to={`/profile/${props.user._id}`}>| &nbsp; PROFILE &nbsp; </Link></p>,
+                                        <p className="nav__logout" key={23423}onClick={props.handleLogout}>| &nbsp; LOGOUT</p>]
+                                    :  <Link to="/Login"><img className="nav__login"src="../../../imgs/login.png"></img></Link>
                             }
                         </div>
                 </div>
@@ -23,6 +23,7 @@ const Header = ( props) => {
                     </div>
            </div>
        </header>
+
     )
 }
 
