@@ -21,7 +21,7 @@ class UserProfile extends Component {
 
     getUser = async (id) => {
         try {
-            const response = await fetch(`http://localhost:9000/users/${id}`, {
+            const response = await fetch(`${process.env.REACT_APP_URL}/users/${id}`, {
             });
 
             if (!response.ok) {
