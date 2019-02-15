@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-// import Signup from '../Login/Signup';
-import GoogleoAuth from './GoogleoAuth';
-import OAuth from '../OAuth'
-import axios from 'axios'
-import { withRouter, NavLink } from 'react-router-dom'
-import './Login-Signup.css'
+import OAuth from '../OAuth';
+import { withRouter, NavLink } from 'react-router-dom';
+import './Login-Signup.css';
 
 class Login extends Component {
     state = {
@@ -15,18 +12,12 @@ class Login extends Component {
     handleInput = (e) => {
         this.setState({
             [e.target.name]: e.target.value
-        })
+        });
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.doLoginUser(this.state)
-        //         axios.post('/users/login', this.state)
-        //         .then(res => {
-        //             this.props.updateParentState(res.data.loggedUser, ' this is loggedUser')
-        //             return res
-        //         })
-        //         .then(res => res.data.isLoggedIn ? this.props.history.push('/home') : this.props.history.push('/'))
+        this.props.doLoginUser(this.state);
     }
 
     render() {
@@ -34,11 +25,9 @@ class Login extends Component {
             <div className='FormCenter'>
                 <img id="relocater-logo" src="../../../imgs/relocater.png" alt="Relocater Logo" title="Relocater Logo"></img>
                 <div className='PageSwitcher'>
-
                     <NavLink exact to="/Login" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
                     <NavLink exact to="/Signup" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
                 </div>
-
                 <div>
                     <form className="FormFields" onSubmit={this.handleSubmit}>
                         <div className='FormField'>
@@ -68,17 +57,10 @@ class Login extends Component {
                         </div>
                     </form>
                 </div>
-
-                <div className="sign-up">
-                    {/* <Signup handleLogin={this.props.handleLogin}/> */}
-                </div>
-
                 <OAuth socket={this.props.socket} provider={'google'} />
-
             </div>
         )
     }
 }
 
-
-export default withRouter(Login)
+export default withRouter(Login);
