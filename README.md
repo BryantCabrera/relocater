@@ -4,7 +4,7 @@
 ## A. Description
 Relocater is a single-page CRUD app that *caters* to a user's relocation needs.  Relocater was made to aggregate and compare relevant data for California county's and help inform a user's decision to relocate.  The app determines what salary he/she/they/zhe needs to make in order to maintain the same lifestyle in a new county. The calculation is based on the user's current salary, current county's median income, and selected county's median income.  
 
-Link to deployed app: [https://github.com/BryantCabrera/relocater](https://github.com/BryantCabrera/relocater)
+Link to deployed app: [https://relocater.herokuapp.com/](https://relocater.herokuapp.com/)
 
 
 Relocater's back-end architecture features a users router with complete CRUD capabilities using RESTful routing.  This router also features authentication using bcrypt.  
