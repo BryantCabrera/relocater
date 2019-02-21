@@ -43,7 +43,7 @@ class Login extends Component {
                         </div>
                         <div className='FormField'>
                             <input
-                                type='text'
+                                type='password'
                                 name='password'
                                 placeholder='password'
                                 value={this.state.password}
